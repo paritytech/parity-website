@@ -1,0 +1,80 @@
+---
+title: index
+tags:
+- Parity Substrate
+- Community
+author: Parity Technologies
+blogTitle: 'Substrate Builders Program Milestone Update: June 2021'
+slug: blog/substrate-builders-program-milestone-update-june-2021
+date_published: 2021-06-09T00:00:00+02:00
+image: "/images/substrate_builders_program_blog-23-1.png"
+
+---
+![](/images/substrate_builders_program_blog-23.png)The [**Substrate Builders Program**](https://www.substrate.io/builders-program/) is an initiative by Parity to support builders in the Substrate ecosystem. The program allows teams building Substrate-based blockchains, applications, or ecosystem components to benefit from Parity’s extensive experience and resources, thereby setting themselves up for success.
+
+There are over 50 projects that have been accepted into the Substrate Builders Program, including projects in the areas of DeFi, gaming, identity, oracles and many others. These teams receive support for technical challenges, strategy, and ecosystem building support.
+
+Projects in the Builders Program are allocated to one of three tracks: the Infrastructure Track, the Chains Track, or the Application Track. Teams accepted into the Substrate Builders Program receive support from Parity on their technical and community roadmaps, outlying major milestones to achieve their goals and launch their project. Projects building applications, chains, and infrastructure components are guided along the way with continuous support and incentives.
+
+This month we are excited to announce that several teams have achieved milestones in the recent weeks. Below are the teams along with the work completed as part of achieving their builders program milestones.
+
+## Milestone 1
+
+### Infrastructure track
+
+[**Hydra**](https://www.joystream.org/hydra/) is a query node for Substrate-based blockchains. A query node ingests data from a Substrate chain and provides rich, domain-specific, and highly customizable access to the blockchain data, far beyond the scope of direct RPC calls. Define your data model and the Hydra indexer will get it in sync with the chain. Hydra provides users with a batteries-included GraphQL server with comprehensive filtering, pagination, and even full-text search capabilities.
+
+* Hydra CLI: a command-line interface for the Hydra querying system
+* Hydra Indexer / Indexer Gateway
+* Hydra Processor
+* GraphQL API
+* Typegen / Chain compatible
+
+[**Limechain**](https://limechain.tech/blog/limechain-develops-subsembly-a-substrate-alternative-supported-by-web3-foundation-grants/) is developing Subsembly, a Runtime development framework, based on AssemblyScript. It provides the necessary foundation for anyone to be able to build Substrate runtimes. Subsembly has a similar architecture to Substrate Runtime components. The framework will provide developers with the already familiar Substrate pallets, a CLI tool for bootstrapping and compiling, as well as extensive documentation and recipes for development. All of the core components of a Substrate runtime will come out of the box with a simple and quick CLI command.
+
+Implement Subsembly CLI that supports:
+
+* Init: the command will create the appropriate folder structure (runtime, tests). The core modules of Subsembly will be placed, along with the core functionality such as the Runtime API, serialisation and deserialisation. This command will be used to bootstrap new Subsembly Runtimes
+* Compile: the command will compile the AssemblyScript Runtime and produce the WASM binary
+* Build-spec: the command will build the RAW genesis specification from a provided (non-raw) spec file
+* Host a Gitbook documentation for Subsembly: documentation will be important because it is going to be the most important resource for builders
+
+Add recipes and guides that describe how someone can use Subsembly to:
+
+* Develop their own pallets
+* Create and run Account-Based Runtime on a Substrate node
+
+## Milestone 2
+
+### Chains track
+
+[**HydraDX**](https://hydradx.io/) is a cross-chain liquidity protocol using the speed and flexibility of Substrate while remaining optimized for a single purpose: enabling fluid programmable value exchange. The multi-asset liquidity pool enables putting all assets into one shared liquidity pool – unlocking efficiency for traders of a wide variety of backgrounds.
+
+* Finish the modeling
+* Start incentivized testnet and connect to Rococo
+* Finish tokenomics / governance parametrization
+* Implementing novel CFMM design
+* Start economic and security audits
+* Crowdfunding for parachain slot
+
+[**MathChain**](https://mathchain.org/en/) is a Polkadot Smart Wallet chain based on Substrate, focusing on adoption, user experience and inclusive blockchain applications and will be a decentralized permissionless parachain powered L2 that allows interoperability with Polkadot, Ethereum, BSC, Filecoin, and Rollups/EVM side chains.
+
+* Testnet Galois (Secret Store, Spending Limit, Rococo Connection)
+* Wallet (Social Account, xChain Transfers)
+* Explorer (Support Runtime and EVM)
+* Docs & Wiki
+
+[**Unique Network**](https://unique.network/) is a Substrate-based blockchain serving non-fungible tokens (NFTs), utilizing the framework to build a focused solution for non-fungible tokens in interoperable networks. With features such as governance, upgradability, and feeless transactions, Unique Network is building a community for marketplaces to develop and flourish in the space of digital ownership and transfers.
+
+* Block explorer POC: a basic block explorer for viewing and verifying the activity of the Unique Network chain
+* NFT pallet
+* Inflation palletMilestone 3
+* Chains track
+
+[**KILT**](https://www.kilt.io/) provides a base layer for verifiable credentials in the Web 3.0 world. Using the benefits of blockchain, KILT brings real-world accreditation to the digital world, creating a way for businesses to verify credentials and bring trust to a whole new level. This system will enable individuals, businesses and governments to rely on a common standard, which is owned by everyone participating and not by a single company. Below are the deliverables that KILT has provided the Substrate Builders Program committee with:
+
+* KILT Shell parachain runtime: the Substrate-based runtime for becoming a fully fledged Substrate based chain and eventually a parachain
+* Launch pallet: migrates unowned accounts to owned accounts with vesting or a time-based lock
+* Parachain Staking Pallet: responsible for providing a Delegated Proof of Stake consensus algorithm for the collator-run parachain. It provides incentives for users to run a collator node in the KILT network which is required to decentralize fully
+
+Have an idea or project built for or on Substrate? The Substrate Builders program can support your project up to launch and will continue to offer longer-term support depending on the project’s needs. [Learn more](https://www.substrate.io/builders-program/) and [apply now](https://docs.google.com/forms/d/e/1FAIpQLSfEYJE3X0RQs3Kucqthe4D8zyUcV1yEvyIw98L2X9_78b4BVA/viewform).
