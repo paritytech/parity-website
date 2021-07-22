@@ -88,6 +88,8 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /tag/security/	/blog/tag/security
 
 # Blog Posts Links
+/substrate-builders-program-milestone-update-june-2021/ /blog/substrate-builders-program-milestone-update-june-2021
+/substrate-builders-program-milestone-update-may-2021/ /blog/substrate-builders-program-milestone-update-may-2021/
 /substrate-builders-program-update-builders-for-builders/	/blog/substrate-builders-program-update-builders-for-builders/
 /statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/	/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/
 /defi-on-polkadot-an-ecosystem-overview/	/blog/defi-on-polkadot-an-ecosystem-overview/	
