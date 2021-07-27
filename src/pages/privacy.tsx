@@ -704,8 +704,11 @@ export default function PrivacyPolicyPage() {
               To get information about the behavior of our visitors, we use Simple Analytics. This analytics software
               gives us insight about our visitors only in general. It does not give us any insights or information about
               individuals as it does not track visitors and does not store any personal identifiable information. Go to
-              Simple Analytics documentation to find out what Simple Analytics collects (and most importantly what they
-              don’t).
+              {` `}
+              <a href="https://docs.simpleanalytics.com/" target="_blank" rel="noreferrer">
+                Simple Analytics documentation
+              </a>{' '}
+              to find out what Simple Analytics collects (and most importantly what they don’t).
             </p>
             <p className="text-textDark  leading-normal">
               <strong>Changes to our privacy policy</strong>
