@@ -19,8 +19,8 @@ export default function EventsPage() {
         <div className="h-full md:pt-32">
           <div className="container h-full text-center pt-48 md:pt-24 pb-12 px-2 md:flex md:flex-col md:justify-center md:max-w-screen-md">
             <h3 className="text-textDark text-center font-normal md:text-5xl md:mb-8">
-            {intl.formatMessage({ id: 'events-page-title' })}
-              </h3>
+              {intl.formatMessage({ id: 'events-page-title' })}
+            </h3>
           </div>
         </div>
       </section>

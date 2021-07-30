@@ -124,6 +124,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-simple-analytics',
       options: {
+        domain: 'api-sa.substrate.io',
+        eventsGlobal: 'sa',
+        events: true,
         trackPageViews: true,
       },
     },
