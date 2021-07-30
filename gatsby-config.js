@@ -128,7 +128,7 @@ module.exports = {
         eventsGlobal: 'sa',
         events: true,
         trackPageViews: true,
-      }
+      },
     },
     'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
