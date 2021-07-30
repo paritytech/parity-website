@@ -1,15 +1,6 @@
 {
   "events": [
     {
-      "title": "Parity & Friends Meetup: NFTs",
-      "description": "Particularly related to Polkadot and Kusama, our excellent line up of speakers from Web3 Foundation and Ternoa discuss the beauty and the tech, from crypto art to securing data transmission. ",
-      "dateTime": "July 8th, 2021",
-      "location": "ONLINE",
-      "cta": "Learn more",
-      "link": "https://www.crowdcast.io/e/parity_friends/2?utm_source=parity.io&utm_medium=referral&utm_campaign=crowdcast&utm_content=meetup%20parity%20website&utm_term=parity%20",
-      "image": "/images/parityfriends_-_crowdcast_-1-1.png"
-    },
-    {
       "title": "Substrate Seminar",
       "description": "Join the collaborative learning call where we learn about Substrate together!",
       "dateTime": "Every other Tuesday",
