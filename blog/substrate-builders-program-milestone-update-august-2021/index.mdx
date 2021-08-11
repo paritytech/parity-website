@@ -1,0 +1,65 @@
+---
+title: index
+tags:
+- Parity Substrate
+- Community
+author: Parity Technologies
+blogTitle: 'Substrate Builders Program Milestone Update: August 2021'
+slug: blog/substrate-builders-program-milestone-update-august-2021
+date_published: 2021-08-11T17:00:00+02:00
+image: "/images/substrate_builders_program_blog_aug-24.png"
+
+---
+The [**Substrate Builders Program**](https://www.substrate.io/builders-program/) participants have been continuously completing milestones with support from Parity Technologies as a part of building out the Substrate ecosystem. The program allows teams building Substrate-based blockchains, applications, or ecosystem components to benefit from Parity’s extensive experience and resources, thereby setting themselves up for success.
+
+Over 50 projects have been accepted into the Substrate Builders Program, with projects in the areas of DeFi, gaming, identity, oracles, and many others. These teams receive support for technical challenges, strategy, and ecosystem building.
+
+Projects in the Builders Program are allocated to one of three tracks: the Infrastructure Track, the Chains Track, or the Application Track. Teams accepted into the Substrate Builders Program receive support from Parity Technologies on their technical and community roadmaps, outlying major milestones to achieve their goals and launch their project.
+
+This month we are excited to announce that several teams have achieved milestones in the recent weeks. Below are the teams along with the work completed as part of achieving their Substrate Builders Program milestones.
+
+## Milestone 1
+
+The following teams have completed their first milestone since the previous update we have shared. Below we have listed each team’s pre-defined achievements that they have completed.
+
+### Chains track
+
+[**Chainflip**](https://chainflip.io/) is a decentralized, trustless protocol that enables cross-chain swaps between different blockchains.
+
+* **Detailed Specifications Finalized**: the Chainflip team delivered detailed architecture specifications for critical areas including their state machine design for State Chain, the ChainFlip engine, as well as contracts for Ethereum chain components.
+* **Witness pallet** completion and **P2P layer execution** implementation
+
+[**Litentry**](https://www.litentry.com/) Network provides privacy-first, decentralized identity aggregation computing services.
+
+* **Parachain readiness**: the Litentry team has successfully connected their test network parachain to the Rococo test network, proving they have the capability to run a parachain for future connectivity on the Kusama or Polkadot networks.
+* **Identity Linking**: this technology enables identities to be linked across networks, including Polkadot, Kusama, Ethereum, and Binance Smart Chain networks. The team has created their own Substrate pallet for this, called the [**account linker pallet**](https://github.com/litentry/litentry-pallets/tree/dev/pallets/account-linker).
+* **Credit Computation**: Using the Substrate off-chain worker pallet and a custom smart contract, the Litentry team has implemented predefined identity credit computation with data from different networks, including functionality for services such as the Graph, Infura, and Etherscan to incorporate data from the Ethereum Foundation network.
+
+[**Mangata**](https://mangata.finance/) is a decentralized exchange for trading Polkadot assets with a bridge between Ethereum and Polkadot.
+
+* **Buy and burn mechanism**: crucial for trading certain assets between different chains, the Mangata team implemented their [buy and burn mechanism](https://github.com/mangata-finance/mangata-node/pull/34) to ensure secure transfers across chains.
+* **Merged staking and liquidity providing**: the [staking functionality](https://github.com/mangata-finance/mangata-node/tree/develop/pallets/staking) for the Mangata network has been implemented.
+* **Ethereum bridge**: bridging assets between Ethereum and Polkadot. The code is published open-source [here](https://github.com/mangata-finance/mangata-node/pull/20).
+* **Solution for VRF vulnerability**: because decentralized exchanges can often be vulnerable to front-running attacks, Mangata implemented its own customized prevention for this. In order to complete the security for this implementation, it was required to modify block production in such a way that the verifiable random function can be properly used. The code is published [here](https://github.com/mangata-finance/mangata-node/blob/develop/Mangata.md).
+
+[**Valiu**](https://www.valiu.com/en) is a project aimed at protecting users from inflation by enabling storing and transferring of crypto and fiat assets.
+
+* **On-chain transfers with Acala Network**: using XCM (cross-chain messaging) to enable fast and secure transfers between parachains, the Valiu team[ successfully demonstrated ](https://github.com/valibre-org/vln-node/pull/76)and implemented this capability of cross-chain asset transfers by supporting transfers between their network and the Acala Network.
+* **Human Swap pallet**: For swaps that require human interaction due to one of the trading pairs being a foreign asset (an asset that exists off-chain). Users of [this pallet](https://github.com/valibre-org/vln-node/tree/master/pallets/human_swap) specify a human they want to trade with based on the convenience of their rates, the party sending cryptocurrency gets its funds locked in a scrow and the other receives the information necessary to conduct the off-chain payment.
+
+## Milestone 2
+
+The following team has completed their second milestone since the previous update we have shared. Below we have listed each team’s pre-defined achievements that they have completed for this milestone.
+
+### Infrastructure Track
+
+[**Patract**](https://patract.io/) is building an open Wasm smart contract platform for Polkadot.
+
+* Delivery of [**Ask! v0.2**](https://github.com/patractlabs/ask), a smart contract language designed based on AssemblyScript and running on [Substrate FRAME Contracts](https://substrate.dev/docs/en/knowledgebase/smart-contracts/overview#contracts-module).
+* [**Redspot**](https://github.com/patractlabs/redspot/), a development environment, testing framework, and asset pipeline for pallet-contracts. Redspot is trying to enable the development of ink! to be projectized and simplified the testing and interacting with contracts.
+* [**Europa v0.3**](https://github.com/patractlabs/europa) completed, a sandbox environment that runs FRAME Contracts pallet and sandbox framework for Substrate Runtimes
+* **Customized contracts model** [Pallet-Patracts](https://github.com/patractlabs/patracts) delivered.
+
+***
+
+Have an idea or project built for or on Substrate? The Substrate Builders program can support your project up to launch and will continue to offer longer-term support depending on the project’s needs. [Learn more](https://www.substrate.io/builders-program/) and [apply now](https://docs.google.com/forms/d/e/1FAIpQLSfEYJE3X0RQs3Kucqthe4D8zyUcV1yEvyIw98L2X9_78b4BVA/viewform).
