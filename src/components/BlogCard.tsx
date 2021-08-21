@@ -10,10 +10,7 @@ interface BlogCardProps {
 
 export default function BlogCard(props: BlogCardProps) {
   const { image, date, title, link } = props;
-  const trimmedTitle = 'Substrate Builders Program Milestone Update: August 2021 Substrate Builders Program Milestone Update: August 2021'.replace(
-    /^(.{60}[^\s]*).*/,
-    '$1'
-  );
+  const trimmedTitle = title.replace(/^(.{60}[^\s]*).*/, '$1');
 
   return (
     <div className="bg-white mx-4 my-8 rounded-lg shadow h-full md:w-1/3">
