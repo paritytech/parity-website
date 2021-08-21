@@ -21,7 +21,7 @@ export default function BlogCard(props: BlogCardProps) {
       </div>
       <div className="p-4 md:py-6 h-1/3 md:h-1/4">
         <p className="font-normal text-xs md:text-sm text-textDark mb-0">{date}</p>
-        <p className="md:text-lg font-normal text-textDark my-1 h-14">
+        <p className="md:text-lg font-normal text-textDark my-1 h-14 md:overflow-hidden">
           {trimmedTitle} {title.length === trimmedTitle.length ? null : `...`}
         </p>
         <LocalizedLink
