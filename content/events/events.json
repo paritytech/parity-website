@@ -1,6 +1,15 @@
 {
   "events": [
     {
+      "title": "Sub0 Online",
+      "description": "The Biggest Substrate Event of the Year! At the cutting edge of blockchain: Tech Deep Dives, Workshops, Networking, All levels.",
+      "dateTime": "October 13th-14th, 2021",
+      "location": "Online",
+      "cta": "Register",
+      "link": "https://sub0.substrate.io/?utm_source=parity.io&utm_medium=referral&utm_campaign=sub0%202021&utm_content=register&utm_term=parity&ref=0ae106a23f5a",
+      "image": ""
+    },
+    {
       "title": "Substrate Seminar",
       "description": "Join the collaborative learning call where we learn about Substrate together!",
       "dateTime": "Every other Tuesday",
