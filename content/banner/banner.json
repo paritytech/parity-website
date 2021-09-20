@@ -1,11 +1,10 @@
 {
-  "active": false,
-  "text": "Polkadot Decoded, the biggest Polkadot event of the year. May19th & 20th",
+  "active": true,
+  "text": "Why is Substrate a groundbreaking blockchain framework? Find out at Sub0 Online, October 13-14.",
   "emoji": "👉",
   "link-text": "Register now",
-  "url": "https://decoded.polkadot.network/?utm_source=parity.io&utm_medium=referral&utm_campaign=decoded+2&utm_content=register",
+  "url": "https://sub0.substrate.io/?utm_source=parity.io&utm_medium=referral&utm_campaign=sub0 2021&utm_content=registration &utm_term=parity&ref=4f9a8077a502",
   "pages": [
-    "/",
-    "/technologies/polkadot"
+    "/"
   ]
 }
