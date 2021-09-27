@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl';
 
 import parityLogo from '../../images/parity_logo_dark.png';
 
-const navItemsDiv = 'px-2 pt-2 pb-4 h-screen flex flex-col md:h-auto md:flex md:flex-row md:items-center md:mt-8';
+const navItemsDiv = 'px-2 pt-2 pb-4 h-screen flex flex-col lg:h-auto lg:flex lg:flex-row lg:items-center lg:mt-8';
 const navItemStyles =
   'block mt-1 px-4 py-1 font-title font-semibold  text-navItemColor tracking-nav no-underline uppercase  hover:text-textLight text-center animate-fade-in';
 const socialIcons = 'w-6 h-auto fill-current text-navItemColor hover:text-textLight mx-4 animate-fade-in';
@@ -28,14 +28,14 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="container relative z-20 md:flex md:justify-between md:px-4">
-      <div className="flex items-center justify-between px-4 py-3 md:p-0">
+    <header className="container relative z-20 lg:flex lg:justify-between lg:px-4">
+      <div className="flex items-center justify-between px-4 py-3 lg:p-0">
         <div>
           <LocalizedLink to="/">
             <img className="h-14" src={parityLogo} alt="Parity Logo" />
           </LocalizedLink>
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             type="button"
             className="block bg-white border-0 focus:outline-none"
@@ -64,10 +64,13 @@ export default function Header() {
         <LocalizedLink to="/about" className={navItemStyles}>
           {intl.formatMessage({ id: 'nav-about' })}
         </LocalizedLink>
+        <LocalizedLink to="/jobs" className={navItemStyles}>
+          {intl.formatMessage({ id: 'nav-jobs' })}
+        </LocalizedLink>
         <LocalizedLink to="/blog" className={navItemStyles}>
           {intl.formatMessage({ id: 'nav-blog' })}
         </LocalizedLink>
-        <div className="flex justify-center items-center px-2 py-1 my-4 md:my-0">
+        <div className="flex justify-center items-center px-2 py-1 my-4 lg:my-0">
           <a href={socialLinks.site.siteMetadata.twitter} target="_blank" rel="noreferrer">
             <svg className={socialIcons} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <title>Twitter icon</title>
