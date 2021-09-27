@@ -71,7 +71,7 @@ export default function Header() {
           {intl.formatMessage({ id: 'nav-about' })}
         </LocalizedLink>
         <LocalizedLink to="/jobs" className={navItemStyles}>
-          {intl.formatMessage({ id: 'nav-careers' })}
+          {intl.formatMessage({ id: 'nav-jobs' })}
         </LocalizedLink>
         <LocalizedLink to="/blog" className={navItemStyles}>
           {intl.formatMessage({ id: 'nav-blog' })}
