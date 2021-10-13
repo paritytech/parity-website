@@ -324,7 +324,7 @@ export default function BugBountyPage() {
               </p>
               <p>
                 <b>
-                  If you’re not sure whether your conduct complies with this policy, please contact us first at
+                  If you’re not sure whether your conduct complies with this policy, please contact us first at{` `}
                   <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> and we will do our best to clarify.
                 </b>
               </p>
