@@ -38,7 +38,7 @@ export default function BugBountyPage() {
               <h3>What&apos;s In Scope? (Hint: Not Our Website!)</h3>
               <p>
                 If you&apos;ve found a potential bug in Substrate, Polkadot, or associated build and deployment
-                infrastructure, then we want to hear from you! Please reach out to us within 48 hours of discovery.
+                infrastructure, then we want to hear from you!
               </p>
               <p>Parity welcomes vulnerability reports that demonstrate security flaws in:</p>
               <ul className="font-normal text-testDark pl-4">
@@ -175,10 +175,6 @@ export default function BugBountyPage() {
                   </ul>
                 </li>
                 <li className="leading-relaxed">
-                  You must report the bug as soon as possible (and no later than 48 hours after discovery) and follow
-                  the bug reporting procedure detailed below.
-                </li>
-                <li className="leading-relaxed">
                   You must not have written the buggy code or otherwise been involved in contributing the buggy code to
                   the Parity project.
                 </li>
@@ -193,7 +189,8 @@ export default function BugBountyPage() {
                 </li>
                 <li className="leading-relaxed">
                   If you inadvertently access, modify, delete, or store user data, we ask that you notify Parity
-                  immediately at bugbounty@parity.io and delete any stored data after notifying us.
+                  immediately at <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> and delete any stored data
+                  after notifying us.
                 </li>
                 <li className="leading-relaxed">
                   We might be prevented by law from paying you. For example, if you happen to live in a country on a
@@ -328,7 +325,7 @@ export default function BugBountyPage() {
               <p>
                 <b>
                   If you’re not sure whether your conduct complies with this policy, please contact us first at
-                  bugbounty@parity.io and we will do our best to clarify.
+                  <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> and we will do our best to clarify.
                 </b>
               </p>
 
