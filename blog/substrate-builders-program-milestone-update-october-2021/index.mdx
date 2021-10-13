@@ -1,17 +1,15 @@
 ---
 title: index
 tags:
-- Parity Substrate
-- Community
+  - Parity Substrate
+  - Community
 author: Parity Technologies
 blogTitle: 'Substrate Builders Program Milestone Update: October 2021'
 slug: blog/Substrate-Builders-Program-Milestone-Update-October-2021
 date_published: 2021-10-13T15:00:00+02:00
-image: "/images/sbp-oct-update-blog-24.png"
-
+image: '/images/sbp-oct-update-blog-24.png'
 ---
 
-  
 Every month Parity announces the latest updates from teams in the Substrate Builders Program, and October 2021’s milestone announcement introduces four teams that have reached their first milestone.
 
 Over 50 [**Substrate Builders Program**](https://substrate.io/ecosystem/substrate-builders-program/) participants have been continuously completing milestones with support from Parity Technologies as a part of building out the Substrate ecosystem. The program allows teams building Substrate-based blockchains, applications, or ecosystem components to benefit from Parity’s extensive experience and resources, thereby setting themselves up for success.
@@ -20,64 +18,63 @@ Projects in the Builders Program are allocated to one of three tracks: the Infra
 
 The following teams have completed their **first milestone** since the previous update we shared. Below we have listed each team’s pre-defined achievements that they have completed.
 
-# Milestone 1
+## Milestone 1
 
 Listed below are each team’s pre-defined achievements that they have completed to mark the finishing of their first milestone.
 
-## Chains track
+### Chains track
 
 [**Equilibrium**](https://equilibrium.io/en) is building a cross-chain money market that combines pooled lending with synthetic asset generation and trading.
 
-* [**Curve AMM Pallet**](https://github.com/equilibrium-eosdt/equilibrium-curve-amm/tree/v3.0.0eq): Substrate-based runtime version of Curve automated market maker that includes low slippage and high efficiency stablecoin exchange, high efficiency exchange tool for other homogeneous assets on Polkadot (e.g. wrapped assets), and liquidity superfluidity with additional rewards from supplying liquidity to lending protocols such as Equilibrium and Acala.
-* **ETH bridge** for interoperability between EVM based blockchains and the Equilibrium blockchain.
-* Additionally, the team has developed and completed a stablecoin curve pool, decentralized exchange pallet, and modified their assets module to fit their use case.
+- [**Curve AMM Pallet**](https://github.com/equilibrium-eosdt/equilibrium-curve-amm/tree/v3.0.0eq): Substrate-based runtime version of Curve automated market maker that includes low slippage and high efficiency stablecoin exchange, high efficiency exchange tool for other homogeneous assets on Polkadot (e.g. wrapped assets), and liquidity superfluidity with additional rewards from supplying liquidity to lending protocols such as Equilibrium and Acala.
+- **ETH bridge** for interoperability between EVM based blockchains and the Equilibrium blockchain.
+- Additionally, the team has developed and completed a stablecoin curve pool, decentralized exchange pallet, and modified their assets module to fit their use case.
 
 [**Kylin Network**](https://kylin.network/) is building a cross-chain platform powering the data economy on Polkadot.
 
-* Built an [off-chain workers module](https://github.com/Kylin-Network/kylin-ocw-module/blob/main/kylin-oracle/src/lib.rs#L394) for receiving data requests and storing them on-chain, added [XCM functionality](https://github.com/Kylin-Network/kylin-ocw-module/blob/main/kylin-oracle/src/lib.rs#L260) to allow data requests from external parachains, and designed a [response mechanism](https://github.com/Kylin-Network/kylin-ocw-module/blob/main/kylin-oracle/src/lib.rs#L434) for communication with parachains.
-* [**Deployed a parachain**](https://kylinnetwork.medium.com/kylin-partners-with-astar-first-to-achieve-xcmp-pallet-calling-8c91474a826) on the Rococo testnet to test cross-chain messaging (XCM) with partner chain Astar network and make upgrades to functionality.
-* [**Published**](https://github.com/Kylin-Network/kylin-collator/blob/main/README.md) a tutorial and code on how to launch your own network using the Kylin network code from scratch. With this example, developers can learn how to launch a relay chain with two Kylin network parachains and communicate between them.
+- Built an [off-chain workers module](https://github.com/Kylin-Network/kylin-ocw-module/blob/main/kylin-oracle/src/lib.rs#L394) for receiving data requests and storing them on-chain, added [XCM functionality](https://github.com/Kylin-Network/kylin-ocw-module/blob/main/kylin-oracle/src/lib.rs#L260) to allow data requests from external parachains, and designed a [response mechanism](https://github.com/Kylin-Network/kylin-ocw-module/blob/main/kylin-oracle/src/lib.rs#L434) for communication with parachains.
+- [**Deployed a parachain**](https://kylinnetwork.medium.com/kylin-partners-with-astar-first-to-achieve-xcmp-pallet-calling-8c91474a826) on the Rococo testnet to test cross-chain messaging (XCM) with partner chain Astar network and make upgrades to functionality.
+- [**Published**](https://github.com/Kylin-Network/kylin-collator/blob/main/README.md) a tutorial and code on how to launch your own network using the Kylin network code from scratch. With this example, developers can learn how to launch a relay chain with two Kylin network parachains and communicate between them.
 
 [**Polkadex**](https://www.polkadex.trade/) is a decentralized peer-to-peer orderbook-based cryptocurrency exchange for the DeFi ecosystem built on Substrate.
 
-* [**Polkapool**](https://github.com/Polkadex-Substrate/Polkadex/tree/frank.uniswap-fix-nightly-version): An automated, completely on-chain market maker-based DEX with feeless transactions, no unnecessary data collection, and no frontrunning.
-* **Offchain IPFS**: maintains a snapshot of the latest state of balance transfers. In case the hardware is corrupted or the network access is lost, or if the operator itself is compromised or becomes a bad actor, the blockchain rejects all future transfers from the orderbook and returns the funds to its users within 12 seconds.
-* Launched their own Substrate testnet.
+- [**Polkapool**](https://github.com/Polkadex-Substrate/Polkadex/tree/frank.uniswap-fix-nightly-version): An automated, completely on-chain market maker-based DEX with feeless transactions, no unnecessary data collection, and no frontrunning.
+- **Offchain IPFS**: maintains a snapshot of the latest state of balance transfers. In case the hardware is corrupted or the network access is lost, or if the operator itself is compromised or becomes a bad actor, the blockchain rejects all future transfers from the orderbook and returns the funds to its users within 12 seconds.
+- Launched their own Substrate testnet.
 
 [**Pontem Network**](https://pontem.network/) is product testing in an internationally regulated market through a compliance tooling dev platform to streamline[ Diem Association certification processes](https://pontem.network/#https://www.diem.com/en-us/white-paper/#compliance-and-the-prevention-of-illicit-activity). Read more [on their blog](https://pontem.network/posts/substrate-builders-program-milestone1).
 
-* [**Created a MOVE VM pallet**](https://github.com/pontem-network/sp-move-vm), the language and virtual machine for Facebook’s Diem blockchain, now compatible as a Substrate pallet with any Substrate-based blockchain. Also added a MOVE standard library.
-* [**Diem to Polkadot Bridge**](https://github.com/pontem-network/bridge) alpha: by using the Pontem Network to act as a bridge between Diem and Polkadot, this project allows the transfer of assets (mostly standard ERC20 like tokens) between both networks.
-* Many other additional features and improvements, such as improvements to the staking, balances and transaction payment pallets, additions to the Polkadot-js repo, and launching a testnet based on the BABE consensus algorithm.
+- [**Created a MOVE VM pallet**](https://github.com/pontem-network/sp-move-vm), the language and virtual machine for Facebook’s Diem blockchain, now compatible as a Substrate pallet with any Substrate-based blockchain. Also added a MOVE standard library.
+- [**Diem to Polkadot Bridge**](https://github.com/pontem-network/bridge) alpha: by using the Pontem Network to act as a bridge between Diem and Polkadot, this project allows the transfer of assets (mostly standard ERC20 like tokens) between both networks.
+- Many other additional features and improvements, such as improvements to the staking, balances and transaction payment pallets, additions to the Polkadot-js repo, and launching a testnet based on the BABE consensus algorithm.
 
-## Infrastructure track
+### Infrastructure track
 
 [**Apron Labs**](https://apron.network/) is a decentralized platform that provides infrastructure services for dapp developers, dapp users, and operators.
 
-* [**Apron Node**](https://github.com/Apron-Network/apron-node) to enable service providers to be publicly available and on-chain via one-button deployment, through the OCW (off-chain worker) synchronize usage, billing for developers and benefits for providers.
-* [**Apron Market**](https://github.com/Apron-Network/apron-marketplace), a service discovery platform that matches the services provided by infrastructure service providers with the demands of dapp developers. Once completed on-chain, Apron nodes will synchronize infrastructure service data and usage to the smart contract.
-* [**Gateway**](https://github.com/Apron-Network/apron-gateway-p2p) network manages the services and forwards requests from client to service provider. The network also records service usage for each user, which can be checked by the user or service provider.
+- [**Apron Node**](https://github.com/Apron-Network/apron-node) to enable service providers to be publicly available and on-chain via one-button deployment, through the OCW (off-chain worker) synchronize usage, billing for developers and benefits for providers.
+- [**Apron Market**](https://github.com/Apron-Network/apron-marketplace), a service discovery platform that matches the services provided by infrastructure service providers with the demands of dapp developers. Once completed on-chain, Apron nodes will synchronize infrastructure service data and usage to the smart contract.
+- [**Gateway**](https://github.com/Apron-Network/apron-gateway-p2p) network manages the services and forwards requests from client to service provider. The network also records service usage for each user, which can be checked by the user or service provider.
 
-# Milestone 2
+## Milestone 2
 
 The following teams have completed their second milestone since the previous update we shared. Below we have listed the predefined achievements that each team has completed for this milestone.
 
-## Chains Track
+### Chains Track
 
 [**Litentry**](https://www.litentry.com/) Network provides privacy-first, decentralized identity aggregation computing services.
 
-* [**TEE Integration**](https://github.com/litentry/pallet-teerex/tree/litentry): Off-chain workers allow a Substrate node to offload tasks that take too long or too much CPU/memory resources to compute, or have non-deterministic results. In particular there is a set of helpers allowing fetching of HTTP requests and parsing for JSON. An OCTW is an OCW that implements in a trusted execution environment (TEE).
-* [**NFT Pallet**](https://github.com/litentry/litentry-pallets/tree/dev/pallets/nft): The identity NFT is closely related to the user’s on-chain historical behaviors, such as transactions, on-chain governance participation, IDO participation, etc., and can reflect the user’s attributes and creditworthiness.
-* Mobile app for easy access on the go to parachain preparation and token migration.
+- [**TEE Integration**](https://github.com/litentry/pallet-teerex/tree/litentry): Off-chain workers allow a Substrate node to offload tasks that take too long or too much CPU/memory resources to compute, or have non-deterministic results. In particular there is a set of helpers allowing fetching of HTTP requests and parsing for JSON. An OCTW is an OCW that implements in a trusted execution environment (TEE).
+- [**NFT Pallet**](https://github.com/litentry/litentry-pallets/tree/dev/pallets/nft): The identity NFT is closely related to the user’s on-chain historical behaviors, such as transactions, on-chain governance participation, IDO participation, etc., and can reflect the user’s attributes and creditworthiness.
+- Mobile app for easy access on the go to parachain preparation and token migration.
 
-## Infrastructure track
+### Infrastructure track
 
 [**Subsquid**](https://www.subsquid.io/) is an open-source framework for building tailored GraphQL APIs for your blockchain state history.
 
-* [**Hosted Hydra Indexers**](https://docs.subsquid.io/hydra-indexer): a daemon that ingests raw substrate data such as events and extrinsics from a Substrate chain and saves it into a Postgres database. It is typically used in conjunction with [Hydra Indexer Gateway](https://docs.subsquid.io/hydra-indexer-gateway) providing a GraphQL API interface.
-* [**New documentation**](https://docs.subsquid.io/) from the Hydra team about Subsquid.
+- [**Hosted Hydra Indexers**](https://docs.subsquid.io/hydra-indexer): a daemon that ingests raw substrate data such as events and extrinsics from a Substrate chain and saves it into a Postgres database. It is typically used in conjunction with [Hydra Indexer Gateway](https://docs.subsquid.io/hydra-indexer-gateway) providing a GraphQL API interface.
+- [**New documentation**](https://docs.subsquid.io/) from the Hydra team about Subsquid.
 
-***
+---
 
-  
 Have an idea or project built for or on Substrate? The Substrate Builders program can support your project up to launch and will continue to offer longer-term support depending on the project’s needs. [Learn more](https://www.substrate.io/builders-program/) and [apply now](https://docs.google.com/forms/d/e/1FAIpQLSfEYJE3X0RQs3Kucqthe4D8zyUcV1yEvyIw98L2X9_78b4BVA/viewform).
