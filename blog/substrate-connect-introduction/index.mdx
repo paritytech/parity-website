@@ -1,0 +1,61 @@
+---
+title: index
+tags:
+- Parity Substrate
+author: Parity Technologies
+blogTitle: 'Introducing Substrate Connect: Browser-Based Light Clients for Connecting
+  to Substrate Chains'
+slug: blog/introducing-substrate-connect
+date_published: 2021-10-13T18:00:00.000+02:00
+image: "/images/image3.png"
+
+---
+[_Substrate Connect_](https://substrate.io/substrate-connect/)_, a browser-based light client for Substrate-based chains, has landed as the latest addition to Substrate’s technology stack. This eagerly anticipated component of blockchain infrastructure provides the easiest and fastest way to sync with Substrate-based blockchains in a decentralized way, paving the way for more user-friendly dapps and services and a better experience for dapp developers. Substrate Connect represents a huge step forward in pursuit of the Web3 vision, and will allow users to quickly and seamlessly interact with blockchains in the browsers they use on a daily basis._
+
+Based on a vision to make blockchain development as flexible and easy as possible, [Substrate](https://www.substrate.io/) has attracted a rich [ecosystem of blockchain builders](https://substrate.io/ecosystem/projects/) since Parity Technologies founder Gavin Wood first [demonstrated its capabilities at Web3 Summit 2018](https://youtu.be/0IoUZdDi5Is). Substrate Connect goes one step further, offering developers and end-users an easier and much faster way to connect to Substrate-based chains in a fully decentralized, trustless way.
+
+Substrate Connect is a Javascript library providing a fully functional browser-based [light client](https://www.parity.io/blog/what-is-a-light-client/) with an accompanying browser extension, and replaces the need to connect to Substrate chains via RPC nodes. A few lines of code is all that’s needed to provide a better end-user experience for Substrate-based decentralized applications. With Substrate connect, dapp developers no longer need to go through the trouble of running their own local full node, and gain access to effortless light client integrations in their dapps.
+
+While Substrate Connect is exclusively available for Substrate based chains, light clients themselves will soon be an industry standard, as they will enable dapps to quickly sync information from blockchains in a user’s browser or mobile device, all while maintaining trustlessness and decentralization.
+
+## Why does Web3 need Substrate Connect?
+
+Decentralization is a core feature of blockchain networks, however, most blockchain user interfaces in the ecosystem work by connecting via a server to a centralized trusted blockchain node that represents a central point of failure. Generally, if one wants to securely and ‘trustlessly’ interact with a blockchain, syncing a full node is necessary, but this requires a lot of knowledge, effort, and resources. Forcing every end-user to run a full node would be a very bad user experience on a laptop, and virtually impossible on mobile. Because of this, dapp developers rely on external services to connect their applications to the blockchain. These node operator services run at scale but at the cost of centralization.
+
+Because running a local node is so impractical for most users, very few choose to do so. For blockchain technology and Web3 to make further progress in terms of widespread adoption, end-users need a fast, lightweight way to interact with blockchains in the apps they use every day.
+
+## Light client functionality
+
+Light clients solve this major impediment to usability and adoption. Set to be a cornerstone component of Web3 infrastructure, light clients allow interaction with a blockchain in a less resource-intensive way than running a full node, and are embeddable in desktop, web, and mobile applications—the most common ways people interact with the internet. Most importantly, they remain trustless, directly syncing block headers from peer nodes. Light clients work by making requests to an individual full node, syncing the block headers of the blockchain to verify the specific responses (such as an account balance) provided by the full node.
+
+## Truly decentralized apps for the Polkadot ecosystem
+
+Until recently, running light clients in the browser would have required developers to reimplement an entire blockchain client in JavaScript. Substrate Connect provides the infrastructure necessary to run light clients directly in the browser without deeper additional programming efforts needed.
+
+Not only can it be used to provide better experiences for end-users, it also provides a better developer experience, freeing dapp developers from the need to run their own local node. Besides a better development workflow and shorter development times for dapp builders, Substrate Connect provides an interface that enables developers to effortlessly make use of the light-client functionality in their applications.
+
+## Using Substrate Connect
+
+Substrate connect provides a [PolkadotJS API](https://www.npmjs.com/package/@substrate/connect) connected to a bundled node, running on an actual Substrate-compatible node in JavaScript. Please note that this API is likely to change a bit going forward:
+
+![](/images/image2.png)
+
+You can also try it in the browser. Head over to [PolkadotJS/Apps](https://polkadot.js.org/apps/#/explorer), select Polkadot & Parachains, and choose the ‘light client (experimental)’ option as displayed below.
+
+![](/images/pdotjs.png)
+
+## The browser extension
+
+The [browser extension](https://github.com/paritytech/substrate-connect/tree/master/projects/extension) is an optional optimization that will enable resource sharing across browser tabs. Without the extension, Substrate Connect runs in the browser with each browser tab running a single Substrate Connect light client. This route will no doubt negatively impact page loading speed, providing a suboptimal user experience, especially compared to Web2 alternatives.
+
+Besides speed, TLS (Transport Layer Security) validation also affects the usability of Web3 apps. Each TLS connection requires a certificate validation process, and as things stand, the burden for this validation is on TLS clients (the internet browsers themselves). Another benefit of Substrate Connect is that it does not require a TLS certificate to connect to nodes, as the connection is initiated from within the browser extension, which has more access rights than a website.
+
+Substrate Connect works in all major browsers, and when using the extension, it acts as a bridge, as only the extension connects to the blockchain, making it possible for every tab or website to sync with the chain.
+
+## The new standard for dapp development
+
+The importance of light clients for the adoption of blockchain and the development of Web3 apps cannot be understated. Without tools like Substrate Connect, decentralized apps would never be truly decentralized.
+
+Substrate and Polkadot are especially well-suited for integrating light clients compared with legacy blockchain networks, which were not designed with light clients in mind. Design choices made in previous networks makes the integration of light clients suboptimal and impractical in many cases. Substrate and Polkadot, on the other hand, were built from the ground up with light client functionality in mind.
+
+_Learn more about Substrate Connect and get started_ [_here_](https://substrate.io/substrate-connect/)_. Keep up with the latest developments in the Substrate ecosystem on_ [_Twitter_](https://twitter.com/substrate_io)_, and_ [_sign up for the Substrate Developer Newsletter_](https://substrate.io/ecosystem/connect/newsletter) _for news on the latest code updates and helpful developer resources._
