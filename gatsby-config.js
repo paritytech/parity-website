@@ -13,7 +13,7 @@ module.exports = {
     siteUrl: siteUrl,
     blogUrl: `${siteUrl}/blog`,
     defaultLang: `en-US`,
-    image: '/static/images/parity-og-image.jpeg',
+    image: `${siteUrl}/images/parity-og-image.jpeg`,
     description:
       'Parity Technologies builds core blockchain infrastructure. From Parity Ethereum, the most advanced Ethereum client, to Polkadot, the next-generation interoperable blockchain network.',
     keywords: ['Blockchain', 'Polkadot', 'Substrate', 'Web3.0', 'Parity Technologies'],
