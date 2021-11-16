@@ -26,6 +26,7 @@ module.exports = {
     github: 'https://github.com/paritytech/',
     telegram: 'https://t.me/parity_technologies',
     gitter: 'https://gitter.im/paritytech/parity',
+    relayChain: 'https://relaychain.fm/',
   },
   plugins: [
     {
