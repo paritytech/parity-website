@@ -23,13 +23,14 @@ export default function Footer() {
           title
           twitter
           gitter
+          relayChain
         }
       }
     }
   `);
 
   return (
-    <footer className="flex flex-col justify-center bg-footerDark text-white w-screen m-0">
+    <footer className="flex flex-col justify-center bg-footerDark text-white m-0">
       <div className="bg-footerLight w-full flex justify-center">
         <div className="container flex justify-center flex-wrap mt-12 mb-8 mx-6">
           <div className="w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/6">
@@ -107,6 +108,14 @@ export default function Footer() {
               <LocalizedLink to="/events" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'nav-events' })}
               </LocalizedLink>
+              <a
+                href={socialLinks.site.siteMetadata.relayChain}
+                target="_blank"
+                rel="noreferrer"
+                className={navItemsFooter}
+              >
+                Relay Chain Podcast
+              </a>
               <a
                 href={socialLinks.site.siteMetadata.github}
                 target="_blank"
