@@ -34,7 +34,7 @@ export default function GavQoute({ page }: GavQouteProps) {
           <div className="text-center text-white">
             <blockquote className="mb-8 leading-8">
               {page === 'about'
-                ? '"We have the best team in the ecosystem… We take research grade material and turn ideas into products."'
+                ? '"We have I think the best team in the ecosystem... We take research grade material and turn ideas into products."'
                 : page === 'jobs'
                 ? '"I built the company that I want to work in—a company that’s focused on helping the world get the best out of blockchain."'
                 : `"${intl.formatMessage({ id: 'technology-page-gavin-quote' })}"`}
