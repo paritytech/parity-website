@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layouts/Layout';
 import SEO from '../components/layouts/SEO';
 import FeaturedBlogs from '../components/FeaturedBlogs';
@@ -8,28 +7,10 @@ import { useIntl } from 'react-intl';
 import { LocalizedLink } from 'gatsby-theme-i18n';
 import Button from '../components/Button';
 import parityRustImage from '../images/parity-heart-rust.svg';
+import GavQoute from '../components/sections/TechnologyPage/GavQoute';
 
 export default function RustJobsPage() {
   const intl = useIntl();
-  const backgroundImg = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "parity-office.jpg" }) {
-        id
-        childImageSharp {
-          fluid(maxWidth: 2048, quality: 90) {
-            src
-          }
-        }
-      }
-    }
-  `);
-  const bgStyles = {
-    backgroundImage: `url(${backgroundImg.file.childImageSharp.fluid.src})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: `center`,
-    backgroundSize: `cover`,
-  };
-
   return (
     <Layout theme="light">
       <SEO title={intl.formatMessage({ id: 'rust-jobs-page-seo' })} />
@@ -97,21 +78,7 @@ export default function RustJobsPage() {
           </div>
         </div>
       </section>
-      {/* <section className="h-full bg-black">
-        <div style={bgStyles}>
-          <div className="container py-28 max-w-3xl">
-            <div className="text-center text-parityWhite">
-              <blockquote className="mb-8 leading-8 text-parityWhite">
-                {`"${intl.formatMessage({ id: 'rust-jobs-page-fred-quote' })}"`}
-              </blockquote>
-              <h4 className="font-semibold mb-2 text-parityWhite">
-                {intl.formatMessage({ id: 'rust-jobs-page-fred' })}
-              </h4>
-              <span className="text-sm">{intl.formatMessage({ id: 'rust-jobs-page-fred-title' })}</span>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      <GavQoute page="jobs" />
       <section>
         <div className="container">
           <div className="px-4 py-20 md:py-28 md:flex md:justify-between">
