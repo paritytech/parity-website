@@ -97,7 +97,7 @@ export default function RustJobsPage() {
           </div>
         </div>
       </section>
-      <section className="h-full bg-black">
+      {/* <section className="h-full bg-black">
         <div style={bgStyles}>
           <div className="container py-28 max-w-3xl">
             <div className="text-center text-parityWhite">
@@ -111,7 +111,7 @@ export default function RustJobsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section>
         <div className="container">
           <div className="px-4 py-20 md:py-28 md:flex md:justify-between">

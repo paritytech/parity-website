@@ -43,13 +43,6 @@ export default function ParityTeam() {
         </div>
         <div className="md:flex md:justify-center mb-10">
           <FullScreenYouTube
-            image={images.jutta.childImageSharp.fluid.src}
-            name={intl.formatMessage({ id: 'homepage-team-jutta' })}
-            title={intl.formatMessage({ id: 'homepage-team-jutta-title' })}
-            videoId="Gsy2Sl1EtFs"
-            link="/about/jutta-steiner/"
-          />
-          <FullScreenYouTube
             image={images.gavin.childImageSharp.fluid.src}
             name={intl.formatMessage({ id: 'homepage-team-gavin' })}
             title={intl.formatMessage({ id: 'homepage-team-gavin-title' })}
