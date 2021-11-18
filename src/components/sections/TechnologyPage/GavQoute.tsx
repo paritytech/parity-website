@@ -7,7 +7,6 @@ interface GavQouteProps {
 }
 
 export default function GavQoute({ page }: GavQouteProps) {
-  console.log(page);
   const intl = useIntl();
   const backgroundImg = useStaticQuery(graphql`
     {
