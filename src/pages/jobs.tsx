@@ -110,7 +110,7 @@ export default function JobsPage() {
           </div>
         </div>
       </section>
-      <section className="h-full bg-black">
+      {/* <section className="h-full bg-black">
         <div style={bgStyles}>
           <div className="container py-28 max-w-3xl">
             <div className="text-center text-parityWhite">
@@ -124,7 +124,7 @@ export default function JobsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section id="jobboard" className="pb-8">
         <div className="container">
           <div className="text-center py-16">
