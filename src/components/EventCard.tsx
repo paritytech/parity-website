@@ -13,11 +13,11 @@ interface EventCardProps {
 export default function BlogCard(props: EventCardProps) {
   const { dateTime, location, title, description, cta, link, image } = props;
   const buttonStyles =
-    'bg-whitefont-title text-base text-textDark opacity-90 px-24 md:px-20 py-2 border border-gray-300 focus:outline-none uppercase';
+    'bg-whitefont-title text-base text-textDark opacity-90 px-20 py-2 border border-gray-300 focus:outline-none uppercase';
   const hoverStyles = 'hover:border-gray-600 transition-transform transform hover:-translate-y-0.5';
 
   return (
-    <article className="bg-white mx-4 my-8 rounded-lg shadow max-w-sm">
+    <article className="bg-white m-4 lg:mr-8 lg:ml-0 my-8 rounded-lg shadow max-w-sm">
       <div className="object-cover">
         <a href={link}>
           <img className="rounded-t-lg" src={image} alt="Parity Event Main Image" />
@@ -28,12 +28,12 @@ export default function BlogCard(props: EventCardProps) {
           <p className="text-xs text-parityPink mb-0">{dateTime}</p>
           <p className="text-xs mb-0">{location}</p>
         </div>
-        <div className="pt-3 pb-6 h-36">
+        <div className="pt-3 pb-6 h-40">
           <p className="font-normal my-0">{title}</p>
           <p className="text-sm font-light my-0">{description}</p>
         </div>
         <div className="flex">
-          <a href={link} className="w-max mx-auto">
+          <a href={link} className="mx-auto">
             <button type="button" className={`${buttonStyles} ${hoverStyles}`}>
               {cta}
             </button>

@@ -15,33 +15,61 @@ export default function EventsPage() {
   return (
     <Layout>
       <SEO title={intl.formatMessage({ id: 'events-page-seo' })} />
-      <section className="bg-hero-pattern-dark bg-parityGray bg-cover bg-center bg-no-repeat -mt-32 w-screen">
-        <div className="h-full md:pt-32">
-          <div className="container h-full text-center pt-48 md:pt-24 pb-12 px-2 md:flex md:flex-col md:justify-center md:max-w-screen-md">
+      <section className="bg-hero-pattern-dark bg-parityGray bg-cover bg-center bg-no-repeat -mt-32">
+        <div className="md:pt-32">
+          <div className="container text-center pt-48 md:pt-24 pb-12 px-2 md:flex md:flex-col md:justify-center md:max-w-screen-md">
             <h3 className="text-textDark text-center font-normal md:text-5xl md:mb-8">
               {intl.formatMessage({ id: 'events-page-title' })}
             </h3>
           </div>
         </div>
       </section>
-      <section className="bg-parityGray pb-20">
+      <section className="bg-parityGray px-6">
         <div className="container">
-          <div className="flex flex-wrap justify-center md:justify-start">
-            {events.map((event: any, index) => {
-              return (
-                <div key={index}>
-                  <EventCard
-                    dateTime={event.dateTime}
-                    location={event.location}
-                    title={event.title}
-                    description={event.description}
-                    cta={event.cta}
-                    link={event.link}
-                    image={event.image}
-                  />
-                </div>
-              );
-            })}
+          <div className="flex flex-wrap justify-center lg:justify-start">
+            {events
+              .filter(event => new Date(event.expiration_date).getTime() - new Date().getTime() > 0)
+              .map((event: any, index) => {
+                return (
+                  <div key={index}>
+                    <EventCard
+                      dateTime={event.dateTime}
+                      location={event.location}
+                      title={event.title}
+                      description={event.description}
+                      cta={event.cta}
+                      link={event.link}
+                      image={event.image}
+                    />
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+      </section>
+      <section className="bg-parityGray px-6">
+        <div className="container">
+          <div className="text-center py-8 md:py-16 md:flex md:flex-col md:justify-center">
+            <h3 className="text-textDark text-center font-normal md:text-5xl mb-0 md:mb-8">Previous Events</h3>
+          </div>
+          <div className="flex flex-wrap justify-center lg:justify-start">
+            {events
+              .filter(event => new Date(event.expiration_date).getTime() - new Date().getTime() < 0)
+              .map((event: any, index) => {
+                return (
+                  <div key={index}>
+                    <EventCard
+                      dateTime={event.dateTime}
+                      location={event.location}
+                      title={event.title}
+                      description={event.description}
+                      cta={'LEARN MORE'}
+                      link={event.link}
+                      image={event.image}
+                    />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </section>
