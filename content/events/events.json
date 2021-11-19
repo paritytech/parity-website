@@ -3,35 +3,32 @@
     {
       "title": "Substrate Seminar",
       "description": "Join the collaborative learning call where we learn about Substrate together!",
-      "recurring": true,
       "dateTime": "Every other Tuesday",
       "location": "ONLINE",
       "cta": "Learn More",
       "link": "https://www.crowdcast.io/e/substrate-seminar?utm_source=parity.io&utm_medium=referral&utm_campaign=crowdcast&utm_content=seminar%20parity&utm_term=parity",
       "image": "/images/substrate-seminar_final.png",
-      "expiration_date": ""
+      "expiration_date": "2025-11-18"
     },
     {
       "title": "Sub0 Online",
       "description": "The Biggest Substrate Event of the Year! At the cutting edge of blockchain: Tech Deep Dives, Workshops, Networking, All levels.",
-      "recurring": false,
       "dateTime": "October 13th-14th, 2021",
       "location": "Online",
       "cta": "Register",
       "link": "https://sub0.substrate.io/?utm_source=parity.io&utm_medium=referral&utm_campaign=sub0%202021&utm_content=register&utm_term=parity&ref=0ae106a23f5a",
       "image": "/images/sub0_2021_event_banner.png",
-      "expiration_date": "October 15, 2021"
+      "expiration_date": "2021-10-15"
     },
     {
       "title": "Parity & Friends Meetup: NFTs",
       "description": "Particularly related to Polkadot and Kusama, our excellent line up of speakers from Web3 Foundation and Ternoa discuss the beauty and the tech, from crypto art to securing data transmission. ",
-      "recurring": false,
       "dateTime": "July 8th, 2021",
       "location": "ONLINE",
       "cta": "Learn more",
       "link": "https://www.crowdcast.io/e/parity_friends/2?utm_source=parity.io&utm_medium=referral&utm_campaign=crowdcast&utm_content=meetup%20parity%20website&utm_term=parity%20",
       "image": "/images/parityfriends_-_crowdcast_-1-1.png",
-      "expiration_date": "July 9th, 2021"
+      "expiration_date": "2021-07-09"
     }
   ]
 }
