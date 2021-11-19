@@ -17,7 +17,7 @@ export default function BlogCard(props: EventCardProps) {
   const hoverStyles = 'hover:border-gray-600 transition-transform transform hover:-translate-y-0.5';
 
   return (
-    <article className="bg-white m-4 lg:mr-8 lg:ml-0 my-8 rounded-lg shadow max-w-sm">
+    <article className="bg-white md:mx-4 my-8 rounded-lg shadow">
       <div className="object-cover">
         <a href={link}>
           <img className="rounded-t-lg" src={image} alt="Parity Event Main Image" />
@@ -28,12 +28,12 @@ export default function BlogCard(props: EventCardProps) {
           <p className="text-xs text-parityPink mb-0">{dateTime}</p>
           <p className="text-xs mb-0">{location}</p>
         </div>
-        <div className="pt-3 pb-6 h-40">
+        <div className="pt-3 pb-6 h-36 md:h-40">
           <p className="font-normal my-0">{title}</p>
           <p className="text-sm font-light my-0">{description}</p>
         </div>
         <div className="flex">
-          <a href={link} className="mx-auto">
+          <a href={link} target="_blank" rel="noreferrer" className="mx-auto">
             <button type="button" className={`${buttonStyles} ${hoverStyles}`}>
               {cta}
             </button>
