@@ -23,8 +23,9 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /ethereum /technologies/ethereum
 
 # About Section
-/jutta-steiner/ /about/jutta-steiner/
-/gavin-wood/ /about/gavin-wood/
+/jutta-steiner/       / 301!
+/about/jutta-steiner/ / 301!
+/gavin-wood/          /about/gavin-wood/
 
 # Blog Page Redirects
 /blog/page/ /blog
@@ -48,7 +49,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /author/joe/	/blog/author/joe-petrowski
 /author/alexandra/	/blog/author/alexandra-heller
 /author/phil/	/blog/author/phil-lucsok
-/author/jef/	/blog/author/jack-fransham"
+/author/jef/	/blog/author/jack-fransham
 /author/jutta/	/blog/author/jutta-steiner
 /author/gav/	/blog/author/gavin-wood
 /author/gautam/	/blog/author/gautum-dhameja
