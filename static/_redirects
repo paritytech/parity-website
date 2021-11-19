@@ -23,8 +23,9 @@ http://parity-prod.netlify.app/  https://www.parity.com 301!
 /ethereum /technologies/ethereum
 
 # About Section
-/jutta-steiner/ /about/jutta-steiner/
-/gavin-wood/ /about/gavin-wood/
+/jutta-steiner/       / 301!
+/about/jutta-steiner/ / 301!
+/gavin-wood/          /about/gavin-wood/
 
 # Blog Page Redirects
 /blog/page/ /blog
