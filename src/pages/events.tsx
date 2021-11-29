@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/layouts/Layout';
 import SEO from '../components/layouts/SEO';
 import Social from '../components/Social';
@@ -8,42 +8,59 @@ import { LocalizedLink } from 'gatsby-theme-i18n';
 import EventCard from '../components/EventCard';
 import eventsData from '../../content/events/events.json';
 
+interface IEvents {
+  title: string;
+  description: string;
+  dateTime: string;
+  location: string;
+  cta: string;
+  link: string;
+  image: string;
+  expiration_date: string;
+}
+
 export default function EventsPage() {
   const intl = useIntl();
   const { events } = eventsData;
+  const [upcomingEvents, SetUpcomingEvents] = useState<IEvents[]>([]);
+  const [pastEvents, SetPastEvents] = useState<IEvents[]>([]);
+
+  useEffect(() => {
+    events.forEach(event => {
+      if (new Date(event.expiration_date).getTime() - new Date().getTime() > 0) {
+        SetUpcomingEvents(prevState => [...prevState, event]);
+      } else {
+        SetPastEvents(prevState => [...prevState, event]);
+      }
+    });
+  }, []);
 
   return (
     <Layout>
       <SEO title={intl.formatMessage({ id: 'events-page-seo' })} />
-      <section className="bg-hero-pattern-dark bg-parityGray bg-cover bg-center bg-no-repeat -mt-32">
-        <div className="md:pt-32">
-          <div className="container text-center pt-48 md:pt-24 pb-12 px-2 md:flex md:flex-col md:justify-center md:max-w-screen-md">
-            <h3 className="text-textDark text-center font-normal md:text-5xl md:mb-8">
-              {intl.formatMessage({ id: 'events-page-title' })}
+      <section className="bg-parityGray bg-hero-pattern-dark bg-cover bg-center bg-no-repeat -mt-32 px-4">
+        <div className="container pt-32">
+          <div className="text-center py-8 md:py-16 md:flex md:flex-col md:justify-center">
+            <h3 className="text-textDark text-center font-normal md:text-5xl mb-0 md:mb-8">
+              Join the Next Parity Events
             </h3>
           </div>
-        </div>
-      </section>
-      <section className="bg-parityGray px-4">
-        <div className="container">
           <div className="flex flex-wrap">
-            {events
-              .filter(event => new Date(event.expiration_date).getTime() - new Date().getTime() > 0)
-              .map((event: any, index) => {
-                return (
-                  <div key={index} className="w-1/1 md:w-1/2 xl:w-1/3">
-                    <EventCard
-                      dateTime={event.dateTime}
-                      location={event.location}
-                      title={event.title}
-                      description={event.description}
-                      cta={event.cta}
-                      link={event.link}
-                      image={event.image}
-                    />
-                  </div>
-                );
-              })}
+            {upcomingEvents.map((event: any, index) => {
+              return (
+                <div key={index} className="w-1/1 md:w-1/2 xl:w-1/3">
+                  <EventCard
+                    dateTime={event.dateTime}
+                    location={event.location}
+                    title={event.title}
+                    description={event.description}
+                    cta={'LEARN MORE'}
+                    link={event.link}
+                    image={event.image}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -53,23 +70,21 @@ export default function EventsPage() {
             <h3 className="text-textDark text-center font-normal md:text-5xl mb-0 md:mb-8">Previous Events</h3>
           </div>
           <div className="flex flex-wrap">
-            {events
-              .filter(event => new Date(event.expiration_date).getTime() - new Date().getTime() < 0)
-              .map((event: any, index) => {
-                return (
-                  <div key={index} className="w-1/1 md:w-1/2 xl:w-1/3">
-                    <EventCard
-                      dateTime={event.dateTime}
-                      location={event.location}
-                      title={event.title}
-                      description={event.description}
-                      cta={'LEARN MORE'}
-                      link={event.link}
-                      image={event.image}
-                    />
-                  </div>
-                );
-              })}
+            {pastEvents.map((event: any, index) => {
+              return (
+                <div key={index} className="w-1/1 md:w-1/2 xl:w-1/3">
+                  <EventCard
+                    dateTime={event.dateTime}
+                    location={event.location}
+                    title={event.title}
+                    description={event.description}
+                    cta={'LEARN MORE'}
+                    link={event.link}
+                    image={event.image}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
