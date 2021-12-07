@@ -9,20 +9,20 @@ export default function Banner() {
   }, [currentPath]);
 
   return (
-    <div
-      className={` ${
-        bannerData.active && bannerData.pages.includes(currentPath) ? `block` : `hidden`
-      } bg-textDark text-parityWhite tracking-wide text-center text-sm px-6 py-3`}
-    >
-      <p className="mb-0">
-        {bannerData.text}
-        {` `}
-        {bannerData.emoji}
-        {` `}{' '}
-        <a href={bannerData.url} target="_blank" rel="noreferrer">
-          {bannerData['link-text']}
-        </a>{' '}
-      </p>
-    </div>
+    <>
+      {bannerData.active && bannerData.pages.includes(currentPath) && (
+        <div className="bg-textDark text-parityWhite tracking-wide text-center text-sm px-6 py-3">
+          <p className="mb-0">
+            {bannerData.text}
+            {` `}
+            {bannerData.emoji}
+            {` `}{' '}
+            <a href={bannerData.url} target="_blank" rel="noreferrer">
+              {bannerData['link-text']}
+            </a>{' '}
+          </p>
+        </div>
+      )}
+    </>
   );
 }
