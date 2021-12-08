@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import TransparentPixel from './components/site/TransparentPixel';
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -14,11 +16,7 @@ export default function HTML(props) {
         {props.preBodyComponents}
         <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}
-        <img
-          className="opacity-0 absolute h-0 -z-10"
-          src="https://cloudcdn-img.com/static/prt/spacer.gif"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+        <TransparentPixel />
       </body>
     </html>
   );
