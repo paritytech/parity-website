@@ -1,0 +1,81 @@
+---
+title: index
+tags:
+- Parity Substrate
+- Community
+author: Parity Technologies
+blogTitle: 'Substrate Builders Program Milestone Update: December 2021'
+slug: blog/substrate-builders-program-milestone-update-december-2021
+date_published: 2021-12-08T00:00:00+01:00
+image: "/images/substrate-builders-program-december-24.png"
+
+---
+Every month Parity announces the latest updates from teams in the Substrate Builders Program. The December 2021 milestone update introduces four teams that have reached their first milestone, one reaching their second milestone, and another reaching their third and final milestone.
+
+Over 50 [**Substrate Builders Program**](https://substrate.io/ecosystem/substrate-builders-program/) participants have been continuously completing milestones with support from Parity Technologies as a part of building out the Substrate ecosystem. The program allows teams building Substrate-based blockchains, applications, or ecosystem components to benefit from Parity’s extensive experience and resources, thereby setting themselves up for success.
+
+Projects in the Builders Program are allocated to one of three tracks: the Infrastructure Track, the Chains Track, or the Application Track. Teams accepted into the Substrate Builders Program receive support from Parity on their technical and community roadmaps, outlying major milestones to achieve their goals and launch their project.
+
+## Milestone 1
+
+The following teams have completed their **first milestone** since the previous update we shared. Below we have listed each team’s pre-defined achievements that they have completed.
+
+## Chains track
+
+[**Ajuna Network**](https://ajuna.io/) is a gaming network that includes a full-featured UnitySDK and UnrealSDK for Substrate.
+
+* [**Substrate .NET API**](https://github.com/ajuna-network/SubstrateNetApi/wiki): an API for handling access Substrate-Nodes with C#, the API has been written in NET Standard 2.0 to provide the best possible support in[ Unity](https://docs.unity3d.com/2021.2/Documentation/Manual/dotnetProfileSupport.html)
+* [**SubstrateNetWallet**](https://github.com/ajuna-network/SubstrateNetApi/wiki/Wallet): a wallet built on top of the SubstrateNetApp that offers common functionalities.
+* [**Ajuna Service Layer**](https://github.com/ajuna-network/Ajuna.ServiceLayer): a module to easily implement Substrate storage services for use with Ajuna Network
+
+[**Bit.Country**](https://bit.country/) is a platform for user-created metaverses and games with opportunities to incentivize players and developers.
+
+* [**Bit.Country Token Economy**](https://github.com/bit-country/Metaverse-Network/tree/master/pallets/tokenization): a pallet that establishes Bit.Country’s current tokenomics and distribution rules.
+* Bit.Country Level Governance: customized governance pallet to match the roadmap for Bit.Country
+* [Bit.Country Level and Global Marketplace](https://github.com/bit-country/Metaverse-Network/blob/master/pallets/swap/src/lib.rs): an NFT marketplace that serves as the platform for swapping assets in the games and metaverses built on Bit.Country
+
+[**Subspace**](https://subspace.network/) is an open, scalable platform for both storage and computation that is fully interoperable with any layer one.
+
+* Implemented consensus based on **_Proofs-of-Archival-Storage_**, completing the upgrade from _Spartan,_ a proof-of-_useless_-space, to Subspace, a proof-of-_useful_-storage.
+* Created an **Object Storage API**, allowing developers to add data to the Subspace blockchain by embedding it within a special transaction and later fetching the data from farmers.
+* Launched the [**Aries Test Network**](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftest-rpc.subspace.network#/explorer) while exposing it over a public RPC endpoint accessible within the Polkadot-JS apps UI, which hosts their first storage dapp, the[ Kusama Relayer](https://testnet-relayer.subspace.network/).
+
+## Infrastructure track
+
+[**Automata Network**](https://www.ata.network/) is a middleware stack for creating privacy-preserving defi applications.
+
+* Launched[ **ContextFree**](https://medium.com/atanetwork/introducing-contextfree-the-canary-network-for-automata-ee3e5ffa5bbd), a full-fledged canary network. Rollout of features as planned with the release of Automata’s [roadmap](http://xata.to/roadmap).
+* Constructed a **cross-chain token bridge** between ERC20 token on EVM-based network and a native token on the Substrate-based canary network.
+* Implementation of supplementary services and integrations for ContextFree. This includes a blockchain dashboard, token faucet, SS58 Prefix integration in Paritytech/Substrate github repository, and introduction of FiniteState, an experimental testnet for features testing, and upgrades prior to deployment on the Canary Network
+* Addition of **pallets for Geode Execution Environmen**t. Features include basic management logics for Attestor, Geode and Service, basic attestation service, liveness monitoring, service scheduling and dispatching
+
+## Milestone 2
+
+The following team has completed their **second** milestone since the previous updates we shared. Below we have listed the predefined achievements that have been completed for this milestone.
+
+## Chains Track
+
+[**Chainflip Labs**](https://chainflip.io/) is a decentralized, trustless protocol that enables cross-chain swaps between different blockchains.
+
+* Private State Chain Testnet: will launch a private testnet including stake witnessing, reward emissions, online monitoring and vault rotations.
+* Initial internal release of the Chainflip Engine with MPC Schnorr Signatures and transaction broadcasting to Ethereum
+* Initial internal release of the Chainflip Staking Portal Web App, to facilitate interaction with the system
+* Deployment of the Ethereum Smart Contracts on the Rinkeby testnet
+* Comprehensive documentation for setting up a Validator Node and unit test suites for the Chainflip State Chain and Chainflip Engine
+
+## Milestone 3
+
+The following team has completed their **third and final** milestone since the previous updates we shared. Below we have listed the predefined achievements that have been completed for this milestone.
+
+## Applications Track
+
+[**Firefly**](https://firefly.exchange/) (formerly **dTrade**) is a decentralized exchange that brings fast trading to DeFi, measured by the time-to-settlement and peak TPS, and is secured by the Kusama and Polkadot Relay Chains via Moonriver and Moonbeam.
+
+* Core contracts deployed
+* Exchange architecture finalized and implemented
+* Deployed dTrade on Moonriver, with finalized plans of deploying Firefly on Polkadot.
+* More details on their [blog post here](https://firefly.exchange/blog/brand-upgrade-dtrade-moves-to-kusama-welcomes-firefly-to-polkadot).
+
+***
+
+Have an idea or project built for or on Substrate? The Substrate Builders program can support your project up to launch and will continue to offer longer-term support depending on the project’s needs. [Learn more](https://www.substrate.io/builders-program/) and [apply now](https://docs.google.com/forms/d/e/1FAIpQLSfEYJE3X0RQs3Kucqthe4D8zyUcV1yEvyIw98L2X9_78b4BVA/viewform).
