@@ -13,7 +13,7 @@ export default function ParityTech() {
         id
         publicURL
       }
-      polkadot: file(relativePath: { eq: "icon-polkadot.svg" }) {
+      polkadot: file(relativePath: { eq: "polkadot_token_polkadotToken_pink.svg" }) {
         id
         publicURL
       }

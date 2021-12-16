@@ -13,7 +13,7 @@ export default function HeroPattern() {
         id
         publicURL
       }
-      polkadot: file(relativePath: { eq: "icon-polkadot-light.svg" }) {
+      polkadot: file(relativePath: { eq: "polkadot_token_polkadot_token_white.svg" }) {
         id
         publicURL
       }
