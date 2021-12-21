@@ -46,7 +46,7 @@
     "gatsby-theme-i18n-react-intl": "^1.0.4",
     "gatsby-transformer-sharp": "^2.9.0",
     "mdx-utils": "^0.2.0",
-    "postcss": "^8.2.2",
+    "postcss": "^8.2.10",
     "prism-react-renderer": "^1.2.0",
     "prismjs": "^1.25.0",
     "react": "^16.13.1",
