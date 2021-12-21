@@ -130,7 +130,7 @@ export default function BugBountyPage() {
                   Instead, use your own accounts or test accounts for security research purposes.
                 </li>
                 <li className="leading-relaxed">
-                  Don’t defraud,harm, or violate the privacy of Parity Technologies Ltd or its users during your
+                  Don’t defraud, harm, or violate the privacy of Parity Technologies Ltd or its users during your
                   research; you should make a good faith effort to not interrupt or degrade our services.
                 </li>
                 <li className="leading-relaxed">
