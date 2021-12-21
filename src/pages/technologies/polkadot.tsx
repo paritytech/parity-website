@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/layouts/Layout';
 import Button from '../../components/Button';
 import { useIntl } from 'react-intl';
-import polkadotLogo from '../../images/logo-polkadot.svg';
+import polkadotLogo from '../../images/polkadot_logo_horizontal_pink_black.svg';
 import Social from '../../components/Social';
 
 export default function PolkadotPage() {
