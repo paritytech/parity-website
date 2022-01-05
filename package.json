@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-theme-parity-website",
+  "name": "parity-website-gatsby",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-theme-parity-website",
-  "author": "Parity WebDev Team",
+  "description": "parity-website-gatsby",
+  "author": "Parity Web Guild",
   "keywords": [
     "gatsby",
     "parity",
