@@ -68,7 +68,7 @@ use `yarn clean` if the server is stale or having issues reloading in your brows
 
   - PR providing new features: open PR against `develop` branch
   - PR providing hotfixes open only against `main` (fixes will be merged into develop with next features)
-  - Content Team uses Forestry CMS to make changes directly to `develop` branch.  Once finished, Content team requests a review and push to production that is handled by Web Guild.  
+  - Content Team uses Forestry CMS to make changes directly to `frstry-cms` branch.  Once finished, Content team requests a review and push to production that is handled by Web Guild, by merging branch to `main` and/or `develop` if needed.  
 
 ### Deploying new features
   - `develop` <- `main`: update content and fixes 
