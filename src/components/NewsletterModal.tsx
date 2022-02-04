@@ -43,9 +43,6 @@ const NewsletterModal = (props: NewsletterModalProps) => {
       })
       .catch(error => {
         setFailedSubmission(!failedSubmission);
-        setTimeout(() => {
-          setFailedSubmission(false);
-        }, 10000);
         console.log('Request failed', error);
       });
   };
