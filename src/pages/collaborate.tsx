@@ -3,6 +3,7 @@ import Layout from '../components/layouts/Layout';
 import SEO from '../components/layouts/SEO';
 import Social from '../components/Social';
 import { useIntl } from 'react-intl';
+import HubspotFormReact from '../components/HubspotFormReact';
 
 export default function ApplicantNoticePage() {
   const intl = useIntl();
@@ -22,19 +23,9 @@ export default function ApplicantNoticePage() {
           </div>
         </div>
       </section>
-      <section className="bg-parityWhite pb-20">
+      <section className="bg-parityWhite px-4 pb-20 md:pb-40">
         <div className="flex justify-center">
-          <div className="flex-grow place-content-center">
-            <iframe
-              className="w-full h-googleForm overflow-y-hidden"
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdBADP87fFHLoi_9nNujkK-AnMr6uopojaeJkTWUdainsPFZA/viewform?embedded=true"
-              width="640"
-              height="1365"
-              frameBorder="0"
-            >
-              Loading…
-            </iframe>
-          </div>
+          <HubspotFormReact />
         </div>
       </section>
       <Social />
