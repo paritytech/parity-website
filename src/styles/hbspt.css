@@ -66,6 +66,10 @@ input.hs-input[type='text'] {
   @apply focus:outline-none focus:border-transparent focus:ring-2 focus:ring-parityPink;
 }
 
+.hs-input {
+  width: 100% !important;
+}
+
 .hs-fieldtype-textarea label {
   @apply flex justify-items-start;
 }
@@ -126,3 +130,4 @@ textarea {
 #hubspotForm .hs-richtext[data-reactid='.hbspt-forms-1.2.3'] p {
   font-size: 12px !important;
 }
+

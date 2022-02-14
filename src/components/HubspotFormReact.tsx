@@ -17,7 +17,12 @@ export default function HubspotFormReact() {
               <p className="mt-20 text-xs text-center text-gray-400 font-sans">
                 If the content does not appear correctly, <br />
                 follow this{' '}
-                <a href="/" target="_blank" rel="noopener noreferrer" className="underline">
+                <a
+                  href="https://share.hsforms.com/1doTFiYp-TvufSsgnDArBJg4iqge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
                   link
                 </a>
                 .
