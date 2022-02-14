@@ -22,7 +22,12 @@
 }
 
 #hubspotForm label {
-  @apply flex items-center justify-start;
+  @apply inline-block ml-1;
+}
+
+label.hs-form-booleancheckbox-display {
+  display: flex !important;
+  @apply justify-start items-center;
 }
 
 .hs-richtext {
@@ -60,13 +65,14 @@
 
 .hs_email input,
 input.hs-input[type='text'] {
-  @apply w-full text-lg;
-  @apply px-4 py-4 my-4 mb-2;
+  width: 100% !important;
+  @apply text-lg;
+  @apply px-4 py-4 mb-2;
   @apply bg-gray-50;
   @apply focus:outline-none focus:border-transparent focus:ring-2 focus:ring-parityPink;
 }
 
-.hs-input {
+.hs-input[type='email'] {
   width: 100% !important;
 }
 
@@ -79,7 +85,8 @@ input.hs-input[type='text'] {
 }
 
 textarea {
-  @apply mb-4 w-full h-32;
+  @apply mb-4 h-32;
+  width: 100% !important;
 }
 /* ERROR MESSAGE EMAIL */
 .hs-error-msg {
@@ -123,8 +130,7 @@ textarea {
 }
 
 #hubspotForm .legal-consent-container .hs-richtext:nth-last-of-type(2) {
-  @apply text-base;
-  font-size: 12px;
+  @apply text-sm;
 }
 
 #hubspotForm .hs-richtext[data-reactid='.hbspt-forms-1.2.3'] p {
