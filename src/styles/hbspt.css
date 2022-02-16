@@ -9,7 +9,7 @@
 }
 
 #hubspotForm ul {
-  @apply my-6;
+  @apply my-3;
 }
 
 /* ALL LIST ITEMS */
@@ -63,6 +63,16 @@ label.hs-form-booleancheckbox-display {
   @apply w-full mb-4;
 }
 
+.input {
+  margin-right: 0px !important;
+}
+
+@media (min-width: 481px) {
+  .hs_firstname {
+    padding-right: 8px !important;
+  }
+}
+
 .hs_email input,
 input.hs-input[type='text'] {
   width: 100% !important;
@@ -90,7 +100,8 @@ textarea {
 }
 /* ERROR MESSAGE EMAIL */
 .hs-error-msg {
-  @apply w-full text-xs text-parityPink text-center sm:text-left;
+  color: #FF1864 !important;
+  @apply w-full text-xs text-center sm:text-left;
 }
 
 .no-list .hs-error-msgs .inputs-list {
@@ -105,7 +116,6 @@ textarea {
 #hubspotForm input[type='submit'] {
   @apply bg-parityPink cursor-pointer font-title text-lg text-white font-semibold opacity-90 tracking-wider px-12 py-2 rounded-sm focus:outline-none uppercase;
   @apply transition-transform transform hover:-translate-y-0.5;
-  @apply focus:bg-buttonRed;
 }
 
 .hs_submit {
@@ -136,4 +146,3 @@ textarea {
 #hubspotForm .hs-richtext[data-reactid='.hbspt-forms-1.2.3'] p {
   font-size: 12px !important;
 }
-

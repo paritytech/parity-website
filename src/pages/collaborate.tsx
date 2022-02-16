@@ -23,7 +23,7 @@ export default function ApplicantNoticePage() {
           </div>
         </div>
       </section>
-      <section className="bg-parityWhite px-4 pb-20 md:pb-40">
+      <section className="bg-parityWhite px-4 pb-20 md:pb-40 min-h-heroMinLg">
         <div className="flex justify-center">
           <HubspotFormReact />
         </div>
