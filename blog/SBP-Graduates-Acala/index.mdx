@@ -1,0 +1,64 @@
+---
+title: index
+tags:
+- Polkadot
+- Parity Substrate
+author: Parity Technologies
+blogTitle: 'SBP Graduates: Acala'
+slug: blog/substrate-builders-program-graduates-acala
+date_published: 2022-02-17T00:00:00.000+01:00
+image: "/images/sbp-acala.jpeg"
+
+---
+_SBP Graduates highlights teams that have successfully completed the Substrate Builders Program and launched a parachain on Polkadot. This post takes a look at the first project to win a parachain auction on Polkadot:_ [_Acala_](https://acala.network/)_._
+
+The name Acala comes from the immovable gatekeeper in Buddhism, representing the foundational aspects of stablecoins in the DeFi ecosystem, and the broader blockchain ecosystem altogether. Acala’s mission is to help establish a foundation of financial tools and infrastructure in the Polkadot and Kusama networks and beyond.
+
+One of the first ever teams to adopt Substrate as their blockchain framework, Acala has benefited from the direct support of the Substrate Builders Program from start to finish — from the first fork of Substrate to [winning the first parachain slot auction](https://www.coindesk.com/tech/2021/11/18/acala-wins-first-polkadot-parachain-auction-with-13b-in-dot-committed/) on Polkadot.
+
+Acala is an Ethereum-compatible platform for financial applications to use smart contracts or built-in protocols with out-of-the-box cross-chain capabilities and robust security. It offers a suite of financial applications including a multi-collateral stablecoin, a decentralized exchange, and minimal fees that can be paid in several different tokens.
+
+_“Acala is a DeFi and liquidity hub for Polkadot that leverages Substrate to provide a parachain and Ethereum-compatible dapp platform customized for DeFi developers and users. Substrate allows us to build DeFi primitives and optimizations to improve developer and user experience, while Substrate and Polkadot’s upgradability enables us to future-proof our chain.” -_ Bryan Chen, Co-founder of Acala
+
+Read the Acala [case study at Substrate.io](https://substrate.io/ecosystem/projects/case-studies/acala/)
+
+## **The journey through the Substrate Builders Program**
+
+Acala is one of the 17 inaugural participants in the Substrate Builders Program, which was first [announced](https://www.parity.io/blog/announcing-the-initial-participants-in-the-substrate-builders-program/) on March 5th, 2020. Having built their entire network early on, starting at nearly the beginning of Substrate’s lifetime, the team has made numerous achievements -— too many to list here. However, among the achievements they’ve made along the way from Substrate node template to winning a parachain slot on Polkadot, there are a few major highlights worth noting:
+
+* The development and launch of the **Mandala testnet**, a Substrate-based chain to test out the first developments building a DeFi chain on Substrate.
+
+* The development, launch, and parachain onboarding of **Karura**, Acala’s canary network on Kusama. This live, value-bearing proving ground has provided the community with a chance to experience the DeFi hub created by Acala while testing its limits and features.
+
+* The development and implementation of a set of **Substrate pallets** with different capabilities:
+  * The [Transaction Payment pallet](https://github.com/AcalaNetwork/Acala/blob/master/modules/transaction-payment/src/lib.rs) handles the fees to be paid in different assets. It uses a DEX to handle the transaction fees, and the SignedExtension to execute them.
+  * The Transaction Payment pallet is tightly coupled with the [Oracle pallet](https://github.com/open-web3-stack/open-runtime-module-library/blob/master/oracle/src/lib.rs), which is feeless and equipped with the latest MEV protections, thanks to the way Substrate allows each pallet to be built.
+  * The Oracle pallet leverages the Weight Class in Substrate and the ability to customize the information to be dispatched.
+  * Acala also built its own implementation of the [EVM pallet](https://github.com/AcalaNetwork/Acala/blob/master/modules/evm/src/lib.rs), leveraging the extensibility property of all pallets in Substrate.
+
+* Last but not least, the team has built a community which helped it win the first-ever parachain slot auction on Polkadot, with **Acala network going live on December 18th** as a parachain. The Acala parachain will host a decentralized exchange, pricing oracles, EVM support, and a multi-collateral stablecoin, with many more features coming, all of which are run and governed by the Acala community.
+
+## **What can you do on Acala?**
+
+Acala aims to be a DeFi backbone of the Polkadot network, with natively integrated DeFi primitives built-in and added via governance, as well as a specialized EVM environment for dapp and chain developers.
+
+For developers, there are three ways to build with Acala:
+
+1. Deploy permissioned protocol [**runtime modules/pallets on the Acala network**](https://wiki.acala.network/build/development-guide/deploy-ecosystem-modules). This is available now with more flexibility for customization & integration. [Ren Protocol's Bitcoin bridge gateway](https://medium.com/acalanetwork/bringing-btc-to-polkadot-acala-x-ren-e7959855d5aa) is implemented this way.
+
+2. Deploy permissionless smart contracts using [**Solidity on Acala EVM**](https://wiki.acala.network/learn/acala-evm). This is fully composable with aggregated cross-chain liquidity for BTC, DOT, and Acala's existing DeFi stack, and is a landing pad for dapps to access the Polkadot ecosystem. [Ampleforth](https://medium.com/acalanetwork/ampleforth-a-defi-building-block-brings-rebasing-currency-and-elastic-finance-to-acala-and-fd1388e8e8fc) is deployed this way.
+
+3. Build a chain and [**connect with Acala using cross-chain message-  
+   passing protocol by Polkadot**](https://wiki.acala.network/build/development-guide/composable-chains). This is currently deployed on Rococo as a parachain as a means to test cross-chain communication, token transfers, and other functionalities.
+
+End-users can keep an eye on the [**Acala portal**](https://apps.acala.network/) to check their balances and begin using DeFi primitives such as swapping, farming, and participating in governance initiatives to enable further features and seamless upgrades on Acala.
+
+## **How did Parity’s Substrate Builders Program help Acala?**
+
+The[ Substrate Builders Program](https://www.substrate.io/builders-program/) supports builders in the Substrate ecosystem. The program allows teams building Substrate-based blockchains, applications, or ecosystem components to benefit from Parity’s extensive experience and resources, thereby setting themselves up for success.
+
+The Substrate Builders Program committee assesses each project’s unique vision, goals and needs and helps them devise a plan that can set them up for success. The program is then structured into three milestones, each lasting three months. Regular check-ins and milestones are reviewed by Parity’s Runtime Engineering team, providing guidance and feedback on the way the team is implementing their solution. After successfully completing all three milestones and/or going live (either solo or by becoming a parachain), the team graduates from the Substrate Builders Program.
+
+—
+
+Have an idea or project built for or on Substrate? The Substrate Builders program can support your project up to launch and will continue to offer longer-term support depending on your project’s needs.[ Learn more](https://www.substrate.io/builders-program/) and[ apply now.](https://docs.google.com/forms/d/e/1FAIpQLSfEYJE3X0RQs3Kucqthe4D8zyUcV1yEvyIw98L2X9_78b4BVA/viewform)
