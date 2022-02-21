@@ -47,22 +47,27 @@ export default function SEO(props: SEOProps) {
           content: metaDescription,
         },
         {
+          name: `title`,
           property: `og:title`,
           content: metaTitle,
         },
         {
+          name: `description`,
           property: `og:description`,
           content: metaDescription,
         },
         {
+          name: `type`,
           property: `og:type`,
           content: `website`,
         },
         {
+          name: `image`,
           property: `og:image`,
           content: metaImage,
         },
         {
+          name: `url`,
           property: `og:url`,
           content: metaUrl,
         },
