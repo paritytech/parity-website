@@ -19,6 +19,7 @@ const NewsletterModal = (props: NewsletterModalProps) => {
   const intl = useIntl();
   const [showModal, setShowModal] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [failedSubmission, setFailedSubmission] = useState(false);
 
   useEffect(() => {
     showModal ? (document.body.style.overflow = `hidden`) : (document.body.style.overflow = `unset`);
@@ -40,7 +41,10 @@ const NewsletterModal = (props: NewsletterModalProps) => {
           setShowModal(!showModal);
         }, 5000);
       })
-      .catch(error => console.log('Request failed', error));
+      .catch(error => {
+        setFailedSubmission(!failedSubmission);
+        console.log('Request failed', error);
+      });
   };
 
   return (
@@ -132,7 +136,7 @@ const NewsletterModal = (props: NewsletterModalProps) => {
                   <a href="https://twitter.com/ParityTech" className="text-parityPink">
                     {intl.formatMessage({ id: 'newsletter-modal-footer-parity-handle' })}
                   </a>{' '}
-                  {intl.formatMessage({ id: 'newsletter-modal-twitter' })}
+                  {intl.formatMessage({ id: 'newsletter-modal-footer-twitter' })}
                 </p>
               </div>
             ) : null}
@@ -166,6 +170,14 @@ const NewsletterModal = (props: NewsletterModalProps) => {
                   >
                     {intl.formatMessage({ id: 'newsletter-cta' })}
                   </button>
+                  {failedSubmission && (
+                    <p className="text-xs text-center mt-6 text-red-600">
+                      Submission failed. Please disable ad-block or{' '}
+                      <a href="https://paritytechnologies.activehosted.com/f/1" target="_blank" rel="noreferrer">
+                        sign up here
+                      </a>
+                    </p>
+                  )}
                   <p className="text-xs text-textDark text-center mt-6">
                     {intl.formatMessage({ id: 'newsletter-modal-one-footer-text' })}{' '}
                     <a href="/privacy">{intl.formatMessage({ id: 'newsletter-modal-one-footer-privacy' })}</a>
