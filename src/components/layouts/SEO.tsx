@@ -88,10 +88,6 @@ export default function SEO(props: SEOProps) {
           content: metaDescription,
         },
         {
-          name: `twitter:title`,
-          content: metaTitle,
-        },
-        {
           name: `twitter:image`,
           content: metaImage,
         },

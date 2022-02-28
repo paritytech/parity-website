@@ -33,6 +33,7 @@ export default function BlogTemplate(props: BlogTemplateProps) {
         description={props.data.mdx.excerpt}
         author={props.data.mdx.frontmatter.author}
         keywords={props.data.mdx.frontmatter.tags}
+        url={`https://www.parity.io/${props.data.mdx.frontmatter.slug}/`}
       />
       <section className="md:bg-hero-pattern bg-top bg-no-repeat bg-contain">
         <div className="md:flex md:justify-center">
