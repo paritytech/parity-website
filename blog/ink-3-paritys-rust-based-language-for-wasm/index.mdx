@@ -39,8 +39,11 @@ The main idea behind ink! 3.0 is that it looks and feels just like Rust. ink! sy
 Besides feeling like Rust, let’s take a look at the most significant changes that came to ink! with version 3.0.
 
 * **Trait Support —** One of the most anticipated features of ink! 3.0 is its Rust trait support best described as providing a more Rusty development experience. Through the new \`#\[ink::trait_definition\]\` procedural macro it is now possible to define your very own trait definitions that are then implementable by ink! smart contracts. This allows defining shared smart contract interfaces to different concrete implementations. This can be useful for defining community defined contract standards. Note that this ink! trait definition can be defined anywhere, even in another crate!
+
 * **Reduced contract sizes** **—** Smaller contract sizes mean better performance and less gas costs. The previous ink! generated smart contracts were big in Wasm code size, which lead to parachain transaction throughput being limited by bandwidth rather than computational complexity. Among the [many solutions considered](https://github.com/paritytech/substrate/issues/9354) to reduce the size of smart contracts was to reduce the size of the compiled contracts.
+
 * **Delegate Call —** The addition of \`delegate_call\` allows a way for contracts to forward a call they received to another contract. One use case for this is implementing a Proxy Upgrade Pattern for smart contracts.
+
 * **Chain Extensions** - This feature allows developers to call directly into Substrate pallets from their contracts, allowing them to tap into the rich ecosystem of Substrate development.
 
 ### cargo-contract 1.0
@@ -49,6 +52,7 @@ Alongside the release of ink! 3.0 we're also releasing \`cargo-contract\` 1.0. \
 
 * **New CLI commands for interacting with contracts on-chain: upload, instantiate and call!  
   \**This means users are no longer required to click through a browser UI to interact with their contract on a chain, they can also use the command-line now. This also paves the way for scripting and integrations into Continuous Integration environments.
+  
 * **Linting rules for ink! smart contracts —** Through automated checking of source code for programmatic and stylistic errors, ink! developers get warnings about common errors. Going forward we want to successively build the collection of linting rules for ink! contracts out. Things we have in mind are rules guiding you to reduce gas costs, towards small contract footprints, correct API usage patterns, and pointing out security flaws.
 
 ### Substrate’s Contracts pallet
