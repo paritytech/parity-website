@@ -6,3 +6,4 @@ declare module 'gatsby-theme-i18n';
 declare module 'gatsby-plugin-gdpr-cookies';
 declare module 'mdx-utils';
 declare module 'prism-react-renderer/prism';
+declare module 'react-hubspot-form';

@@ -1,0 +1,148 @@
+/* Form Div */
+.hs-form {
+  @apply text-black;
+  @apply focus:outline-none;
+  @apply font-body tracking-wide;
+}
+
+#hubspotForm form {
+}
+
+#hubspotForm ul {
+  @apply my-3;
+}
+
+/* ALL LIST ITEMS */
+#hubspotForm li {
+  @apply list-none;
+}
+
+#hubspotForm strong {
+  @apply font-bold;
+}
+
+#hubspotForm label {
+  @apply inline-block ml-1;
+}
+
+label.hs-form-booleancheckbox-display {
+  display: flex !important;
+  @apply justify-start items-center;
+}
+
+.hs-richtext {
+  @apply text-sm text-gray-500;
+}
+
+.hs-richtext a {
+  @apply text-parityPink;
+}
+
+.hs-dependent-field p {
+  @apply text-sm md:text-base text-black;
+}
+
+/* ALL CHECKBOXES */
+
+#hubspotForm input[type='checkbox'],
+#hubspotForm input[type='radio'] {
+  @apply cursor-pointer h-3 rounded-sm mr-2 text-parityPink border;
+  @apply focus:outline-none focus:border-transparent focus:ring-2 focus:ring-transparent;
+}
+
+.legal-consent-container {
+  @apply mb-5;
+}
+
+/* Email Input Field */
+.hs_email {
+  @apply w-full mb-4;
+}
+
+.hs-fieldtype-text {
+  @apply w-full mb-4;
+}
+
+.input {
+  margin-right: 0px !important;
+}
+
+@media (min-width: 481px) {
+  .hs_firstname {
+    padding-right: 8px !important;
+  }
+}
+
+.hs_email input,
+input.hs-input[type='text'] {
+  width: 100% !important;
+  @apply text-lg;
+  @apply px-4 py-4 mb-2;
+  @apply bg-gray-50;
+  @apply focus:outline-none focus:border-transparent focus:ring-2 focus:ring-parityPink;
+}
+
+.hs-input[type='email'] {
+  width: 100% !important;
+}
+
+.hs-fieldtype-textarea label {
+  @apply flex justify-items-start;
+}
+
+.hs-form-required {
+  @apply text-parityPink ml-1;
+}
+
+textarea {
+  @apply mb-4 h-32;
+  width: 100% !important;
+}
+/* ERROR MESSAGE EMAIL */
+.hs-error-msg {
+  color: #FF1864 !important;
+  @apply w-full text-xs text-center sm:text-left;
+}
+
+.no-list .hs-error-msgs .inputs-list {
+  @apply w-full text-xs text-parityPink text-center sm:text-left;
+}
+
+.hs_error_rollup {
+  @apply w-full text-xs text-parityPink text-center sm:text-left flex justify-center;
+}
+
+/* SUBMIT BUTTON AND DIV */
+#hubspotForm input[type='submit'] {
+  @apply bg-parityPink cursor-pointer font-title text-lg text-white font-semibold opacity-90 tracking-wider px-12 py-2 rounded-sm focus:outline-none uppercase;
+  @apply transition-transform transform hover:-translate-y-0.5;
+}
+
+.hs_submit {
+  @apply self-center;
+}
+
+/* CONFIRMATION TEXT */
+#hubspotForm .submitted-message {
+  @apply flex justify-center;
+}
+
+#hubspotForm .submitted-message p {
+  @apply text-sm font-semibold max-w-md text-center;
+}
+
+#hubspotForm .submitted-message p a {
+  @apply text-parityPink font-normal;
+}
+
+#hubspotForm .legal-consent-container .hs-richtext:first-of-type {
+  @apply text-base text-black;
+}
+
+#hubspotForm .legal-consent-container .hs-richtext:nth-last-of-type(2) {
+  @apply text-sm;
+}
+
+#hubspotForm .hs-richtext[data-reactid='.hbspt-forms-1.2.3'] p {
+  font-size: 12px !important;
+}
