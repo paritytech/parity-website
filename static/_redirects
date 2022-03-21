@@ -4,7 +4,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 
 # Legacy Redirects
 /blog/security-altert /secyrity-alert-2
-/security-is-a-process-a-postmortem-on-the-parity-multi-sig-library-self-destruct /blog/a-postmortem-on-the-parity-multi-sig-library-self-destruct 
+/security-is-a-process-a-postmortem-on-the-parity-multi-sig-library-self-destruct /blog/a-postmortem-on-the-parity-multi-sig-library-self-destruct
 /on-classes-of-stuck-ether-and-potential-solutions-2 /blog/on-classes-of-stuck-ether-and-potential-solutions
 /enterprise /solutions
 /technology /technologies
@@ -19,7 +19,6 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /polkadot /technologies/polkadot
 /substrate /technologies/substrate
 /signer /technologies/signer
-/bitcoin /technologies/bitcoin
 /ethereum /technologies/ethereum
 
 # About Section
@@ -93,7 +92,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /substrate-builders-program-milestone-update-may-2021/ /blog/substrate-builders-program-milestone-update-may-2021/
 /substrate-builders-program-update-builders-for-builders/	/blog/substrate-builders-program-update-builders-for-builders/
 /statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/	/blog/statemint-generic-assets-chain-proposing-a-common-good-parachain-to-polkadot-governance/
-/defi-on-polkadot-an-ecosystem-overview/	/blog/defi-on-polkadot-an-ecosystem-overview/	
+/defi-on-polkadot-an-ecosystem-overview/	/blog/defi-on-polkadot-an-ecosystem-overview/
 /building-a-hot-wallet-with-substrate-primitives/	/blog/building-a-hot-wallet-with-substrate-primitives/
 /ethereum-smart-contracts-on-substrate-moonbeam/	/blog/ethereum-smart-contracts-on-substrate-moonbeam/
 /send-transactions-with-mycrypto-beta-and-parity-signer/	/blog/send-transactions-with-mycrypto-beta-and-parity-signer/
@@ -106,10 +105,10 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /built-on-substrate-centrifuge-chain/	/blog/built-on-substrate-centrifuge-chain/
 /announcing-substrate-delivery-partners/	/blog/announcing-substrate-delivery-partners/
 /06-03-2020-alert-impersonated-emails/	/blog/06-03-2020-alert-impersonated-emails/
-/announcing-the-initial-participants-in-the-substrate-builders-program/	/blog/announcing-the-initial-participants-in-the-substrate-builders-program/	
+/announcing-the-initial-participants-in-the-substrate-builders-program/	/blog/announcing-the-initial-participants-in-the-substrate-builders-program/
 /write-wasm-smart-contracts-with-ink-2-0/	/blog/write-wasm-smart-contracts-with-ink-2-0/
 /contributors-join-openethereum/	/blog/contributors-join-openethereum/
-/announcing-parity-1-5/	/blog/announcing-parity-1-5/	
+/announcing-parity-1-5/	/blog/announcing-parity-1-5/
 /announcing-parity-1-4/	/blog/announcing-parity-1-4/
 /announcing-parity-1-3/	/blog/announcing-parity-1-3/
 /parity-1-2-2-released-hard-fork-enabled/	/blog/parity-1-2-2-released-hard-fork-enabled/
@@ -156,7 +155,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /parity-stepping-up-the-security-model-1-a-modular-approach-to-transaction-signing/	/blog/parity-stepping-up-the-security-model-1-a-modular-approach-to-transaction-signing/
 /attack-on-the-dao-what-will-be-your-response/ /blog/attack-on-the-dao-what-will-be-your-response/
 /our-dao-response/	/blog/our-dao-response/
-/how-we-find-common-ground-and-settle-our-differences/ /blog/how-we-find-common-ground-and-settle-our-differences/ 
+/how-we-find-common-ground-and-settle-our-differences/ /blog/how-we-find-common-ground-and-settle-our-differences/
 /condition-oriented-programming/	/blog/condition-oriented-programming/
 /the-dos-vector-and-the-soft-fork-for-miners/	/blog/the-dos-vector-and-the-soft-fork-for-miners/
 /in-support-of-a-hard-fork/	/blog/in-support-of-a-hard-fork/
@@ -166,7 +165,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /the-multi-sig-hack-a-postmortem/	/blog/the-multi-sig-hack-a-postmortem/
 /security-alert/	/blog/security-alert/
 /announcing-the-bug-bounty-program/	/blog/announcing-the-bug-bounty-program/
-/security-update/	/blog/security-update/	
+/security-update/	/blog/security-update/
 /announcing-parity-1-7/	/blog/announcing-parity-1-7/
 /parity-bitcoin-is-now-supporting-segwit-segwit2x-and-bitcoin-cash/	/blog/parity-bitcoin-is-now-supporting-segwit-segwit2x-and-bitcoin-cash/
 /parity-technologies-launches-picops/	/blog/parity-technologies-launches-picops/
@@ -181,7 +180,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /parity-1-10-opportunity-released/	/blog/parity-1-10-opportunity-released/
 /private-transactions-webassembly-and-permissioning-new-features-energy-web-foundation-blockchain-for-energy/	/blog/private-transactions-webassembly-and-permissioning-new-features-energy-web-foundation-blockchain-for-energy/
 /creating-a-lighter-experience/	/blog/creating-a-lighter-experience/
-/our-commitment-to-ethereum-and-a-decentralised-future/	/blog/our-commitment-to-ethereum-and-a-decentralised-future/	
+/our-commitment-to-ethereum-and-a-decentralised-future/	/blog/our-commitment-to-ethereum-and-a-decentralised-future/
 /parity_1_11_beta_private_transactions/	/blog/parity_1_11_beta_private_transactions/
 /security-alert-3/	/blog/security-alert-3/
 /parity-ethereum-client-issue-report/	/blog/parity-ethereum-client-issue-report/
@@ -196,7 +195,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /fether-beta-is-out-check-it-out-and-tell-us-what-you-think/	/blog/fether-beta-is-out-check-it-out-and-tell-us-what-you-think/
 /security-alert-ethereum-constantinople-postponement/	/blog/security-alert-ethereum-constantinople-postponement/
 /new-cto/	/blog/new-cto/
-/q-a-with-fredrik-harrysson/ /blog/q-a-with-fredrik-harrysson/ 
+/q-a-with-fredrik-harrysson/ /blog/q-a-with-fredrik-harrysson/
 /substrate-testnet-launched/	/blog/substrate-testnet-launched/
 /parity-technologies-awarded-5-million-grant-from-the-ethereum-foundation/	/blog/parity-technologies-awarded-5-million-grant-from-the-ethereum-foundation/
 /2018-year-in-review/	/blog/2018-year-in-review/
@@ -210,7 +209,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /parity-completes-trail-of-bits-security-review/	/blog/parity-completes-trail-of-bits-security-review/
 /parity-signer-v2-0-beta-new-features-and-improved-security/	/blog/parity-signer-v2-0-beta-new-features-and-improved-security/
 /parity-ethereum-2-1-2-beta-constantinople-coming-to-kovan-and-ropsten/	/blog/parity-ethereum-2-1-2-beta-constantinople-coming-to-kovan-and-ropsten/
-/substrate-in-a-nutshell/	/blog/substrate-in-a-nutshell/	
+/substrate-in-a-nutshell/	/blog/substrate-in-a-nutshell/
 /parity-ethereum-2-0/	/blog/parity-ethereum-2-0/
 /fighting-hunger-with-blockchain/	/blog/fighting-hunger-with-blockchain/
 /what-is-a-light-client/	/blog/what-is-a-light-client/
