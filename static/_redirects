@@ -11,6 +11,7 @@ http://parity-prod.netlify.app/  https://www.parity.io 301!
 /legal /terms
 /rustjobs /rust-jobs
 /bugbounty /bug-bounty
+/technologies/bitcoin https://github.com/paritytech/parity-bitcoin 301!
 
 #Jobs Redirect
 /apply/ gh_jid=:id  https://boards.greenhouse.io/parity/jobs/:id
