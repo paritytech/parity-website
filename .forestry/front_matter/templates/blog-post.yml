@@ -83,6 +83,7 @@ pages:
 - 'blog/Attack on The DAO: What will be your response?/index.mdx'
 - blog/OnFinality - Graduate profile/index.mdx
 - blog/Our DAO Response/index.mdx
+- blog/SBP-Graduates-Acala/index.mdx
 - blog/Sub0-Online-take-the-stage/index.mdx
 - blog/a-brief-summary-of-everything-substrate-polkadot/index.mdx
 - blog/a-postmortem-on-the-parity-multi-sig-library-self-destruct/index.mdx
@@ -120,6 +121,7 @@ pages:
 - blog/how-to-build-your-own-blockchain-using-parity-substrate/index.mdx
 - blog/how-we-find-common-ground-and-settle-our-differences/index.mdx
 - blog/in-support-of-a-hard-fork/index.mdx
+- blog/ink-3-paritys-rust-based-language-for-wasm/index.mdx
 - blog/iot-on-substrate-nodle-io/index.mdx
 - blog/launch-a-blockchain-in-minutes-substrate/index.mdx
 - blog/light-js-how-to-build-your-dapp-on-a-light-client/index.mdx
@@ -170,6 +172,7 @@ pages:
 - blog/release-parity-ethereum-goes-to-istanbul/index.mdx
 - blog/restoring-blank-seed-phrase/index.mdx
 - blog/rust-2020/index.mdx
+- blog/sbp-graduates-astar/index.mdx
 - blog/security-alert-2/index.mdx
 - blog/security-alert-3/index.mdx
 - blog/security-alert-ethereum-constantinople-postponement/index.mdx
@@ -182,7 +185,10 @@ pages:
 - blog/subspace-archiving-kusama-with-onfinality/index.mdx
 - blog/substrate-2-0-is-here/index.mdx
 - blog/substrate-2-0-release-deep-dive/index.mdx
+- blog/substrate-builders-program-graduates-moonbeam/index.mdx
 - blog/substrate-builders-program-milestone-update-august-2021/index.mdx
+- blog/substrate-builders-program-milestone-update-february-2022/index.mdx
+- blog/substrate-builders-program-milestone-update-january-2022/index.mdx
 - blog/substrate-builders-program-milestone-update-june-2021/index.mdx
 - blog/substrate-builders-program-milestone-update-may-2021/index.mdx
 - blog/substrate-builders-program-milestone-update-november-2021/index.mdx
