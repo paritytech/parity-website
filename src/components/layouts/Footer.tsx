@@ -70,9 +70,6 @@ export default function Footer() {
               <LocalizedLink to="/technologies/substrate" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'substrate' })}
               </LocalizedLink>
-              <LocalizedLink to="/technologies/bitcoin" className={navItemsFooter}>
-                {intl.formatMessage({ id: 'parity-bitcoin' })}
-              </LocalizedLink>
               <LocalizedLink to="/technologies/polkadot" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'polkadot' })}
               </LocalizedLink>
