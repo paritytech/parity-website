@@ -268,8 +268,8 @@ export default function ParitySigner({ data }: ParitySignerProps) {
               {intl.formatMessage({ id: 'signer-page-dowbload-section-title' })}
             </h4>
             <p className="text-base md:text-lg max-w-lg mx-4">
-              <b>Important:</b> Parity Signer is still in beta pending a full audit. Be sure to backup your private
-              keys; the safety of funds cannot be guaranteed.
+              <b>Important:</b> Parity Signer is still in beta pending a full audit. <br /> Be sure to backup your
+              private keys; the safety of funds cannot be guaranteed.
             </p>
             <div className="flex flex-col sm:flex-row items-center pt-8">
               <a href="https://itunes.apple.com/us/app/parity-signer/id1218174838" target="_blank" rel="noreferrer">
