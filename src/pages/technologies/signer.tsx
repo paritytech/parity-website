@@ -143,6 +143,14 @@ export default function ParitySigner({ data }: ParitySignerProps) {
                   <span>&mdash; </span>
                   {intl.formatMessage({ id: 'signer-page-section-one-bullte-two' })}
                 </li>
+                <li className="text-parityWhite text-base md:text-lg max-w-md font-light">
+                  <span>&mdash; </span>
+                  Backup your seed phrase on paper or use{' '}
+                  <a href="https://github.com/paritytech/banana_split" target="_black" rel="noreferrer">
+                    Banana Split
+                  </a>{' '}
+                  for maximum security
+                </li>
               </ul>
             </div>
           </div>
@@ -162,7 +170,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
               <div>
                 <h3 className="font-normal  max-w-lg">{intl.formatMessage({ id: 'signer-page-section-two-title' })}</h3>
                 <p className="text-base md:text-lg max-w-lg">
-                  {intl.formatMessage({ id: 'signer-page-section-two-description' })}
+                  Transactions are initiated on a network-connected device with a compatible interface like{' '}
+                  <a href="https://github.com/paritytech/banana_split" target="_blank" rel="noreferrer">
+                    Polkadot-JS Apps
+                  </a>
+                  , then scanned with your Signer device.
                 </p>
                 <hr className="border-1 border-parityPink w-12" />
                 <ul className="list-none">
@@ -214,25 +226,51 @@ export default function ParitySigner({ data }: ParitySignerProps) {
           </div>
         </div>
       </section>
-      <section className="bg-textDark md:flex">
-        <div className="md:w-1/2">
-          <FullWidthYouTube image={data.videoThumbnail.childImageSharp.fluid.src} videoId="57fl_hmOuZg" />
-        </div>
-        <div className="mx-4 py-10 md:w-1/2 md:py-0 md:flex md:flex-col md:justify-center xl:pl-20">
-          <h4 className="text-parityWhite font-normal max-w-md text-2xl md:text-3xl mb-8">
-            {intl.formatMessage({ id: 'signer-page-video-section-title' })}
-          </h4>
-          <p className="text-parityWhite font-light text-base max-w-md md:text-lg md:mb-0">
-            {intl.formatMessage({ id: 'signer-page-video-section-description' })}
-          </p>
+      <section className="bg-parityWhite h-full">
+        <div className="container">
+          <div className="pt-20 flex flex-col md:flex-row-reverse mx-auto">
+            <div className="w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
+              <Img
+                className="md:max-w-md mx-auto"
+                fluid={data.signerPhoneTwo.childImageSharp.fluid}
+                alt="Parity Signer Phone Image"
+              />
+            </div>
+            <div className="text-textDark mx-4 md:w-1/2 md:flex md:flex-col md:justify-center">
+              <div>
+                <h3 className="font-normal  max-w-lg">
+                  {intl.formatMessage({ id: 'signer-page-section-four-title' })}
+                </h3>
+                <p className="text-base md:text-lg max-w-lg">
+                  {intl.formatMessage({ id: 'signer-page-section-four-description' })}
+                </p>
+                <hr className="border-1 border-parityPink w-12" />
+                <ul className="list-none">
+                  <li className="text-base md:text-lg max-w-lg font-light">
+                    <span>&mdash; </span>
+                    {intl.formatMessage({ id: 'signer-page-section-four-bullte-one' })}
+                  </li>
+                  <li className="text-base md:text-lg max-w-md font-light">
+                    <span>&mdash; </span>
+                    The latest metadata for Polkadot, Kusama, and Westend can be found{' '}
+                    <a href="https://metadata.parity.io/">here.</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className="bg-hero-pattern-dark bg-cover bg-center h-full">
         <div className="container">
           <div className="flex flex-col items-center pt-24 pb-16 text-center">
-            <h4 className="font-normal text-2xl md:text-3xl md:mb-8">
+            <h4 className="font-normal text-2xl md:text-3xl mb-8">
               {intl.formatMessage({ id: 'signer-page-dowbload-section-title' })}
             </h4>
+            <p className="text-base md:text-lg max-w-lg mx-4">
+              <b>Important:</b> Parity Signer is still in beta pending a full audit. Be sure to backup your private
+              keys; the safety of funds cannot be guaranteed.
+            </p>
             <div className="flex flex-col sm:flex-row items-center pt-8">
               <a href="https://itunes.apple.com/us/app/parity-signer/id1218174838" target="_blank" rel="noreferrer">
                 <img
