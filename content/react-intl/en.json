@@ -169,7 +169,7 @@
   "signer-page-section-one-description": "Start by restoring your dedicated iOS or Android device to factory settings, then go into airplane mode and always keep the device offline.",
   "signer-page-section-one-bullte-one": "Generate and store multiple private keys",
   "signer-page-section-one-bullte-two": "Support for derived accounts enables multiple addresses with a single seed phrase",
-  "signer-page-section-one-bullte-three": "Backup your seed phrase on paper or use Banana Split for maximum security",
+  "signer-page-section-one-bullte-three": "",
   "signer-page-section-two-title": "Create and scan your transaction",
   "signer-page-section-two-description": "",
   "signer-page-section-two-bullte-one": "Create a transaction on your network-connected device",
