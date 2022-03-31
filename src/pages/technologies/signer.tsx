@@ -4,7 +4,6 @@ import { useIntl } from 'react-intl';
 import Layout from '../../components/layouts/Layout';
 import SEO from '../../components/layouts/SEO';
 import Img from 'gatsby-image';
-import FullWidthYouTube from '../../components/FullWidthYouTube';
 import Social from '../../components/Social';
 import { LocalizedLink } from 'gatsby-theme-i18n';
 import signerLogo from '../../images/signer/logo-parity-signer-light.svg';
