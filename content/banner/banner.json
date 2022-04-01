@@ -1,9 +1,9 @@
 {
-  "active": false,
-  "text": "Why is Substrate a groundbreaking blockchain framework? Find out at Sub0 Online, October 13-14.",
+  "active": true,
+  "text": "Polkadot Decoded, June 2022 | Vote for your favorite talks and help curate the final conference program.",
   "emoji": "👉",
-  "link-text": "Register now",
-  "url": "https://sub0.substrate.io/?utm_source=parity.io&utm_medium=referral&utm_campaign=sub0 2021&utm_content=registration &utm_term=parity&ref=4f9a8077a502",
+  "link-text": "Vote now",
+  "url": "https://decoded.polkadot.network/vote/?utm_source=parity.io&utm_medium=display&utm_campaign=decoded%202022&utm_content=website%20banner",
   "pages": [
     "/"
   ]
