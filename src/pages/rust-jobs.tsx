@@ -122,11 +122,11 @@ export default function RustJobsPage() {
                 <li className="font-light pb-1">
                   {intl.formatMessage({ id: 'about-page-team-stats-office-cambridge' })}
                 </li>
+                <li className="font-light pb-1">{intl.formatMessage({ id: 'about-page-team-stats-office-lisbon' })}</li>
               </ul>
               <ul className="list-none text-sm">
                 <li className="font-medium pb-1">{intl.formatMessage({ id: 'about-page-team-stats-facts' })}</li>
                 <li className="font-light pb-1">{intl.formatMessage({ id: 'about-page-team-stats-facts-one' })}</li>
-                <li className="font-light pb-1">{intl.formatMessage({ id: 'about-page-team-stats-facts-two' })}</li>
               </ul>
             </div>
           </div>
