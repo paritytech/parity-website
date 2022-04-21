@@ -29,7 +29,7 @@ export default function ParitySigner({ data }: ParitySignerProps) {
             <div className="pb-10 md:py-20 px-20 sm:px-40 md:px-0 md:col-span-2 md:order-2 w-full self-center">
               <Img
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneOne.childImageSharp.fluid}
+                fluid={data.signerPhoneHero.childImageSharp.fluid}
                 alt="Parity Signer Phone Image"
               />
             </div>
@@ -319,6 +319,13 @@ export const query = graphql`
       siteMetadata {
         element
         github
+      }
+    }
+    signerPhoneHero: file(relativePath: { eq: "signer/parity-signer-phone-0.png" }) {
+      childImageSharp {
+        fluid(quality: 90, toFormat: PNG) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
     signerPhoneOne: file(relativePath: { eq: "signer/parity-signer-phone-1.png" }) {
