@@ -109,27 +109,6 @@
     text-decoration-thickness: .05em;
     }
 
-    /* Tables */
-    /* table {
-    @apply table border-separate border-gray-200 align-middle text-left bg-gray-200 rounded;
-
-        caption {
-        @apply p-3;
-        }
-
-        thead tr th {
-        @apply py-2 px-4;
-        }
-
-        tbody tr td {
-        @apply py-2 px-4;
-        }
-
-        tfoot tr th {
-        @apply py-2 px-4;
-        }
-    } */
-
     /* Forms */
     input, textarea {
     @apply block px-3 py-2 border rounded text-sm;

@@ -23,28 +23,41 @@ export default function ParitySigner({ data }: ParitySignerProps) {
   return (
     <Layout theme="light">
       <SEO title={intl.formatMessage({ id: 'signer-page-seo' })} />
-      <section className="bg-hero-signer bg-cover bg-center -mt-24 xl:-mt-32 md:-mb-12">
-        <div className="md:h-screen md:min-h-heroMinLg">
-          <div className="container h-full max-w-4xl pt-36 md:pt-0 pb-16 px-2 flex flex-col justify-center items-center md:items-start md:w-2/3">
-            <img className="mx-auto md:mx-0 w-64 h-auto py-4" src={signerLogo} alt="Parity Signer Logo" />
-            <h3 className="text-white font-light text-center md:text-left md:text-5xl lg:text-6xl py-4 max-w-2xl">
-              {intl.formatMessage({ id: 'signer-page-title' })}
-            </h3>
-            <div className="flex md:flex-row items-center pt-8">
-              <a href="https://itunes.apple.com/us/app/parity-signer/id1218174838" target="_blank" rel="noreferrer">
-                <img
-                  className="w-auto h-12 mx-1 opacity-80 hover:opacity-100"
-                  src={signerApple}
-                  alt="Parity Signer Apple iTunes"
-                />
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=io.parity.signer" target="_blank" rel="noreferrer">
-                <img
-                  className="w-auto h-12 mx-1 opacity-80 hover:opacity-100"
-                  src={signerAndroid}
-                  alt="Parity Signer Apple iTunes"
-                />
-              </a>
+      <section className="bg-signerHeroBg -mt-24 xl:-mt-32 md:-mb-12">
+        <div>
+          <div className="container max-w-5xl pt-28 md:pt-24 pb-20 md:pb-24 grid md:grid-cols-5">
+            <div className="pb-10 md:py-20 px-20 sm:px-40 md:px-0 md:col-span-2 md:order-2 w-full self-center">
+              <Img
+                className="md:max-w-md mx-auto"
+                fluid={data.signerPhoneOne.childImageSharp.fluid}
+                alt="Parity Signer Phone Image"
+              />
+            </div>
+            <div className="md:col-span-3 md:order-1 pb-16 px-8 self-center">
+              <img className="md:mx-0 w-64 h-auto py-4" src={signerLogo} alt="Parity Signer Logo" />
+              <h3 className="text-white font-light md:text-left md:text-5xl lg:text-6xl py-4 max-w-2xl">
+                {intl.formatMessage({ id: 'signer-page-title' })}
+              </h3>
+              <div className="flex md:flex-row items-center pt-8">
+                <a href="https://itunes.apple.com/us/app/parity-signer/id1218174838" target="_blank" rel="noreferrer">
+                  <img
+                    className="w-auto h-12 mx-1 opacity-80 hover:opacity-100"
+                    src={signerApple}
+                    alt="Parity Signer Apple iTunes"
+                  />
+                </a>
+                <a
+                  href="https://play.google.com/store/apps/details?id=io.parity.signer"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="w-auto h-12 mx-1 opacity-80 hover:opacity-100"
+                    src={signerAndroid}
+                    alt="Parity Signer Apple iTunes"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -117,8 +130,8 @@ export default function ParitySigner({ data }: ParitySignerProps) {
       </section>
       <section className="bg-textDark border-b border-parityBoder h-full">
         <div className="container">
-          <div className="pt-20 flex flex-col-reverse md:flex-row mx-auto">
-            <div className="w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
+          <div className="py-20 flex flex-col-reverse md:flex-row mx-auto items-center">
+            <div className="px-5 w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
               <Img
                 className="md:max-w-md mx-auto"
                 fluid={data.signerPhoneOne.childImageSharp.fluid}
@@ -158,7 +171,7 @@ export default function ParitySigner({ data }: ParitySignerProps) {
       <section className="bg-parityWhite h-full">
         <div className="container">
           <div className="pt-20 flex flex-col md:flex-row-reverse mx-auto">
-            <div className="w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
+            <div className="px-5 pb-10 md:pb-0 w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
               <Img
                 className="md:max-w-md mx-auto"
                 fluid={data.signerPhoneTwo.childImageSharp.fluid}
@@ -191,10 +204,10 @@ export default function ParitySigner({ data }: ParitySignerProps) {
           </div>
         </div>
       </section>
-      <section className="bg-parityWhite border-b border-parityBoder h-full">
+      <section className="bg-parityWhite h-full">
         <div className="container">
-          <div className="py-20 flex flex-col md:flex-row mx-auto">
-            <div className="w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
+          <div className="pt-20 flex flex-col md:flex-row mx-auto">
+            <div className="px-5 pb-10 md:pb-0 w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
               <Img
                 className="md:max-w-md mx-auto"
                 fluid={data.signerPhoneThree.childImageSharp.fluid}
@@ -225,13 +238,13 @@ export default function ParitySigner({ data }: ParitySignerProps) {
           </div>
         </div>
       </section>
-      <section className="bg-parityWhite h-full">
+      <section className="bg-parityWhite h-full border-b border-parityBoder">
         <div className="container">
-          <div className="pt-20 flex flex-col md:flex-row-reverse mx-auto">
-            <div className="w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
+          <div className="py-20 flex flex-col md:flex-row-reverse mx-auto">
+            <div className="px-10 pb-10 md:pb-0 w-full md:w-1/2 max-w-screen-sm mx-auto">
               <Img
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneTwo.childImageSharp.fluid}
+                fluid={data.signerPhoneFour.childImageSharp.fluid}
                 alt="Parity Signer Phone Image"
               />
             </div>
@@ -308,23 +321,30 @@ export const query = graphql`
         github
       }
     }
-    signerPhoneOne: file(relativePath: { eq: "signer/parity-signer-phone-1.jpg" }) {
+    signerPhoneOne: file(relativePath: { eq: "signer/parity-signer-phone-1.png" }) {
       childImageSharp {
         fluid(quality: 90, toFormat: PNG) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    signerPhoneTwo: file(relativePath: { eq: "signer/parity-signer-phone-2.jpg" }) {
+    signerPhoneTwo: file(relativePath: { eq: "signer/parity-signer-phone-2.png" }) {
       childImageSharp {
         fluid(quality: 90, toFormat: PNG) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    signerPhoneThree: file(relativePath: { eq: "signer/parity-signer-phone-3.jpg" }) {
+    signerPhoneThree: file(relativePath: { eq: "signer/parity-signer-phone-3.png" }) {
       childImageSharp {
         fluid(quality: 90, toFormat: PNG) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    signerPhoneFour: file(relativePath: { eq: "signer/parity-signer-phone-4.png" }) {
+      childImageSharp {
+        fluid(quality: 100, toFormat: PNG) {
           ...GatsbyImageSharpFluid
         }
       }
