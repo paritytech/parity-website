@@ -25,8 +25,8 @@ export default function ParitySigner({ data }: ParitySignerProps) {
       <SEO title={intl.formatMessage({ id: 'signer-page-seo' })} />
       <section className="bg-signerHeroBg -mt-24 xl:-mt-32 md:-mb-12">
         <div>
-          <div className="container max-w-5xl pt-28 md:pt-24 pb-20 md:pb-24 grid md:grid-cols-5">
-            <div className="pb-10 md:py-20 px-20 sm:px-40 md:px-0 md:col-span-2 md:order-2 w-full self-center">
+          <div className="container max-w-5xl pt-40 md:pt-24 pb-20 md:pb-24 grid md:grid-cols-5">
+            <div className="hidden md:block pb-10 md:py-20 px-20 sm:px-40 md:px-0 md:col-span-2 md:order-2 w-full self-center">
               <Img
                 className="md:max-w-md mx-auto"
                 fluid={data.signerPhoneHero.childImageSharp.fluid}
@@ -35,7 +35,7 @@ export default function ParitySigner({ data }: ParitySignerProps) {
             </div>
             <div className="md:col-span-3 md:order-1 pb-16 px-8 self-center">
               <img className="md:mx-0 w-64 h-auto py-4" src={signerLogo} alt="Parity Signer Logo" />
-              <h3 className="text-white font-light md:text-left md:text-5xl lg:text-6xl py-4 max-w-2xl">
+              <h3 className="text-white font-light md:text-left text-5xl lg:text-6xl py-4 max-w-2xl">
                 {intl.formatMessage({ id: 'signer-page-title' })}
               </h3>
               <div className="flex md:flex-row items-center pt-8">
