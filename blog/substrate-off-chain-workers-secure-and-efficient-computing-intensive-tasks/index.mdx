@@ -9,7 +9,7 @@ author: Phil Lucsok
 blogTitle: 'Substrate off-chain workers: Secure and efficient computing-intensive
   tasks'
 slug: blog/substrate-off-chain-workers-secure-and-efficient-computing-intensive-tasks/
-date_published: 2019-11-14T01:00:00+01:00
+date_published: 2019-11-14T01:00:00.000+01:00
 image: "/images/off-chain-workers-main-graphic-03.png"
 
 ---
@@ -32,7 +32,7 @@ Even if those pain points are somehow mitigated, submitting transactions with th
 
 ## Introducing Substrate off-chain workers
 
-To make off-chain data integration secure and more efficient, Substrate provides off-chain workers. The off-chain worker subsystem allows execution of long-running and possibly non-deterministic tasks (e.g. web requests, encryption/decryption and signing of data, random number generation, CPU-intensive computations, enumeration/aggregation of on-chain data, etc.) which could otherwise require longer than the block execution time.
+To make off-chain data integration secure and more efficient, Substrate provides [off-chain workers](https://docs.substrate.io/v3/concepts/off-chain-features/). The off-chain worker subsystem allows execution of long-running and possibly non-deterministic tasks (e.g. web requests, encryption/decryption and signing of data, random number generation, CPU-intensive computations, enumeration/aggregation of on-chain data, etc.) which could otherwise require longer than the block execution time.
 
 The code for the off-chain workers is stored on-chain, and has access to the on-chain environment, but is never executed as part of block-processing. Off-chain workers make it easy to run the correct code and allow longer running tasks to be performed without holding up the blockchain. But, the on-chain code allows verification mechanisms, such as voting, averaging, and challenging to be implemented in the state-transition function of the blockchain it is running on. It is up to the blockchain/oracle network designer and those running nodes on the network to agree on exactly who should be doing what, when, and the rewards and punishments for participants.
 
@@ -57,4 +57,4 @@ Since off-chain workers are running in a sandboxed environment, they can only ac
 
 _Note: Some of these APIs are still under development. More information and usage documentation will be published as and when the APIs are available for use._
 
-Get started on playing with Substrate off-chain workers by going to the [GitHub repo](https://github.com/paritytech/substrate/tree/master/core/offchain), learn by example with this [walkthrough of a callback](https://gnunicorn.github.io/substrate-offchain-cb/), or talking to the developers in the [Substrate technical channel](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org).
+Get started on playing with Substrate [off-chain workers](https://github.com/paritytech/substrate/tree/master/frame/examples/offchain-worker) by checking out the [example pallet](https://github.com/paritytech/substrate/tree/master/frame/examples/offchain-worker), learn by example with this [walkthrough of a callback](https://gnunicorn.github.io/substrate-offchain-cb/), or talking to the developers in the [Substrate technical channel](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org).
