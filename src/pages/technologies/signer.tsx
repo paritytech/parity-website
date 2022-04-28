@@ -162,11 +162,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
                 </li>
                 <li className="text-parityWhite text-base md:text-lg max-w-md font-light">
                   <span>&mdash; </span>
-                  Backup your seed phrase on paper or use{' '}
-                  <a href="https://github.com/paritytech/banana_split" target="_black" rel="noreferrer">
-                    Banana Split
-                  </a>{' '}
-                  for maximum security
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: intl.formatMessage({ id: 'signer-page-section-one-bullte-three' }),
+                    }}
+                  ></span>
                 </li>
               </ul>
             </div>
@@ -186,13 +186,12 @@ export default function ParitySigner({ data }: ParitySignerProps) {
             <div className="text-textDark mx-4 md:w-1/2 md:flex md:flex-col md:justify-center">
               <div>
                 <h3 className="font-normal  max-w-lg">{intl.formatMessage({ id: 'signer-page-section-two-title' })}</h3>
-                <p className="text-base md:text-lg max-w-lg">
-                  Transactions are initiated on a network-connected device with a compatible interface like{' '}
-                  <a href="https://github.com/paritytech/banana_split" target="_blank" rel="noreferrer">
-                    Polkadot-JS Apps
-                  </a>
-                  , then scanned with your Signer device.
-                </p>
+                <p
+                  className="text-base md:text-lg max-w-lg"
+                  dangerouslySetInnerHTML={{
+                    __html: intl.formatMessage({ id: 'signer-page-section-two-description' }),
+                  }}
+                ></p>
                 <hr className="border-1 border-parityPink w-12" />
                 <ul className="list-none">
                   <li className="text-base md:text-lg max-w-lg font-light">
@@ -269,8 +268,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
                   </li>
                   <li className="text-base md:text-lg max-w-md font-light">
                     <span>&mdash; </span>
-                    The latest metadata for Polkadot, Kusama, and Westend can be found{' '}
-                    <a href="https://metadata.parity.io/">here.</a>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: intl.formatMessage({ id: 'signer-page-section-four-bullte-two' }),
+                      }}
+                    ></span>
                   </li>
                 </ul>
               </div>
@@ -284,10 +286,10 @@ export default function ParitySigner({ data }: ParitySignerProps) {
             <h4 className="font-normal text-2xl md:text-3xl mb-8">
               {intl.formatMessage({ id: 'signer-page-dowbload-section-title' })}
             </h4>
-            <p className="text-base md:text-lg max-w-lg mx-4">
-              <b>Important:</b> Parity Signer is still in beta pending a full audit. <br /> Be sure to backup your
-              private keys; the safety of funds cannot be guaranteed.
-            </p>
+            <p
+              className="text-base md:text-lg max-w-lg mx-4"
+              dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: 'signer-page-dowbload-section-warning' }) }}
+            ></p>
             <div className="flex flex-col sm:flex-row items-center pt-8">
               <a href="https://itunes.apple.com/us/app/parity-signer/id1218174838" target="_blank" rel="noreferrer">
                 <img
