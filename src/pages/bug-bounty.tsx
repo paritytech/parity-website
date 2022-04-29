@@ -44,30 +44,39 @@ export default function BugBountyPage() {
               <ul className="font-normal text-testDark pl-4">
                 <li>
                   <p className="font-bold mb-1">Substrate</p>
-                  <ul className="ont-normal text-testDark pl-4 mb-1">
+                  <ul className="font-normal text-testDark pl-4 mb-1">
                     <li>
                       Any bugs which can be used to bring down or take control of Substrate clients without direct
-                      access to the machine, including bugs in Substrate pallets and Substrate primitives
+                      access to the machine, including bugs in Substrate pallets and Substrate primitives.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p className="font-bold mb-1">Smoldot</p>
+                  <ul className="font-normal text-testDark pl-4 mb-1">
+                    <li>
+                      Any bugs which can be used to bring down or take control of Smoldot clients without direct access
+                      to the machine.
                     </li>
                   </ul>
                 </li>
                 <li>
                   <p className="font-bold mb-1">Polkadot</p>
-                  <ul className="ont-normal text-testDark pl-4 mb-1">
+                  <ul className="font-normal text-testDark pl-4 mb-1">
                     <li className="leading-relaxed">
                       <strong>Client:</strong> Any bugs which can be used to bring down or take control of Parity
-                      Polkadot client without direct access to the machine
+                      Polkadot client without direct access to the machine.
                     </li>
                     <li className="leading-relaxed">
                       <strong>Runtimes:</strong> Any bugs that compromise the intended behavior of the various
-                      Parity-built blockchain runtimes (Kusama, Polkadot, etc)
+                      Parity-built blockchain runtimes (Kusama, Polkadot, etc).
                     </li>
                   </ul>
                 </li>
                 <li className="leading-relaxed">
                   <strong>Parity releases pipeline:</strong> any bugs which could be used to enable an attacker to
                   inject malicious code into our distributed binaries, or be used to halt Parity’s release process or
-                  add malicious/unintended functions to the released binaries
+                  add malicious/unintended functions to the released binaries.
                 </li>
                 <li className="leading-relaxed">
                   <strong>Production infrastructure:</strong> publicly-available infrastructure Parity runs for
@@ -109,11 +118,11 @@ export default function BugBountyPage() {
                 </li>
                 <li className="leading-relaxed">
                   Bugs which have already been submitted by another user or are already known to the Parity team or have
-                  already been publicly disclosed
+                  already been publicly disclosed.
                 </li>
                 <li className="leading-relaxed">
                   Bugs in third-party tools and services we’re using (but we would be glad to connect you with the
-                  security team of the corresponding project)
+                  security team of the corresponding project).
                 </li>
                 <li className="leading-relaxed">
                   Parity Technologies’ development team, Parity Technology employees and any other person employed or
