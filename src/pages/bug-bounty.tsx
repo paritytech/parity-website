@@ -55,8 +55,8 @@ export default function BugBountyPage() {
                   <p className="font-bold mb-1">Smoldot</p>
                   <ul className="font-normal text-testDark pl-4 mb-1">
                     <li>
-                      Any bugs which can be used to bring down or take control of Substrate clients without direct
-                      access to the machine.
+                      Any bugs which can be used to bring down or take control of Smoldot clients without direct access
+                      to the machine.
                     </li>
                   </ul>
                 </li>
