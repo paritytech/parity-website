@@ -302,7 +302,7 @@ export default function ParitySigner({ data }: ParitySignerProps) {
                 <img
                   className="w-auto h-16 mx-1 opacity-80 hover:opacity-100 md:pl-8"
                   src={signerAndroidDark}
-                  alt="Parity Signer Apple iTunes"
+                  alt="Parity Signer Google Play"
                 />
               </a>
             </div>
