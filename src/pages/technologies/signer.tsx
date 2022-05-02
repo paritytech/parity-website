@@ -57,11 +57,6 @@ export default function ParitySigner({ data }: ParitySignerProps) {
                     alt="Parity Signer Google Play"
                   />
                 </a>
-                <a href="https://paritytech.github.io/parity-signer/" target="_blank" rel="noreferrer">
-                  <button className="h-12 px-3 mx-1 my-4 bg-white text-black rounded-lg font-title font-bold xl:text-lg hover:opacity-70">
-                    User Guides
-                  </button>
-                </a>
               </div>
             </div>
           </div>
