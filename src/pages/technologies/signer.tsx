@@ -38,10 +38,10 @@ export default function ParitySigner({ data }: ParitySignerProps) {
               <h3 className="text-white font-light md:text-left text-5xl lg:text-6xl py-4 max-w-2xl">
                 {intl.formatMessage({ id: 'signer-page-title' })}
               </h3>
-              <div className="flex flex-wrap md:flex-row items-center pt-8">
+              <div className="flex md:flex-row gap-2 items-center pt-8">
                 <a href="https://itunes.apple.com/us/app/parity-signer/id1218174838" target="_blank" rel="noreferrer">
                   <img
-                    className="w-auto h-12 mx-1 opacity-80 hover:opacity-100"
+                    className="w-auto h-12 opacity-80 hover:opacity-100"
                     src={signerApple}
                     alt="Parity Signer Apple iTunes"
                   />
@@ -52,7 +52,7 @@ export default function ParitySigner({ data }: ParitySignerProps) {
                   rel="noreferrer"
                 >
                   <img
-                    className="w-auto h-12 mx-1 opacity-80 hover:opacity-100"
+                    className="w-auto h-12 opacity-80 hover:opacity-100"
                     src={signerAndroid}
                     alt="Parity Signer Google Play"
                   />
