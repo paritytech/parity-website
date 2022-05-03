@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { useIntl } from 'react-intl';
 import Layout from '../../components/layouts/Layout';
 import SEO from '../../components/layouts/SEO';
-import Img from 'gatsby-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import Social from '../../components/Social';
 import { LocalizedLink } from 'gatsby-theme-i18n';
 import signerLogo from '../../images/signer/logo-parity-signer-light.svg';
@@ -27,10 +27,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
         <div>
           <div className="container max-w-5xl pt-40 md:pt-24 pb-20 md:pb-24 grid md:grid-cols-5">
             <div className="hidden md:block pb-10 md:py-20 px-20 sm:px-40 md:px-0 md:col-span-2 md:order-2 w-full self-center">
-              <Img
+              <StaticImage
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneHero.childImageSharp.fluid}
+                src="../../images/signer/parity-signer-phone-0.png"
                 alt="Parity Signer Phone Image"
+                placeholder="none"
               />
             </div>
             <div className="md:col-span-3 md:order-1 pb-16 px-8 self-center">
@@ -132,10 +133,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
         <div className="container">
           <div className="py-20 flex flex-col-reverse md:flex-row mx-auto items-center">
             <div className="px-5 w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
-              <Img
+              <StaticImage
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneOne.childImageSharp.fluid}
+                src="../../images/signer/parity-signer-phone-1.png"
                 alt="Parity Signer Phone Image"
+                placeholder="none"
               />
             </div>
             <div className="text-parityWhite mx-4 md:w-1/2 lg:pt-20">
@@ -172,10 +174,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
         <div className="container">
           <div className="pt-20 flex flex-col md:flex-row-reverse mx-auto">
             <div className="px-5 pb-10 md:pb-0 w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
-              <Img
+              <StaticImage
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneTwo.childImageSharp.fluid}
+                src="../../images/signer/parity-signer-phone-2.png"
                 alt="Parity Signer Phone Image"
+                placeholder="none"
               />
             </div>
             <div className="text-textDark mx-4 md:w-1/2 md:flex md:flex-col md:justify-center">
@@ -207,10 +210,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
         <div className="container">
           <div className="pt-20 flex flex-col md:flex-row mx-auto">
             <div className="px-5 pb-10 md:pb-0 w-full md:w-1/2 h-auto max-w-screen-sm mx-auto">
-              <Img
+              <StaticImage
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneThree.childImageSharp.fluid}
+                src="../../images/signer/parity-signer-phone-3.png"
                 alt="Parity Signer Phone Image"
+                placeholder="none"
               />
             </div>
             <div className="text-textDark mx-4 md:w-1/2 md:flex md:flex-col md:justify-center">
@@ -241,10 +245,11 @@ export default function ParitySigner({ data }: ParitySignerProps) {
         <div className="container">
           <div className="py-20 flex flex-col md:flex-row-reverse mx-auto">
             <div className="px-10 pb-10 md:pb-0 w-full md:w-1/2 max-w-screen-sm mx-auto">
-              <Img
+              <StaticImage
                 className="md:max-w-md mx-auto"
-                fluid={data.signerPhoneFour.childImageSharp.fluid}
+                src="../../images/signer/parity-signer-phone-4.png"
                 alt="Parity Signer Phone Image"
+                placeholder="none"
               />
             </div>
             <div className="text-textDark mx-4 md:w-1/2 md:flex md:flex-col md:justify-center">
@@ -321,48 +326,6 @@ export const query = graphql`
       siteMetadata {
         element
         github
-      }
-    }
-    signerPhoneHero: file(relativePath: { eq: "signer/parity-signer-phone-0.png" }) {
-      childImageSharp {
-        fluid(quality: 90, toFormat: PNG) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    signerPhoneOne: file(relativePath: { eq: "signer/parity-signer-phone-1.png" }) {
-      childImageSharp {
-        fluid(quality: 90, toFormat: PNG) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    signerPhoneTwo: file(relativePath: { eq: "signer/parity-signer-phone-2.png" }) {
-      childImageSharp {
-        fluid(quality: 90, toFormat: PNG) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    signerPhoneThree: file(relativePath: { eq: "signer/parity-signer-phone-3.png" }) {
-      childImageSharp {
-        fluid(quality: 90, toFormat: PNG) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    signerPhoneFour: file(relativePath: { eq: "signer/parity-signer-phone-4.png" }) {
-      childImageSharp {
-        fluid(quality: 100, toFormat: PNG) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    videoThumbnail: file(relativePath: { eq: "signer/video-thumbnail-9.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, toFormat: PNG) {
-          src
-        }
       }
     }
   }
