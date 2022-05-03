@@ -36,6 +36,7 @@ module.exports = {
         footerDark: '#1b1b1b',
         footerLight: '#282828',
         twitter: '#00aced',
+        signerHeroBg: '#0E0E0E',
       },
       height: {
         hero: '70vh',
