@@ -1,0 +1,80 @@
+---
+title: index
+tags:
+- Parity Signer
+- Releases
+author: Parity Technologies
+blogTitle: 'Parity Signer 5.0 Beta: Parity’s Advanced Air-Gapped Wallet Gets a Major
+  Update'
+slug: blog/parity-signer-gets-a-major-update
+date_published: 2022-05-03T00:00:00+02:00
+image: "/images/image1-2.png"
+
+---
+[_Parity Signer_](https://www.parity.io/technologies/signer)_, Parity’s advanced smartphone-based cold storage solution for Substrate-based blockchains, has just received its most comprehensive update to date. The 5.0 beta release is now available for download in the_ [_iOS App Store_](https://apps.apple.com/us/app/parity-signer/id1218174838)_, on_ [_Google Play_](https://play.google.com/store/apps/details?id=io.parity.signer)_, and on the project’s_ [_Github repository_](https://github.com/paritytech/parity-signer)_, with game-changing new features like offline QR-based updates. While optimized for the highest security requirements, Signer is still in beta pending the completion of an ongoing audit, so users should keep this in mind and always backup their accounts._
+
+Hardware wallets (aka cold storage solutions) are generally the most secure way to manage blockchain-based accounts and tokens. Parity Signer was designed to offer a simple solution for cold storage using a dedicated iOS or Android device that is kept offline. It allows users to generate, store, and manage credentials for Substrate-based* blockchains and to sign transactions in a completely offline way, transforming their device into an air-gapped wallet. For maximum security, Parity Signer is meant to be used on a dedicated device that is not used for other purposes and never connects to the internet (e.g. stays in airplane mode).
+
+A comprehensive rewrite of the app from React Native to a native Rust backend and User Interface, Parity Signer 5.0** beta features a host of key improvements and new functionalities to ensure that Signer remains the best hardware wallet for Polkadot, Kusama, and other Substrate-based chains.
+
+## New features
+
+The first major update for Signer in over a year brings the latest security features and UI upgrades:
+
+* Offline QR-based metadata updates
+* Metadata Update Portal
+* Derived keys
+* Offline log screen for transaction monitoring
+* Banana Split updates
+
+### Offline QR-based metadata updates
+
+Until now, updating an air-gapped wallet with the latest blockchain metadata has generally required an occasional connection to the internet. On previous versions of Parity Signer, users were required to reset their device to factory settings, go back online, download the latest release, go back offline, and restore their accounts from backup, an inconvenient and time-consuming process. These steps also represent possible points of attack and user error, albeit small ones.
+
+Parity Signer 5.0 Beta does away with this requirement by introducing an innovative new way of updating via QR code while remaining completely offline. The app can interpret data embedded within an animated series of QR codes to extract the software package and initiate the installation. This represents a major advancement in security capabilities for cold storage wallets and significantly improves the user experience.
+
+### Metadata Update Portal
+
+Off-the-shelf, Party Signer supports Polkadot, Kusama and Westend networks. Users of these networks can always find the latest version of metadata for Parity Signer on the [Metadata Update Portal hosted by Parity Technologies](https://metadata.parity.io/). However, the teams behind other Substrate-based blockchains can create a [Metadata Update Portal for their own chain](https://github.com/paritytech/metadata-portal), expanding the use of Signer to other networks in the Substrate, Polkadot, and Kusama ecosystems.
+
+This way, users of those chains can make sure they always have the latest metadata by securely updating via the same simple QR-based method. It automatically monitors updates that teams make to their blockchain, and publishes new QR codes for users to update their Signer device, creating no new overhead for the teams themselves. Substrate teams can host their own portal, though it doesn’t even require any dedicated servers: everything is powered by Github Actions with some custom tooling on top. In addition, teams can activate the ‘add network to Signer’ button on their metadata portals to allow their users to add a new network to their Signer device.
+
+### Support for derived keys
+
+Signer users can now create and manage several addresses using the same seed phrase. This is an important piece of functionality, especially for an ecosystem like Polkadot where users often manage multiple accounts on multiple different chains.
+
+Some members of the community also choose to use different addresses for different activities, i.e. one for staking, another for governance participation, and another for crowdloan participation. The best practice is generally not to use the same address for each of these. Parity Signer 5.0 Beta makes this easy with derived keys — enabling users to create and manage several public addresses on the network using the same seed phrase.
+
+Previously on Parity Signer, users had to create a new seed phrase for each new address. This update represents a significant improvement in user experience, streamlining the process while maintaining the same stringent level of security.
+
+### Offline log screen for transaction monitoring
+
+Signer now provides a helpful, data-rich log of all activity carried out with the app (transactions signed, etc), kept securely on the users’ chosen device. Crucially, this log is maintained offline in a tamper-proof way and has been designed so that any attempt to modify or delete its contents is impossible without wiping all the keys.
+
+Users can wipe the log for privacy reasons, but this leaves a clear tamper mark that includes the date of the wipe. There is also the added functionality of users being able to use the log to save custom notes.
+
+### Coming soon: enhanced Banana Split compatibility for secure backups
+
+One of the safest ways to store seed phrases has traditionally been with a physical piece of paper kept in a ‘safe place’. However, this method is not foolproof. Human error and unforeseen circumstances can compromise paper backups — from fires and burglaries, to simply misplacing the backup. Any of these can result in the permanent loss of seed phrases and the digital assets on those accounts.
+
+[Banana Split](http://bs.parity.io) is Parity’s way of protecting the security and accessibility of your seed phrase. It works by splitting up your private key into three or more pieces and encrypting them with a password, thereby preventing a ‘single point of failure’ for your backup. Crucially, you only need a certain, user-defined number of the pieces to reconstruct access to your wallet (needs to be at least more than half of the total number of pieces).
+
+For example, you can split your private key into 3 pieces and store them in different physical locations. If one of those pieces becomes compromised, you only need access to the other two (along with your password) in order to restore your account. This represents an innovative way of distributing seed phrases to decentralize the risk involved of having one physical copy.
+
+Banana Split was recently updated to make it more secure and user-friendly, and users can expect an update in the coming months to enhance compatibility between Banana Split and Parity Signer.
+
+## How to install Parity Signer
+
+The new UI and security features of 5.0 Beta combine to make Parity Signer the ideal hardware solution for digital assets used with Substrate-based networks.
+
+Getting started doesn’t require purchasing additional expensive hardware. Users only require a spare dedicated iOS or Android device that can be restored to factory settings. After restoring the phone, users enable disk encryption, install Parity Signer, and most importantly, switch on airplane mode and make sure no Wi-Fi, Bluetooth, or any other connectivity is enabled. From that point, accounts can be securely created or restored offline.
+
+## Keep up to date with the latest Parity Signer developments
+
+Parity Signer is completely open-source. For updates, follow the project on [Github](https://github.com/paritytech/parity-signer), follow Parity Technologies on [Twitter](https://twitter.com/ParityTech), and sign up for the [newsletter](https://www.parity.io/newsletter/).
+
+***
+
+***Note, the current version of Parity Signer no longer supports Ethereum accounts.**
+
+***Please keep in mind that this is still a beta release; it has not yet completed a full audit. You could potentially lose your keys if you do not make appropriate backups; the safety of funds cannot be guaranteed.**
