@@ -19,10 +19,12 @@ export default function ApplicantNoticePage() {
               </p>
               <p>
                 Parity Technologies Limited of c/o Ignition Law, 1 Sans Walk, London, England, EC1R 0LT{' '}
-                <strong>or</strong> Parity Technologies Deutschland GmbH of Glogauer Straße 6, 10999 Berlin, Germany
-                (also referred to as “<strong>Parity</strong>”; “<strong>company</strong>”; “<strong>we</strong>”; “
-                <strong>our</strong>” or “<strong>us</strong>”) is the data controller of any information you submit in
-                support of your application according to the General Data Protection Regulation (EU) 2016/679 (“
+                <strong>or</strong> Parity Technologies Deutschland GmbH of Glogauer Straße 6, 10999 Berlin, Germany{' '}
+                <strong>or</strong> Unstoppable Open Source Technologies, Unipessoal Lda of Rua Garrett 64, 1200-204
+                Lisboa, Portugal (also referred to as “<strong>Parity</strong>”; “<strong>company</strong>”; “
+                <strong>we</strong>”; “<strong>our</strong>” or “<strong>us</strong>”) is the data controller of any
+                information you submit in support of your application according to the General Data Protection
+                Regulation (EU) 2016/679 (“
                 <strong>GDPR</strong>”).
               </p>
               <p>
@@ -84,8 +86,9 @@ export default function ApplicantNoticePage() {
               </p>
               <p>
                 Your data might be shared with other entities for the purpose of assessing your application only. In
-                particular, we may share your personal information with Web3 Foundation (registered address
-                Reiffergässli 4, CH-6300 Zug, Switzerland) for the purposes of assessing your application where
+                particular, we may share your personal information with Web 3.0 Technologies Foundation (registered
+                address Reiffergässli 4, CH-6300 Zug, Switzerland), a third party with whom we are not affiliated but
+                with whom we cooperate on a range of activities, for the purposes of assessing your application where
                 necessary and appropriate for the purposes of our collaboration.
               </p>
               <p>
@@ -115,10 +118,10 @@ export default function ApplicantNoticePage() {
                 Where your personal information you send us in support of your application is transferred by us or our
                 service provider(s) outside the European Economic Area (EEA), and where this is a country which is not
                 subject to an adequacy decision by the EU Commission, we protect your privacy adequately by entering
-                into EU approved contractual clauses with service providers operating outside the EEA, by ensuring our
-                service provider(s) are registered with the EU-US Privacy Shield or a service provider’s Processor
-                Binding Corporate Rules. For further information, including how to obtain a copy of the documents used
-                to protect your information, please contact us as described in the “Contact Us” section below.
+                into EU approved contractual clauses with service providers operating outside the EEA or a service
+                provider’s Processor Binding Corporate Rules. For further information, including how to obtain a copy of
+                the documents used to protect your information, please contact us as described in the “Contact Us”
+                section below.
               </p>
               <p>
                 <strong>Your Rights</strong>
@@ -179,7 +182,7 @@ export default function ApplicantNoticePage() {
                 <a href="mailto:legal@parity.io">legal@parity.io</a>.
               </p>
               <p>
-                <em>This notice was last updated on January 25, 2021.</em>
+                <em>This notice was last updated on May 12, 2022.</em>
               </p>
             </article>
           </div>
