@@ -1,0 +1,7 @@
+[context.deploy-preview]
+  command = "yarn build && cp .netlify/_headers_staging public/_headers"
+  publish = "public/"
+
+[context.develop]
+  command = "yarn build && cp .netlify/_headers_staging public/_headers"
+  publish = "public/"
