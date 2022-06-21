@@ -50,9 +50,6 @@ export default function Footer() {
               <LocalizedLink to="/bug-bounty" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'nav-bug-bounty' })}
               </LocalizedLink>
-              <a href="/parity-media-kit.zip" target="_blank" rel="noreferrer" className={navItemsFooter}>
-                {intl.formatMessage({ id: 'nav-media-kit' })}
-              </a>
               <LocalizedLink to="/rust-jobs" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'nav-rust-jobs' })}
               </LocalizedLink>
