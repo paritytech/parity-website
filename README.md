@@ -54,19 +54,12 @@ Before installing new plugins (especially for gatsby), make sure which version o
 2. Clear Cache (for runtime errors) 
 use `yarn clean` if the server is stale or having issues reloading in your browser of choice. 
 
-## 📝 Content Contribution, PRs and merging flow
+## 📝 Content Contribution
 
-  - PR providing new features: open PR against `develop` branch
-  - PR providing hotfixes open only against `main` (fixes will be merged into develop with next features)
-  - Content Team uses Forestry CMS to make changes directly to `frstry-cms` branch.  Once finished, Content team requests a review and push to production that is handled by Web Guild, by merging branch to `main` and/or `develop` if needed.  
+  - Content Team uses Forestry CMS to make changes directly to `forestry-cms` branch. Once finished, Content team requests a review and push to production that is handled by @paritytech/webops, by merging branch to `main`.  
 
-### Deploying new features
-  - `develop` <- `main`: update content and fixes 
-  - `develop` <- `feature/branch`: merging feature PRs
-  - `main` <- `develop`: deploying new release to production
 
 ## 🎋 Forestry CMS Setup
-  - **WebDev:** Configured directly through [Forestry CMS](https://app.forestry.io/) - Ask Web Guild for access.
   - **Content Team:** Forestry taps into `/content/` folder, sub-folder, & files for any content that needs to be exposed to Forestry CMS.
   - **Blog Setup:**  Blog content is located under `/blog/{blog-name}/` and directly editable through Forestry CMS.
 
