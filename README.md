@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.parity.io">
-    <img alt="Parity Logo" src="https://www.parity.io/images/parity_logo_light.png" width="60" />
+    <img alt="Parity Logo" src="https://www.parity.io/images/parity_logo_light.png" width="160" />
   </a>
 </p>
 <h1 align="center">
@@ -10,23 +10,13 @@
   https://www.parity.io 
 </h3>
 
-### Status [Staging](https://staging.parity.io/) 
-(Password protected; ask Parity Web-Guild for details)
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a37b450c-3e18-4676-8ec3-e2d370366d43/deploy-status)](https://app.netlify.com/sites/parity-staging/deploys)
-
 ### Production [Live Site](https://www.parity.io)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/18555313-f0d7-4189-8176-b27ed50e17fa/deploy-status)](https://app.netlify.com/sites/parity-prod/deploys)
 
 
 ## 🚀 Quick start
 
-1.  **Clone the Repo**
-
-    ```shell
-    # create a new folder to get going
-    git clone https://github.com/paritytechmarcomms/parity-website-gatsby.git
-    ```
+1.  **Clone this Repo**
 
 2.  **Get Setup**
 
