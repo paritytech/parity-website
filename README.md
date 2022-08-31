@@ -47,7 +47,7 @@
 Make sure to follow the following steps in order to troubleshoot any development issues: 
 
 1. Version
-  `NodeJS`: 14+ 
+  `NodeJS`: 14 (v14.19.3, use `.nvmrc`)
   `GatsbyCLI`: 2.26.1 
 Before installing new plugins (especially for gatsby), make sure which version of CLI is supported. 
 
