@@ -39,7 +39,7 @@
 4.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
-    And your GraphiQL data layer is running at http://localhost:8000/\_\_graphql
+    And your GraphiQL data layer is running at `http://localhost:8000/__graphql`
 
     Edit to see your site update in real-time!
 
