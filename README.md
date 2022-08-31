@@ -23,8 +23,8 @@
     Navigate into your new site’s directory and install all dependencies.
 
     ```shell
-    cd parity-website/
-    yarn install
+    cd parity-website
+    yarn
     ```
 
 3.  **Development Server**
@@ -32,7 +32,7 @@
     Navigate into your new site’s directory and use the following command to start the development server locally, once the dependencies have been installed.
 
     ```shell
-    cd parity-website/
+    cd parity-website
     yarn develop
     ```
 
@@ -55,7 +55,7 @@ Make sure to follow the following steps in order to troubleshoot any development
 2. Clear Cache (for runtime errors)
    use `yarn clean` if the server is stale or having issues reloading in your browser of choice.
 
-## 📝 Content Contribution
+## 📝 BLOG / Content Contribution
 
 - Content Team uses Forestry CMS to make changes directly to `forestry-cms` branch. Once finished, Content team requests a review and push to production that is handled by @paritytech/webops, by merging branch to `main`.
 
