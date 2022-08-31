@@ -1,8 +1,8 @@
 {
-  "name": "parity-website-gatsby",
+  "name": "parity-website",
   "version": "1.0.0",
   "private": true,
-  "description": "parity-website-gatsby",
+  "description": "parity-website",
   "author": "Parity Web Guild",
   "keywords": [
     "gatsby",
