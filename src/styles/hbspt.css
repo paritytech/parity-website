@@ -155,6 +155,11 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.hs-main-font-element > h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .submitted-message {
   margin: 4rem 0;
 }
