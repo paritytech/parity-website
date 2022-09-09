@@ -5,7 +5,7 @@ import HubspotNewsletter from './HubspotNewsletter';
 
 ///////////////---STYLES---///////////////////
 const modalDiv = 'fixed top-0 bottom-0 left-0 right-0 bg-opacity-80 h-full w-full bg-black text-textDark flex justify-center items-center overflow-auto';
-const whiteContainer = 'absolute rounded-md bg-white flex flex-col justify-center items-center w-full sm:w-3/4 md:w-3/5 lg:w-3/4 xl:w-1/2 2xl:w-2/5';
+const whiteContainer = 'absolute rounded-md bg-white flex flex-col justify-center items-center w-full sm:w-3/4 md:w-3/5 lg:w-3/4 xl:w-1/2 2xl:w-2/5 max-w-xl';
 const closeX = 'absolute top-0 right-0 pt-2 pr-3 opacity-40 hover:opacity-100 cursor-pointe text-xl cursor-pointer';
 ///////////////---END STYLES---////////////////
 
