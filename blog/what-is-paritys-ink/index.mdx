@@ -15,17 +15,17 @@ image: "/images/xwqylk5.jpg"
 ---
 _On the occasion of ink! Surpassing 1,000 stars on Github, we take a deep dive into the smart contract programming language._
 
-[ink!](https://ink.substrate.io) is a programming language for smart contracts — one of several that blockchains built with[ the Substrate framework](http://substrate.io) can choose from. It’s an opinionated language that we at Parity have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
+[ink!](https://ink.substrate.io) is a programming language for smart contracts — one of several that blockchains built with [the Substrate framework](http://substrate.io) can choose from. It’s an opinionated language that we at Parity have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
 
 ## **Thank you for helping ink! surpass 1,000 GitHub stars!**
 
-[The ink! repository](http://github.com/paritytech/ink) recently surpassed one thousand stars on GitHub. It’s now the third most starred Parity repository on GitHub, after Substrate and Polkadot. We want to say a big “Thank you!” to everyone who contributed to making this happen! Over the last few years we’ve seen contributions in all forms bringing the project to where it stands today. Thank you for writing your contracts in ink!, for creating issues and pull requests, for providing us with good and constructive feedback, for answering questions on[ Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes), for creating third-party tooling for ink!, for writing blog posts about us, and for holding workshops!
+[The ink! repository](http://github.com/paritytech/ink) recently surpassed one thousand stars on GitHub. It’s now the third most starred Parity repository on GitHub, after Substrate and Polkadot. We want to say a big “Thank you!” to everyone who contributed to making this happen! Over the last few years we’ve seen contributions in all forms bringing the project to where it stands today. Thank you for writing your contracts in ink!, for creating issues and pull requests, for providing us with good and constructive feedback, for answering questions on [Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes), for creating third-party tooling for ink!, for writing blog posts about us, and for holding workshops!
 
 A lot has happened over the last few years in the ink! world. The first commit was in December, 2018 and our current version is `v3.3.1`. We’re working hard on shipping the next major iteration with `v4.0` soon. An open point that comes up regularly is that we’ve never written a blog post explaining from start to finish what ink! is and how it ties into Substrate and Polkadot. Hence this occasion is a great opportunity to do just that!
 
 ## **How does ink! relate to Substrate?**
 
-Before we can talk about ink! we first need to clarify what Substrate and its Contracts pallet (`pallet-contracts`) are.[ Substrate](https://substrate.io) is a framework for building blockchains, which can be standalone blockchains or blockchains connected to[ Kusama](http://kusama.network) or[ Polkadot](http://polkadot.network) as so called [_parachains_](https://polkadot.network/parachains/). Substrate contains a number of modules, which in Substrate terminology are called _pallets_. Substrate comes with a set of pallets for many requirements modern blockchains typically have ‒ staking, fungible tokens, non-fungible tokens, governance, etc.
+Before we can talk about ink! we first need to clarify what Substrate and its Contracts pallet (`pallet-contracts`) are.[Substrate](https://substrate.io) is a framework for building blockchains, which can be standalone blockchains or blockchains connected to [Kusama](http://kusama.network) or [Polkadot](http://polkadot.network) as so called [_parachains_](https://polkadot.network/parachains/). Substrate contains a number of modules, which in Substrate terminology are called _pallets_. Substrate comes with a set of pallets for many requirements modern blockchains typically have ‒ staking, fungible tokens, non-fungible tokens, governance, etc.
 
 Substrate also ships with a module for smart contracts called the Contracts pallet. If a parachain is developed in Substrate, it can easily add smart contract functionality by including this pallet.
 
@@ -65,7 +65,7 @@ For contract developers this means they can use ink! for writing smart contracts
 
 * [Parity’s ink!](https://github.com/paritytech/ink) for Rust.
 * [ask!](https://github.com/patractlabs/ask) for AssemblyScript.
-* The[ Solang](https://github.com/hyperledger-labs/solang) compiler for Solidity.
+* The [Solang](https://github.com/hyperledger-labs/solang) compiler for Solidity.
 
 It’s not hard to add new languages. There just needs to be a compiler for the language down to WebAssembly, then it’s possible to implement the Contracts pallet API. This API at the moment consists of about 15-20 functions for anything a smart contract may desire: storage access, cryptographic functionality, environmental information like block numbers, access to functions for getting random numbers or to self-terminate the contract, etc. Not all of those have to be implemented in the language ‒ the ink! “Hello, World!” requires just six API functions. The following schema depicts this relationship:
 
@@ -92,7 +92,7 @@ Those chains typically take the off-the-shelf Contracts pallet and create some a
 
 There is another not so obvious use case for the Contracts pallet: smart contracts as “second-class citizens” on an existing chain. By this we mean that the central value proposition of the chain has nothing to do with smart contracts, but it still includes them as an add-on.
 
-We provide an API (called[ chain extensions](https://ink.substrate.io/macros-attributes/chain-extension)) with which a parachain can expose certain parts of its business logic to smart contract developers. Through this, smart contract developers can utilize the business logic primitives of the chain to build a new application on top of it. Think for example of a decentralized exchange blockchain. This chain would in its simplest form have an order book to place bids and asks ‒ there is no need for taking untrusted, turing complete, programs from the outside. The parachain could decide to expose the order book into smart contracts though, giving external developers the option of building new applications that utilize the order book. For example, to upload trading algorithms as smart contracts to the chain.
+We provide an API (called [chain extensions](https://ink.substrate.io/macros-attributes/chain-extension)) with which a parachain can expose certain parts of its business logic to smart contract developers. Through this, smart contract developers can utilize the business logic primitives of the chain to build a new application on top of it. Think for example of a decentralized exchange blockchain. This chain would in its simplest form have an order book to place bids and asks ‒ there is no need for taking untrusted, turing complete, programs from the outside. The parachain could decide to expose the order book into smart contracts though, giving external developers the option of building new applications that utilize the order book. For example, to upload trading algorithms as smart contracts to the chain.
 
 Smart contracts here are an opportunity to help increase user engagement. And the billing for utilizing the chain comes already built-in with the pallet ‒ users have to pay gas fees for the execution of their smart contract.
 
@@ -106,7 +106,7 @@ The time to develop a smart contract and deploy it is shorter than the onboardin
 
 ## **A simple ink! smart contract**
 
-ink! is really just Rust, that’s our overarching goal. We aim to be minimally invasive, enabling developers to use everything that they also can use for “normal” Rust ‒ IDEs, `cargo fmt`, `cargo clipy`, code snippets, the[ crates.io](http://crates.io) ecosystem, etc.
+ink! is really just Rust, that’s our overarching goal. We aim to be minimally invasive, enabling developers to use everything that they also can use for “normal” Rust ‒ IDEs, `cargo fmt`, `cargo clipy`, code snippets, the [crates.io](http://crates.io) ecosystem, etc.
 
 In the following picture you can see a simple ink! contract. The contract here holds one boolean value in its storage. Once the contract is created it sets the boolean to `true`. The contract exposes two functions: one to read the current value of the boolean `(fn get())` and one to switch the value to its opposite boolean value `(fn flip())`.
 
@@ -169,16 +169,16 @@ For Developer UI’s there are currently three choices:
 
 * [Contracts UI](https://contracts-ui.substrate.io/): Ideal for beginners, gives helpful hints and assists developers.
 * [polkadot.js](https://polkadot.js.org/apps): Advanced interface which gives developers flexibility, at the cost of user friendliness.
-* [ink! playground](http://ink-playground.substrate.io/): A playground to try out ink! in the browser or share permanent links to code snippets. A very handy use is if you are asking questions on the[ Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes): you can share code with e.g. a problem you are facing.
+* [ink! playground](http://ink-playground.substrate.io/): A playground to try out ink! in the browser or share permanent links to code snippets. A very handy use is if you are asking questions on the [Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes): you can share code with e.g. a problem you are facing.
 * [`cargo-contract`](https://github.com/paritytech/cargo-contract): If you are looking to deploy contracts from the command-line, call them, decode their output, etc. then this tool provides a handy option to do all of that from a command-line interface. The tool is also perfect for scripting or CI integrations.
 
 ## **Why choose this route over a Substrate Ethereum compatibility layer?**
 
-Besides the Contracts pallet, two other popular options for smart contracts in Substrate are[`pallet-evm`](https://paritytech.github.io/frontier/frame/evm.html) and[ Frontier](https://paritytech.github.io/frontier/)\`. Both are Ethereum compatibility layers for Substrate.
+Besides the Contracts pallet, two other popular options for smart contracts in Substrate are[`pallet-evm`](https://paritytech.github.io/frontier/frame/evm.html) and [Frontier](https://paritytech.github.io/frontier/)\`. Both are Ethereum compatibility layers for Substrate.
 
 There are a number of advantages for choosing the route of ink! and the Contracts pallet over the EVM one. To summarize a few which were detailed in this article:
 
-* ink! is just Rust: you can use all the normal Rust tooling ‒ clippy,[ crates.io](http://crates.io), IDE’s, etc.
+* ink! is just Rust: you can use all the normal Rust tooling ‒ clippy, [crates.io](http://crates.io), IDE’s, etc.
 * Rust is a language that incorporates years of language research, it’s safe and fast. On top of that we took major learnings from older smart contract languages (like Solidity) and incorporated them into the ink! language design. We’ve chosen more sensible default behavior, such as disabling re-entrancy by default or making functions private by default.
 * Rust is an amazing language to work with, _it has been crowned the most loved programming language for seven years in a row_ on StackOverflow ([source](https://survey.stackoverflow.co/2022/)).
 * If you are a company and looking to hire smart contract developers, you can hire from the Rust ecosystem, which is much larger than the niche of e.g. Solidity developers.
@@ -191,10 +191,10 @@ We support interoperability with legacy Solidity codebases: the HyperLedger proj
 
 ## **Where to learn more?**
 
-* Our documentation portal can be found at[ ink.substrate.io](https://ink.substrate.io/), it contains the most comprehensive information on ink!.
-* Since ink! is just Rust, you can also check out the crate docs. We’ve linked relevant crate docs in our readme[ here](https://github.com/paritytech/ink#developer-documentation), e.g. the crate documentation for data structures is linked there.
-* We have a number of contract examples in our repository[ here](https://github.com/paritytech/ink/tree/master/examples). Those cover a broad number of typical use-cases: ERC-20, upgradeable contracts, etc.
-* If you are looking for a quickstart,[ ink!'s Guided Tutorial for Beginners](https://docs.substrate.io/tutorials/smart-contracts/) provides a great starting point.
+* Our documentation portal can be found at [ink.substrate.io](https://ink.substrate.io/), it contains the most comprehensive information on ink!.
+* Since ink! is just Rust, you can also check out the crate docs. We’ve linked relevant crate docs in our readme [here](https://github.com/paritytech/ink#developer-documentation), e.g. the crate documentation for data structures is linked there.
+* We have a number of contract examples in our repository [here](https://github.com/paritytech/ink/tree/master/examples). Those cover a broad number of typical use-cases: ERC-20, upgradeable contracts, etc.
+* If you are looking for a quickstart, [ink!'s Guided Tutorial for Beginners](https://docs.substrate.io/tutorials/smart-contracts/) provides a great starting point.
 * In case you are interested in the inner workings of ink!, we explain those in our[`ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
 * For the Contracts pallet the[`README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
 
@@ -202,4 +202,4 @@ We support interoperability with legacy Solidity codebases: the HyperLedger proj
 
 Our intention with this article was to provide a complete picture on what ink! is all about. The next big step for ink! is `v4.0.0` ‒ our next major iteration for which we already released an alpha. This release will bring major improvements to contract sizes, the developer experience and native End-to-End testing. Besides this, a number of parachain teams are on the verge of launching the Contracts pallet and ink! to Kusama or Polkadot. Things are staying excited and we’re very much looking forward to the next one thousand stars.
 
-In case you are left with any questions, please don’t hesitate to reach out. The best way to do so is to ask on the[Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes) or via[https://info.polkadot.network/contact](https://info.polkadot.network/contact). If you are already building, open an issue in the relevant repository.
+In case you are left with any questions, please don’t hesitate to reach out. The best way to do so is to ask on the [Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes) or via [https://info.polkadot.network/contact](https://info.polkadot.network/contact). If you are already building, open an issue in the relevant repository.
