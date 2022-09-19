@@ -25,13 +25,13 @@ A lot has happened over the last few years in the ink! world. The first commit w
 
 ## **How does ink! relate to Substrate?**
 
-Before we can talk about ink! we first need to clarify what Substrate and its Contracts pallet (`pallet-contracts`) are. [Substrate](https://substrate.io) is a framework for building blockchains, which can be standalone blockchains or blockchains connected to [Kusama](http://kusama.network) or [Polkadot](http://polkadot.network) as so called [_parachains_](https://polkadot.network/parachains/). Substrate contains a number of modules, which in Substrate terminology are called _pallets_. Substrate comes with a set of pallets for many requirements modern blockchains typically have ‒ staking, fungible tokens, non-fungible tokens, governance, etc.
+Before we can talk about ink! we first need to clarify what Substrate and its Contracts pallet (`pallet-contracts`) are. [Substrate](https://substrate.io) is a framework for building blockchains, which can be standalone blockchains or blockchains connected to [Kusama](http://kusama.network) or [Polkadot](http://polkadot.network) as so-called [_parachains_](https://polkadot.network/parachains/). Substrate contains a number of modules, which in Substrate terminology are called _pallets_. Substrate comes with a set of pallets for many requirements modern blockchains typically have — staking, fungible tokens, non-fungible tokens, governance, etc.
 
 Substrate also ships with a module for smart contracts called the Contracts pallet. If a parachain is developed in Substrate, it can easily add smart contract functionality by including this pallet.
 
 How does ink! come into play here? ink! is a programming language, specifically it is an embedded domain-specific language (eDSL) for the popular Rust programming language. This means that you can use all the normal Rust syntax plus some specifics that we added to make the language suitable for the smart contract world. The Contracts pallet takes these ink! contracts and executes them in a safe manner. So in short:
 
-> **with ink! you can write smart contracts in Rust for blockchains built with Substrate that include the Contracts pallet.**
+> **With ink! you can write smart contracts in Rust for blockchains built with Substrate that include the Contracts pallet.**
 
 ![Substrate pallets](/images/uhlpu68.png "Substrate pallets")
 
@@ -41,9 +41,9 @@ One of the first questions we typically get when somebody learns about Substrate
 
 The distinction here is that, in the context of Polkadot and Kusama, a parachain leases a slot for a couple of months for up to two years. The deal with a lease is that the parachain gets a fixed slot for executing its business logic (typically referred to as its _state transition function_) and can persist its modified state in a block. In Substrate terminology this state transition function is called the chain’s _runtime_.
 
-The distinction to other ecosystems here is that, in the context of Polkadot, parachains and smart contracts exist at different layers of the stack: _smart contracts sit on top of parachains_. Parachains would usually be described as layer-1 blockchains ‒ except for that they don’t have to build their own security, are upgradable, and interoperable.
+The distinction to other ecosystems here is that, in the context of Polkadot, parachains and smart contracts exist at different layers of the stack: _smart contracts sit on top of parachains_. Parachains would usually be described as layer-1 blockchains — except for that they don’t have to build their own security, and are upgradable and interoperable.
 
-It’s noteworthy that a parachain’s state transition function doesn’t get further validated ‒ it’s up to the parachain how it utilizes its slot time. Once a parachain secures a slot by bonding tokens (or sourcing them from their community via [crowdloan](https://polkadot.network/auctions/)), the slot is essentially pre-paid, with no additional fees required for executing the chain’s business logic. This means the parachain can build its own (blockchain) world! For example, it can decide on how transaction fees are charged ‒ or even if transaction fees are charged at all. These options are crucial when building new or more user-friendly business models.
+It’s noteworthy that a parachain’s state transition function doesn’t get further validated — it’s up to the parachain how it utilizes its slot time. Once a parachain secures a slot by bonding tokens (or sourcing them from their community via [crowdloan](https://polkadot.network/auctions/)), the slot is essentially pre-paid, with no additional fees required for executing the chain’s business logic. This means the parachain can build its own (blockchain) world! For example, it can decide on how transaction fees are charged, or even if transaction fees are charged at all. These options are crucial when building new or more user-friendly business models.
 
 Other distinguishing factors between parachains that we observe in the wild are differences in how the chain’s governance or crypto-economics work. There are some constraints on how the parachain can build its world though. Like physics in the real world, it has to adhere to certain ground rules. For Polkadot and Kusama that’s for example the consensus algorithm for the relay chain to communicate with the parachain. From those ground rules the advantages of Polkadot and Kusama emerge. Advantages like the aforementioned shared security, cross-chain communication, or guaranteed execution slot time.
 
