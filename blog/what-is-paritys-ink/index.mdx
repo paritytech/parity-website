@@ -126,7 +126,7 @@ For our current version 3.3.1, unit and integration tests can also be written as
     
     }
 
-The `#\[ink::test\]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#\[ink::test\]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env::test` functions in our crate documentation[here](https://docs.rs/ink_env/3.3.1/ink_env/).
+The `#\[ink::test\]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#\[ink::test\]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env::test` functions in our [crate documentation](https://docs.rs/ink_env/3.3.1/ink_env/).
 
 ## **cargo-contract ‒ the swiss army knife for ink! contracts**
 
@@ -155,16 +155,15 @@ The `*.contract bundle` is only needed if you are developing a smart contract, t
 
 ## **Development Environments**
 
-A number of parachains have developed custom tooling that provides a more context-specific angle on the context in which they utilize the Contracts pallet and ink!. We mentioned some of those teams in the beginning of this post. For more information see our[` awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
+A number of parachains have developed custom tooling that provides a more context-specific angle on the context in which they utilize the Contracts pallet and ink!. We mentioned some of those teams in the beginning of this post. For more information see our[`awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
 
 We, as the team developing ink! and the Contracts pallet, provide a couple of handy tools as well:
 
-* [`substrate-contracts-node  
-  `](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment…  
-  If you are looking for production templates take a look at Substrate’s[` node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
-* We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet[ in our documentation](https://ink.substrate.io/testnet).
+* [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment…  
+  If you are looking for production templates take a look at Substrate’s[`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
+* We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://ink.substrate.io/testnet).
 
-There’s also a number of community testnets, you can find some in our[` awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
+There’s also a number of community testnets, you can find some in our [`awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
 
 For Developer UI’s there are currently three choices:
 
@@ -175,7 +174,7 @@ For Developer UI’s there are currently three choices:
 
 ## **Why choose this route over a Substrate Ethereum compatibility layer?**
 
-Besides the Contracts pallet, two other popular options for smart contracts in Substrate are[` pallet-evm`](https://paritytech.github.io/frontier/frame/evm.html) and[ Frontier](https://paritytech.github.io/frontier/)`. Both are Ethereum compatibility layers for Substrate.
+Besides the Contracts pallet, two other popular options for smart contracts in Substrate are[`pallet-evm`](https://paritytech.github.io/frontier/frame/evm.html) and[ Frontier](https://paritytech.github.io/frontier/)\`. Both are Ethereum compatibility layers for Substrate.
 
 There are a number of advantages for choosing the route of ink! and the Contracts pallet over the EVM one. To summarize a few which were detailed in this article:
 
@@ -196,8 +195,8 @@ We support interoperability with legacy Solidity codebases: the HyperLedger proj
 * Since ink! is just Rust, you can also check out the crate docs. We’ve linked relevant crate docs in our readme[ here](https://github.com/paritytech/ink#developer-documentation), e.g. the crate documentation for data structures is linked there.
 * We have a number of contract examples in our repository[ here](https://github.com/paritytech/ink/tree/master/examples). Those cover a broad number of typical use-cases: ERC-20, upgradeable contracts, etc.
 * If you are looking for a quickstart,[ ink!'s Guided Tutorial for Beginners](https://docs.substrate.io/tutorials/smart-contracts/) provides a great starting point.
-* In case you are interested in the inner workings of ink!, we explain those in our[` ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
-* For the Contracts pallet the[` README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
+* In case you are interested in the inner workings of ink!, we explain those in our[`ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
+* For the Contracts pallet the[`README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
 
 ## **Going forward**
 
