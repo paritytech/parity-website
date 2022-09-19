@@ -51,7 +51,7 @@ For smart contracts, on the other hand, an existing parachain has to include the
 
 > **_To restate this important distinction: developing a parachain runtime is different from developing a smart contract ‒ a smart contract sits on top of a parachain_.**
 
-The trade-off is that with a parachain one has the freedom to decide on (nearly) all the rules that make up the parachain. With a smart contract one is constrained by what the chain allows and the safety pillars that necessarily have to be in place. 
+The trade-off is that with a parachain one has the freedom to decide on (nearly) all the rules that make up the parachain. With a smart contract one is constrained by what the chain allows and the safety pillars that necessarily have to be in place.
 
 A smart contract on the other hand has less friction for developing and deploying it. Developers don’t have to think about governance, crypto-economics, etc. One just needs a few tokens and can go on their merry way deploying a smart contract. It’s as simple as that.
 
@@ -147,7 +147,7 @@ As a result of executing `cargo contract build` three files are created:
 
 Each of those files has a different use case:
 
-![](/images/zrwhapt.png)
+![](/images/cargo-contract.jpg)
 
 The WebAssembly is the only file that is actually stored on-chain. Storing data on-chain should only be done for data that strictly needs to be on-chain. Anything that is unnecessary on-chain would still incur costs for the users and bloat up the chain footprint. The metadata is not necessary to be on-chain, a dapp or frontend can contain the hardcoded metadata in order to determine how to interact with the contract.
 
