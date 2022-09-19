@@ -28,8 +28,8 @@ fields:
   description: Select publishing date &amp; time
   config:
     required: true
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
 - name: tags
   type: tag_list
@@ -44,6 +44,7 @@ fields:
   config:
     required: true
     options:
+    - Michi Müller
     - Peter Haymond
     - Joe Petrowski
     - Phil Lucsok
@@ -69,7 +70,7 @@ fields:
       type: simple
       section: blog-settings
       file: content/blog/authors.json
-      path: 
+      path:
   label: Author
 - name: image
   type: file
