@@ -1,6 +1,13 @@
 {
   "authors": [
     {
+      "name": "Michi Müller",
+      "title": "Core Developer",
+      "company": "Parity Technologies",
+      "avatar": "/images/michi.jpg",
+      "link": "/blog/author/michi-muller"
+    },
+    {
       "name": "Peter Haymond",
       "title": "Ecosystem Development Manager",
       "company": "Parity Technologies",

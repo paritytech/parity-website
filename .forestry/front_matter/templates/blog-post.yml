@@ -44,6 +44,7 @@ fields:
   config:
     required: true
     options:
+    - Michi Müller
     - Peter Haymond
     - Joe Petrowski
     - Phil Lucsok
@@ -214,6 +215,7 @@ pages:
 - blog/velocity-the-fastest-parity-released/index.mdx
 - blog/wasm-smart-contract-development/index.mdx
 - blog/what-is-a-light-client/index.mdx
+- blog/what-is-paritys-ink/index.mdx
 - blog/what-is-substrate/index.mdx
 - blog/why-libp2p/index.mdx
 - blog/why-rust/index.mdx
