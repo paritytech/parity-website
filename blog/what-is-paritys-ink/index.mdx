@@ -108,29 +108,27 @@ The time to develop a smart contract and deploy it is shorter than the onboardin
 
 ink! is really just Rust, that’s our overarching goal. We aim to be minimally invasive, enabling developers to use everything that they also can use for “normal” Rust — IDEs, `cargo fmt`, `cargo clipy`, code snippets, the [crates.io](http://crates.io) ecosystem, etc.
 
-In the following picture you can see a simple ink! contract. The contract here holds one boolean value in its storage. Once the contract is created it sets the boolean to `true`. The contract exposes two functions: one to read the current value of the boolean `(fn get())` and one to switch the value to its opposite boolean value `(fn flip())`.
+In the following picture you can see a simple ink! contract. The contract here holds one boolean value in its storage. Once the contract is created it sets the boolean to `true`. The contract exposes two functions: one to read the current value of the boolean (`fn get()`) and one to switch the value to its opposite boolean value (`fn flip()`).
 
-![](/images/xsis7lr.png)
+![](/images/code_new.png)
 
 The colored lines are ink!-specific annotations in the code, the rest is just normal Rust syntax. These annotations abstract away from what needs to happen under the hood in order to make the program compatible to be executed on-chain.
 
 For our current version 3.3.1, unit and integration tests can also be written as they are in “normal” Rust:
 
-    #[ink::test]
-    
-    fn default_works() {
-    
+```rust
+#[ink::test]
+fn default_works() {
     let flipper = Flipper::default();
-    
     assert_eq!(flipper.get(), false);
-    
-    }
+}
+```
 
-The `#\[ink::test\]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#\[ink::test\]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env::test` functions in our [crate documentation](https://docs.rs/ink_env/3.3.1/ink_env/).
+The `#[ink::test]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#\[ink::test\]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env` functions in our [crate documentation](https://docs.rs/ink_env/3.3.1/ink_env/).
 
 ## **cargo-contract ‒ the swiss army knife for ink! contracts**
 
-For building ink! smart contracts you could just use the normal `cargo build` workflow for building Rust programs. You would have to add a number of arguments for the command though to make it work on-chain. We’ve created a tool that already chooses the optimal set of flags for you:[`cargo-contract`](https://github.com/paritytech/cargo-contract). It’s a command-line tool that mirrors `cargo`. You can think of it like a swiss army knife for ink! smart contracts, it can do much more besides just building a contract, but we’ll talk about that later.
+For building ink! smart contracts you could just use the normal `cargo build` workflow for building Rust programs. You would have to add a number of arguments for the command though to make it work on-chain. We’ve created a tool that already chooses the optimal set of flags for you: [`cargo-contract`](https://github.com/paritytech/cargo-contract). It’s a command-line tool that mirrors `cargo`. You can think of it like a swiss army knife for ink! smart contracts, it can do much more besides just building a contract, but we’ll talk about that later.
 
 For building contracts you use `cargo contract build`. Note that the typical Rust `cargo build` behavior is that you need to supply `--release` if you want the smallest possible binary size, same with cargo `contract build --release`. If you run this command you’ll see that `cargo-contract` executes the “normal” `cargo build` on your contract, but it does some more steps as well. The three most important additional steps are:
 
@@ -151,7 +149,7 @@ Each of those files has a different use case:
 
 The WebAssembly is the only file that is actually stored on-chain. Storing data on-chain should only be done for data that strictly needs to be on-chain. Anything that is unnecessary on-chain would still incur costs for the users and bloat up the chain footprint. The metadata is not necessary to be on-chain, a dapp or frontend can contain the hardcoded metadata in order to determine how to interact with the contract.
 
-The `*.contract bundle` is only needed if you are developing a smart contract, then you can use this file with a Developer UI. Developer UI’s give you the ability of deploying contracts, interacting with them, and debugging them.
+The `*.contract` bundle is only needed if you are developing a smart contract, then you can use this file with a Developer UI. Developer UI’s give you the ability of deploying contracts, interacting with them, and debugging them.
 
 ## **Development Environments**
 
@@ -160,7 +158,7 @@ A number of parachains have developed custom tooling that provides a more contex
 We, as the team developing ink! and the Contracts pallet, provide a couple of handy tools as well:
 
 * [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment…  
-  If you are looking for production templates take a look at Substrate’s[`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
+  If you are looking for production templates take a look at Substrate’s [`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
 * We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://ink.substrate.io/testnet).
 
 There’s also a number of community testnets, you can find some in our [`awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
@@ -174,7 +172,7 @@ For Developer UI’s there are currently three choices:
 
 ## **Why choose this route over a Substrate Ethereum compatibility layer?**
 
-Besides the Contracts pallet, two other popular options for smart contracts in Substrate are [`pallet-evm`](https://paritytech.github.io/frontier/frame/evm.html) and [Frontier](https://paritytech.github.io/frontier/)\`. Both are Ethereum compatibility layers for Substrate.
+Besides the Contracts pallet, two other popular options for smart contracts in Substrate are [`pallet-evm`](https://paritytech.github.io/frontier/frame/evm.html) and [Frontier](https://paritytech.github.io/frontier/). Both are Ethereum compatibility layers for Substrate.
 
 There are a number of advantages for choosing the route of ink! and the Contracts pallet over the EVM one. To summarize a few which were detailed in this article:
 
@@ -184,7 +182,7 @@ There are a number of advantages for choosing the route of ink! and the Contract
 * If you are a company and looking to hire smart contract developers, you can hire from the Rust ecosystem, which is much larger than the niche of e.g. Solidity developers.
 * ink! is native to Substrate, we use similar primitives, like the same type system.
 * There is a clear migration path to graduate from a contract to a parachain. Since ink! and Substrate are both Rust, developers can reuse large parts of their code, their tests, as well as frontend and client code.
-* WebAssembly is an industry standard, it’s not just used in the blockchain world. It is continually improved by major companies such as Google, Apple, Microsoft, Mozilla, and Facebook. Going forward we will profit from all improvements to the standard and its implementations. This is a big thing. WebAssembly is mostly used for the web, which has similar requirements as blockchains ‒ safe and fast.
+* WebAssembly is an industry standard, it’s not just used in the blockchain world. It is continually improved by major companies such as Google, Apple, Microsoft, Mozilla, and Facebook. Going forward we will profit from all improvements to the standard and its implementations. This is a big thing. WebAssembly is mostly used for the web, which has similar requirements as blockchains — safe and fast.
 * WebAssembly expands the family of languages available to smart contract developers to include Rust, C/C++, C#, Typescript, Haxe, Kotlin, etc. This means you can write smart contracts in whichever language you’re familiar with. We think this design is more future proof than a tight coupling of language and execution architecture.
 
 We support interoperability with legacy Solidity codebases: the HyperLedger project[ Solang](https://github.com/hyperledger/solang) compiles Solidity for the Contracts pallet.
@@ -195,8 +193,8 @@ We support interoperability with legacy Solidity codebases: the HyperLedger proj
 * Since ink! is just Rust, you can also check out the crate docs. We’ve linked relevant crate docs in our readme [here](https://github.com/paritytech/ink#developer-documentation), e.g. the crate documentation for data structures is linked there.
 * We have a number of contract examples in our repository [here](https://github.com/paritytech/ink/tree/master/examples). Those cover a broad number of typical use-cases: ERC-20, upgradeable contracts, etc.
 * If you are looking for a quickstart, [ink!'s Guided Tutorial for Beginners](https://docs.substrate.io/tutorials/smart-contracts/) provides a great starting point.
-* In case you are interested in the inner workings of ink!, we explain those in our[`ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
-* For the Contracts pallet the[`README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
+* In case you are interested in the inner workings of ink!, we explain those in our [`ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
+* For the Contracts pallet the [`README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
 
 ## **Going forward**
 
