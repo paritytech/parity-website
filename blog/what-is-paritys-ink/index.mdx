@@ -64,7 +64,7 @@ We intentionally designed the Contracts pallet in a way that it is decoupled fro
 For contract developers this means they can use ink! for writing smart contracts, but can also decide on other languages. Right now three languages to choose from exist:
 
 * [Parity’s ink!](https://github.com/paritytech/ink) for Rust.
-* [ask!](https://github.com/patractlabs/ask) for AssemblyScript.
+* [ask!](https://github.com/ask-lang/ask) for AssemblyScript.
 * The [Solang](https://github.com/hyperledger-labs/solang) compiler for Solidity.
 
 It’s not hard to add new languages. There just needs to be a compiler for the language down to WebAssembly, then it’s possible to implement the Contracts pallet API. This API at the moment consists of about 15-20 functions for anything a smart contract may desire: storage access, cryptographic functionality, environmental information like block numbers, access to functions for getting random numbers or to self-terminate the contract, etc. Not all of those have to be implemented in the language — the ink! “Hello, World!” requires just six API functions. The following schema depicts this relationship:
