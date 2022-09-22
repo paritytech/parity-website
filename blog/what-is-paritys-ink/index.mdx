@@ -47,7 +47,7 @@ It’s noteworthy that a parachain’s state transition function doesn’t get f
 
 Other distinguishing factors between parachains that we observe in the wild are differences in how the chain’s governance or crypto-economics work. There are some constraints on how the parachain can build its world though. Like physics in the real world, it has to adhere to certain ground rules. For Polkadot and Kusama that’s for example the consensus algorithm for the relay chain to communicate with the parachain. From those ground rules the advantages of Polkadot and Kusama emerge. Advantages like the aforementioned shared security, cross-chain communication, or guaranteed execution slot time.
 
-For smart contracts, on the other hand, an existing parachain has to include the Contracts pallet for users to deploy smart contracts. The deployed smart contract is always untrusted code. Anyone (or any program) that has tokens of the chain can upload a smart contract without requiring permission. Smart contracts allow _permisionless_ deployment of _untrusted_ programs on a blockchain. The Contracts pallet has to assume that these programs are adversarial, it has to put a number of safety pillars in place to ensure that the contract can not e.g. stall the chain or cause state corruption of other contracts. For the Contracts pallet those safety pillars include mechanisms like gas metering or deposits for storing data on-chain.
+For smart contracts, on the other hand, an existing parachain has to include the Contracts pallet for users to deploy smart contracts. The deployed smart contract is always untrusted code. Anyone (or any program) that has tokens of the chain can upload a smart contract without requiring permission. Smart contracts allow _permissionless_ deployment of _untrusted_ programs on a blockchain. The Contracts pallet has to assume that these programs are adversarial, it has to put a number of safety pillars in place to ensure that the contract can not e.g. stall the chain or cause state corruption of other contracts. For the Contracts pallet those safety pillars include mechanisms like gas metering or deposits for storing data on-chain.
 
 > **_To restate this important distinction: developing a parachain runtime is different from developing a smart contract ‒ a smart contract sits on top of a parachain_.**
 
@@ -176,7 +176,7 @@ Besides the Contracts pallet, two other popular options for smart contracts in S
 
 There are a number of advantages for choosing the route of ink! and the Contracts pallet over the EVM one. To summarize a few which were detailed in this article:
 
-* ink! is just Rust: you can use all the normal Rust tooling ‒ clippy, [crates.io](http://crates.io), IDE’s, etc.
+* ink! is just Rust — you can use all the normal Rust tooling: clippy, [crates.io](http://crates.io), IDE’s, etc.
 * Rust is a language that incorporates years of language research, it’s safe and fast. On top of that we took major learnings from older smart contract languages (like Solidity) and incorporated them into the ink! language design. We’ve chosen more sensible default behavior, such as disabling re-entrancy by default or making functions private by default.
 * Rust is an amazing language to work with, _it has been crowned the most loved programming language for seven years in a row_ on StackOverflow ([source](https://survey.stackoverflow.co/2022/)).
 * If you are a company and looking to hire smart contract developers, you can hire from the Rust ecosystem, which is much larger than the niche of e.g. Solidity developers.
