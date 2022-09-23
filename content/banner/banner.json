@@ -1,10 +1,8 @@
 {
-  "active": false,
-  "text": "Polkadot Decoded, June 29th-30th, 2022 | Join 100+ talks, live streamed from 4 locations worldwide.",
+  "active": true,
+  "text": "Sub0 is coming to Lisbon! | Join the Polkadot developer conference, November 28th-29th",
   "emoji": "👉",
   "link-text": "SIGN UP",
-  "url": "https://decoded.polkadot.network/?utm_source=parity.io&utm_medium=referral&utm_campaign=decoded%202022&utm_content=notification%20banner2",
-  "pages": [
-    "/"
-  ]
+  "url": "https://sub0.polkadot.network/?utm_source=parity.io&utm_medium=referral&utm_campaign=sub0%202022&utm_content=notification%20banner%20parity",
+  "pages": ["/"]
 }
