@@ -126,9 +126,9 @@ fn default_works() {
 
 The `#[ink::test]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#[ink::test]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env` functions in our [crate documentation](https://docs.rs/ink_env/3.3.1/ink_env/).
 
-## **cargo-contract ‒ the swiss army knife for ink! contracts**
+## **cargo-contract ‒ the Swiss army knife for ink! contracts**
 
-For building ink! smart contracts you could just use the normal `cargo build` workflow for building Rust programs. You would have to add a number of arguments for the command though to make it work on-chain. We’ve created a tool that already chooses the optimal set of flags for you: [`cargo-contract`](https://github.com/paritytech/cargo-contract). It’s a command-line tool that mirrors `cargo`. You can think of it like a swiss army knife for ink! smart contracts, it can do much more besides just building a contract, but we’ll talk about that later.
+For building ink! smart contracts you could just use the normal `cargo build` workflow for building Rust programs. You would have to add a number of arguments for the command though to make it work on-chain. We’ve created a tool that already chooses the optimal set of flags for you: [`cargo-contract`](https://github.com/paritytech/cargo-contract). It’s a command-line tool that mirrors `cargo`. You can think of it like a Swiss army knife for ink! smart contracts, it can do much more besides just building a contract, but we’ll talk about that later.
 
 For building contracts you use `cargo contract build`. Note that the typical Rust `cargo build` behavior is that you need to supply `--release` if you want the smallest possible binary size, same with cargo `contract build --release`. If you run this command you’ll see that `cargo-contract` executes the “normal” `cargo build` on your contract, but it does some more steps as well. The three most important additional steps are:
 
