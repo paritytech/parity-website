@@ -13,7 +13,7 @@ date_published: 2022-09-20T10:00:00.000+00:00
 image: "/images/xwqylk5.jpg"
 
 ---
-_On the occasion of ink! surpassing 1,000 stars on Github, we take a deep dive into the smart contract programming language._
+* _On the occasion of ink! surpassing 1,000 stars on Github, we take a deep dive into the smart contract programming language._
 
 [ink!](https://ink.substrate.io) is a programming language for smart contracts — one of several that blockchains built with [the Substrate framework](http://substrate.io) can choose from. It’s an opinionated language that we at Parity have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
 
@@ -47,7 +47,7 @@ It’s noteworthy that a parachain’s state transition function doesn’t get f
 
 Other distinguishing factors between parachains that we observe in the wild are differences in how the chain’s governance or crypto-economics work. There are some constraints on how the parachain can build its world though. Like physics in the real world, it has to adhere to certain ground rules. For Polkadot and Kusama that’s for example the consensus algorithm for the relay chain to communicate with the parachain. From those ground rules the advantages of Polkadot and Kusama emerge. Advantages like the aforementioned shared security, cross-chain communication, or guaranteed execution slot time.
 
-For smart contracts, on the other hand, an existing parachain has to include the Contracts pallet for users to deploy smart contracts. The deployed smart contract is always untrusted code. Anyone (or any program) that has tokens of the chain can upload a smart contract without requiring permission. Smart contracts allow _permisionless_ deployment of _untrusted_ programs on a blockchain. The Contracts pallet has to assume that these programs are adversarial, it has to put a number of safety pillars in place to ensure that the contract can not e.g. stall the chain or cause state corruption of other contracts. For the Contracts pallet those safety pillars include mechanisms like gas metering or deposits for storing data on-chain.
+For smart contracts, on the other hand, an existing parachain has to include the Contracts pallet for users to deploy smart contracts. The deployed smart contract is always untrusted code. Anyone (or any program) that has tokens of the chain can upload a smart contract without requiring permission. Smart contracts allow _permissionless_ deployment of _untrusted_ programs on a blockchain. The Contracts pallet has to assume that these programs are adversarial, it has to put a number of safety pillars in place to ensure that the contract can not e.g. stall the chain or cause state corruption of other contracts. For the Contracts pallet those safety pillars include mechanisms like gas metering or deposits for storing data on-chain.
 
 > **_To restate this important distinction: developing a parachain runtime is different from developing a smart contract ‒ a smart contract sits on top of a parachain_.**
 
@@ -124,11 +124,11 @@ fn default_works() {
 }
 ```
 
-The `#[ink::test]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#\[ink::test\]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env` functions in our [crate documentation](https://docs.rs/ink_env/3.3.1/ink_env/).
+The `#[ink::test]` annotation here has the effect of executing this test in a mocked blockchain environment. This enables developers to mock e.g. the value that is transferred to a contract, the caller executing a contract, the block number, etc. For example, you can use `ink_env::test::set_value_transferred` within an `#[ink::test]` to mock the value (i.e. tokens) that are sent to a contract. You can see the full list of `ink_env` functions in our [crate documentation](https://docs.rs/ink_env/3.3.1/ink_env/).
 
-## **cargo-contract ‒ the swiss army knife for ink! contracts**
+## **cargo-contract ‒ the Swiss army knife for ink! contracts**
 
-For building ink! smart contracts you could just use the normal `cargo build` workflow for building Rust programs. You would have to add a number of arguments for the command though to make it work on-chain. We’ve created a tool that already chooses the optimal set of flags for you: [`cargo-contract`](https://github.com/paritytech/cargo-contract). It’s a command-line tool that mirrors `cargo`. You can think of it like a swiss army knife for ink! smart contracts, it can do much more besides just building a contract, but we’ll talk about that later.
+For building ink! smart contracts you could just use the normal `cargo build` workflow for building Rust programs. You would have to add a number of arguments for the command though to make it work on-chain. We’ve created a tool that already chooses the optimal set of flags for you: [`cargo-contract`](https://github.com/paritytech/cargo-contract). It’s a command-line tool that mirrors `cargo`. You can think of it like a Swiss army knife for ink! smart contracts, it can do much more besides just building a contract, but we’ll talk about that later.
 
 For building contracts you use `cargo contract build`. Note that the typical Rust `cargo build` behavior is that you need to supply `--release` if you want the smallest possible binary size, same with cargo `contract build --release`. If you run this command you’ll see that `cargo-contract` executes the “normal” `cargo build` on your contract, but it does some more steps as well. The three most important additional steps are:
 
@@ -157,7 +157,7 @@ A number of parachains have developed custom tooling that provides a more contex
 
 We, as the team developing ink! and the Contracts pallet, provide a couple of handy tools as well:
 
-* [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment…  
+* [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment.  
   If you are looking for production templates take a look at Substrate’s [`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
 * We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://ink.substrate.io/testnet).
 
@@ -176,7 +176,7 @@ Besides the Contracts pallet, two other popular options for smart contracts in S
 
 There are a number of advantages for choosing the route of ink! and the Contracts pallet over the EVM one. To summarize a few which were detailed in this article:
 
-* ink! is just Rust: you can use all the normal Rust tooling ‒ clippy, [crates.io](http://crates.io), IDE’s, etc.
+* ink! is just Rust — you can use all the normal Rust tooling: clippy, [crates.io](http://crates.io), IDE’s, etc.
 * Rust is a language that incorporates years of language research, it’s safe and fast. On top of that we took major learnings from older smart contract languages (like Solidity) and incorporated them into the ink! language design. We’ve chosen more sensible default behavior, such as disabling re-entrancy by default or making functions private by default.
 * Rust is an amazing language to work with, _it has been crowned the most loved programming language for seven years in a row_ on StackOverflow ([source](https://survey.stackoverflow.co/2022/)).
 * If you are a company and looking to hire smart contract developers, you can hire from the Rust ecosystem, which is much larger than the niche of e.g. Solidity developers.
