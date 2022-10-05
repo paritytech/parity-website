@@ -108,17 +108,14 @@ Using the email addresses of all Polkadot Decoded attendees, we could send a sec
 ![](/images/image7.jpg)  
 **Step 4. Set all metadata**
 
-After the NFT items are created (aka minted) on the blockchain, the metadata needs to be set for each item. This metadata links to a JSON file that contains the NFT name, description, and image URL. We used the format below, which is supported by most wallets and UIs.  
-  
-`<mark >`{
+After the NFT items are created (aka minted) on the blockchain, the metadata needs to be set for each item. This metadata links to a JSON file that contains the NFT name, description, and image URL. We used the format below, which is supported by most wallets and UIs.
 
-"name": "name of the item",
+    {
+    "name": "name of the item",
+    "description": "A human readable description of the item. Markdown is supported."
+    "image": "This is the URL to the image of the item. Can be just about any type of image (including SVGs, which will be cached into PNGs by OpenSea), and can be IPFS URLs (ipfs://ipfs/<CID>) or paths.",
+    }
 
-"description": "A human readable description of the item. Markdown is supported."
-
-"image": "This is the URL to the image of the item. Can be just about any type of image (including SVGs, which will be cached into PNGs by OpenSea), and can be IPFS URLs (ipfs://ipfs/<CID>) or paths.",
-
- }`</mark>`  
   
 **Step 5. Store metadata safely**
 
@@ -142,3 +139,9 @@ Let’s go through all the steps one-by-one:
 * Use the Uniques pallet setMetadata call to set the NFT metadata to the IPFS CID.
 
 An example metadata from our campaign:
+
+    {
+      "name": "Polkadot Decoded 2022 POAPs Tier 1",
+      "image": "ipfs://ipfs/QmPotLZPgW9AvNzuNGB24zVqbWY9eP7Sbrzk3KCdydyB66",
+      "description": "The Polkadot Decoded NFTs were minted and distributed as POAPs for Polkadot Decoded v3 that was held on June 29th and 30th, 2022, with a fully hybrid experience of online and in-person events. All those who registered were able to claim a one of a kind, unque NFT that they could additionally use as their avatar for the conference. Each tier varied in how rare the NFTs were, with tier 1 being the most rare, then tier 2, tier 3, and so on."
+    }
