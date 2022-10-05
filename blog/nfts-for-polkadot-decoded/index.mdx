@@ -80,10 +80,9 @@ Another great thing about the Uniques pallet is that it’s very easy for anyone
 
 For the Polkadot Decoded NFTs, we went with the Uniques pallet so we could spend all of our efforts on the artworks, and not on developing smart contracts. After all, publishing 50K NFTs was already enough work in itself. Luckily, this wasn’t our first collection of this scale, so we could make use of the automation tools we built for earlier collections (read on to learn more about these open-source tools).
 
-With the Uniques pallet as our pallet-of-choice, the last thing to consider was whether to mint the NFT collection on Polkadot or Kusama. The pallet is currently deployed as a module on common good parachains on both Polkadot (Statemint parachain) and Kusama (Statemine parachain). Kusama turned out to be the most cost-effective option at that time.
+With the Uniques pallet as our pallet-of-choice, the last thing to consider was whether to mint the NFT collection on Polkadot or Kusama. The pallet is currently deployed as a module on common good parachains on both Polkadot (Statemint parachain) and Kusama (Statemine parachain). Kusama turned out to be the most cost-effective option at that time. 
 
-| --- |
-| 💡 Good to knowThe Uniques pallet intends to provide the core NFT functionality out of the box and lets everyone create their own NFT collection. In the next version of the pallet, “Uniques V2”, more core functionality will be added. The intention is to keep the core functionality in the pallet, which can be extended by community parachains for more customized use cases, such as composable NFTs and gaming. Learn about NFT parachains. |
+> 💡 Good to knowThe Uniques pallet intends to provide the core NFT functionality out of the box and lets everyone create their own NFT collection. In the next version of the pallet, “Uniques V2”, more core functionality will be added. The intention is to keep the core functionality in the pallet, which can be extended by community parachains for more customized use cases, such as composable NFTs and gaming. Learn about NFT parachains. 
 
 ## Time for Hamid to mint those 50K NFTs!
 
@@ -116,7 +115,6 @@ After the NFT items are created (aka minted) on the blockchain, the metadata nee
     "image": "This is the URL to the image of the item. Can be just about any type of image (including SVGs, which will be cached into PNGs by OpenSea), and can be IPFS URLs (ipfs://ipfs/<CID>) or paths.",
     }
 
-  
 **Step 5. Store metadata safely**
 
 To store the metadata and any related assets, we used a decentralized storage like IPFS (InterPlanetary File System). For this collection, we stored the metadata [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/#decentralization) and used [Pinata](https://www.pinata.cloud/) to pin our assets on IPFS.
@@ -125,8 +123,8 @@ Pinning on IPFS refers to the concept that a server, or group of servers, guaran
 
 While IPFS is a decentralized, peer-to-peer storage system and data is cached on IPFS nodes, sometimes nodes may delete the old data to make room for new content. Pinning guarantees that, at any given time, files are available on at least one server (or a few) to be accessible by the IPFS network. You can either host your own IPFS server or use a 3rd-party service like Pinata, which provides pinning as a service.
 
-When storing and pinning assets, you’ll get an address to those files on IPFS. These are called CIDs (Content IDs) and can be used to retrieve the assets through [IPFS gateways](https://docs.ipfs.tech/concepts/ipfs-gateway/#gateway-types).  
-  
+When storing and pinning assets, you’ll get an address to those files on IPFS. These are called CIDs (Content IDs) and can be used to retrieve the assets through [IPFS gateways](https://docs.ipfs.tech/concepts/ipfs-gateway/#gateway-types).
+
 **Step 6. Create metadata CIDs**
 
 Let’s go through all the steps one-by-one:
@@ -145,3 +143,29 @@ An example metadata from our campaign:
       "image": "ipfs://ipfs/QmPotLZPgW9AvNzuNGB24zVqbWY9eP7Sbrzk3KCdydyB66",
       "description": "The Polkadot Decoded NFTs were minted and distributed as POAPs for Polkadot Decoded v3 that was held on June 29th and 30th, 2022, with a fully hybrid experience of online and in-person events. All those who registered were able to claim a one of a kind, unque NFT that they could additionally use as their avatar for the conference. Each tier varied in how rare the NFTs were, with tier 1 being the most rare, then tier 2, tier 3, and so on."
     }
+
+When wallets or NFT UIs want to retrieve and present an NFT, they go to the blockchain and find the CID of that metadata.json file, which is stored on the Uniques pallet. Then they parse the information out of it — using the “image” CID to retrieve the actual NFT assets — and present them on the UI.
+
+![](/images/image11-1.jpg)
+
+**Step 7. Automate with our cli tool**
+
+If all the NFTs were the same, we would just have to set one metadata for the entire collection by calling uniques.setCollectionMetadata. However, for our huge collection we needed to generate and upload 50K images to IPFS, get their CIDs, and generate 50K metadata for each NFT on blockchain by calling uniques.setMetadata.
+
+Doing this manually would have been a nightmare. Luckily, we didn’t have to thanks to our developed [cli tool](https://github.com/paritytech/uniques-campaign-runner), which automated this process.
+
+How we used the cli tool:
+
+* Put the NFT information in a .csv file
+* Define the mint workflow in a JSON file, which is configured to use that .csv file as datafile
+* Call the cli to run the defined workflow
+
+These steps automate the entire workflow: from creating the collection to minting items, generating gift secrets and addresses, uploading images to IPFS, generating metadata for each NFT, uploading to IPFS, and finally setting the metadata on a Uniques pallet for each item as described above.
+
+With all of these operations, it would still roughly take a second per NFT to mint so the scripts ran for almost 13 hours all-together! Thankfully it was automated, so the minting was done overnight and ready to be distributed on the first day of Polkadot Decoded!
+
+## Project completed: Meet the happy owners
+
+After Polkadot Decoded, 25K NFTs in different tiers were claimed — resulting in many happy new owners! The entire collection can be viewed [here](https://singular.app/collectibles/statemine/2022). Below, you’ll see some of the minted NFTs and their new owners.
+
+![](/images/image13.png)![](/images/image5.png)![](/images/image8.png)![](/images/image19.png)![](/images/image9.png)
