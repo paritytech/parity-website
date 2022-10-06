@@ -11,6 +11,8 @@ date_published: 2022-10-04T22:00:00Z
 image: "/images/decoded-nft-blog.png"
 
 ---
+**Blog contributors:** Simon Telezhkin, Hamid Alipour, Ignasi Albero
+
 _For Polkadot Decoded 2022, we came up with the idea to offer both in-person and online attendees something extra special: their own, unique NFT! Read on to learn more about this gift concept and how our team created a collection of 50,000 different avatars — representing the pluralism and innovation from the Polkadot ecosystem — all in just one month._
 
 ## The idea behind the event NFTs
@@ -103,7 +105,9 @@ Using the Unique pallet, we created a call uniques.create, which creates a colle
 
 Using the email addresses of all Polkadot Decoded attendees, we could send a secret gift code that people could use on [this page](https://claimnft.kusama.network/#/claim) to claim their NFT. Each code was made of random numbers (more on the creation process [here](https://polkadot.js.org/docs/keyring/start/suri#working-with-non-mnemonics)) used as seeds in keyring to derive the account’s keypairs and their correspondent addresses, which could then be used as the address of the owner of each pre-minted NFT.
 
-**Step 3. Mint all NFTs**Using the uniques.mint call, it’s time to finally mint all NFTs. During minting, each item will be assigned to an address. When the NFT secret codes are claimed, the claim app will check whether the corresponding address derives from that secret code and transfer all the NFTs and assets. The claim app either lets the recipient create a new account through the app or select an existing account from someone’s [Polkadot-JS Extension](https://polkadot.js.org/extension/) or [Parity Signer](https://www.parity.io/technologies/signer/) wallet.
+**Step 3. Mint all NFTs**
+
+Using the uniques.mint call, it’s time to finally mint all NFTs. During minting, each item will be assigned to an address. When the NFT secret codes are claimed, the claim app will check whether the corresponding address derives from that secret code and transfer all the NFTs and assets. The claim app either lets the recipient create a new account through the app or select an existing account from someone’s [Polkadot-JS Extension](https://polkadot.js.org/extension/) or [Parity Signer](https://www.parity.io/technologies/signer/) wallet.
 
 ![](/images/image7-1.jpg)  
 **Step 4. Set all metadata**
