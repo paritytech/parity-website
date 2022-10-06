@@ -27,11 +27,11 @@ With different NFT tiers, the rarity of people’s souvenirs all depended on how
 
 Having joined Parity only a few weeks prior to the event, Visual 3D Designer Simon Telezhkin was thrown right in when asked to create 50K unique NFTs for Polkadot Decoded.
 
-He came up with a plan to create 50K NFTs in the given timeframe. Between creating, rendering and finalizing the art, you’re easily looking at months of work — and Simon only had one month until the event.
+He came up with a plan to create 50K NFTs in the given timeframe. Between creating, rendering, and finalizing the art, you’re easily looking at months of work — and Simon only had one month until the event.
 
-While brainstorming time-saving processes, he thought about rendering with masks to give certain image parts a different color, or opting for render farms. But both methods could result in having to create even more images, working with tons of data, or ending up with NFTs that looked too similar in shape (with color variations only).
+While brainstorming time-saving processes, he thought about rendering with masks to give certain image parts a different color or opting for render farms. But both methods could result in having to create even more images, working with tons of data, or ending up with NFTs that looked too similar in shape (with color variations only).
 
-This is how he got to pixel art — a fun stylisation that suited all the NFT project requirements.
+This is how he got to pixel art — a fun stylization that suited all the NFT project requirements.
 
 Simon created the pieces with the free, open-sourced tool [Blender](https://www.blender.org/). While he prefers Houdini as his go-to DCC (Digital Content Creation), Blender turned out to be a great tool for creating modular parts and rendering. Here’s how the creation process looked:
 
@@ -45,9 +45,13 @@ Simon started by separating the different parts of each modular droid character:
 * Back part of the head
 * Clothes
 
-![](/images/image20.png)
+![](/images/image20-1.png)
 
-![](/images/image12.png)![](/images/image22.png)![](/images/image2-2.png)![](/images/image18.png)
+![](/images/image12.png)![](/images/image22.png)
+
+![](/images/image2-3.png)
+
+![](/images/image18-1.png)
 
 When creating 50K images out of 5 modules, all you need is 9 variations for each module to get (9^5=)59049 variations. However, not every module is created equally. If you only change the ears, hair, and clothes but leave the top and bottom part of the face the same, two versions can look quite similar. As an MVP this works, but Simon was determined to bring more variety in the characters. Which leads us to the next step.
 
@@ -55,18 +59,16 @@ When creating 50K images out of 5 modules, all you need is 9 variations for each
 
 While it’s impossible to manually switch the visibility attribute to multiple objects fifty-thousand times, you can install the plug-in [FZRandomizer 3](https://fruitzeus.gumroad.com/l/FZRandomizer) — a Blender add-on which allows you to randomize characters and other mesh objects. While the plugin lacked stability when working with 50K images, it was fast, able to make JSON files, and to work with probabilities.
 
-![](/images/image3-2.png)![](/images/image4-1.png)
+![](/images/image3-3.png)![](/images/image4-2.png)
 
-![](/images/image10.png)  
+![](/images/image10-1.png)  
 **Step 3. A bit of YouTube and a bit of open-source**
 
 For the rendering, Simon opted for a combination of rendering light in cycles, then converting it to shader data, and then rendering once more. This idea was inspired by [this tutorial](https://www.youtube.com/watch?v=Cwh_TpouPfQ) from Mezaka. While Mezaka’s plugin slowed down after 3000 pictures, open source came to the rescue. With a few changes in the code, Simon was able to rework the shaders, and implement drivers to change colors and materials depending on the frame render.
 
-![](/images/image21.png)
+![](/images/image21-1.png)
 
-![](/images/image14.png)
-
-![](/images/image16.png)
+![](/images/image14-1.png)![](/images/image16-1.png)
 
 ## Pallets, uniques, and more: Setting up the NFT collection
 
@@ -80,7 +82,7 @@ Another great thing about the Uniques pallet is that it’s very easy for anyone
 
 For the Polkadot Decoded NFTs, we went with the Uniques pallet so we could spend all of our efforts on the artworks, and not on developing smart contracts. After all, publishing 50K NFTs was already enough work in itself. Luckily, this wasn’t our first collection of this scale, so we could make use of the automation tools we built for earlier collections (read on to learn more about these open-source tools).
 
-With the Uniques pallet as our pallet-of-choice, the last thing to consider was whether to mint the NFT collection on Polkadot or Kusama. The pallet is currently deployed as a module on common good parachains on both Polkadot (Statemint parachain) and Kusama (Statemine parachain). Kusama turned out to be the most cost-effective option at that time. 
+With the Uniques pallet as our pallet-of-choice, the last thing to consider was whether to mint the NFT collection on Polkadot or Kusama. The pallet is currently deployed as a module on common good parachains on both Polkadot (Statemint parachain) and Kusama (Statemine parachain). Kusama turned out to be the most cost-effective option at that time.
 
 💡 Good to know  
 The Uniques pallet intends to provide the core NFT functionality out of the box and lets everyone create their own NFT collection. In the next version of the pallet, “Uniques V2”, more core functionality will be added. The intention is to keep the core functionality in the pallet, which can be extended by community parachains for more customized use cases, such as composable NFTs and gaming. Learn about NFT parachains.
@@ -97,7 +99,7 @@ We’ll take you through the manual steps needed to create a collection and mint
 
 Using the Unique pallet, we created a call uniques.create, which creates a collection with a collection id that can be used to mint the items in that collection.
 
-![](/images/image11.jpg)
+![](/images/image11-2.jpg)
 
 **Step 2. Distribute the NFTs**
 
@@ -105,7 +107,7 @@ Using the email addresses of all Polkadot Decoded attendees, we could send a sec
 
 **Step 3. Mint all NFTs**Using the uniques.mint call, it’s time to finally mint all NFTs. During minting, each item will be assigned to an address. When the NFT secret codes are claimed, the claim app will check whether the corresponding address derives from that secret code and transfer all the NFTs and assets. The claim app either lets the recipient create a new account through the app or select an existing account from someone’s [Polkadot-JS Extension](https://polkadot.js.org/extension/) or [Parity Signer](https://www.parity.io/technologies/signer/) wallet.
 
-![](/images/image7.jpg)  
+![](/images/image7-1.jpg)  
 **Step 4. Set all metadata**
 
 After the NFT items are created (aka minted) on the blockchain, the metadata needs to be set for each item. This metadata links to a JSON file that contains the NFT name, description, and image URL. We used the format below, which is supported by most wallets and UIs.
@@ -147,7 +149,7 @@ An example metadata from our campaign:
 
 When wallets or NFT UIs want to retrieve and present an NFT, they go to the blockchain and find the CID of that metadata.json file, which is stored on the Uniques pallet. Then they parse the information out of it — using the “image” CID to retrieve the actual NFT assets — and present them on the UI.
 
-![](/images/image11-1.jpg)
+![](/images/image17-2.jpg)
 
 **Step 7. Automate with our cli tool**
 
@@ -169,4 +171,4 @@ With all of these operations, it would still roughly take a second per NFT to mi
 
 After Polkadot Decoded, 25K NFTs in different tiers were claimed — resulting in many happy new owners! The entire collection can be viewed [here](https://singular.app/collectibles/statemine/2022). Below, you’ll see some of the minted NFTs and their new owners.
 
-![](/images/image13.png)![](/images/image5.png)![](/images/image8.png)![](/images/image19.png)![](/images/image9.png)
+![](/images/image13-1.png)![](/images/image5-1.png)![](/images/image8-1.png)![](/images/image19-1.png)![](/images/image9-1.png)
