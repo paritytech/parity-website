@@ -97,7 +97,7 @@ We’ll take you through the manual steps needed to create a collection and mint
 
 **Step 1. Create a collection**
 
-Using the Unique pallet, we created a call uniques.create, which creates a collection with a collection id that can be used to mint the items in that collection.
+Using the Unique pallet, we created a call **uniques.create**, which creates a collection with a **collection id** that can be used to mint the items in that collection.
 
 ![](/images/image11-2.jpg)
 
@@ -107,7 +107,7 @@ Using the email addresses of all Polkadot Decoded attendees, we could send a sec
 
 **Step 3. Mint all NFTs**
 
-Using the uniques.mint call, it’s time to finally mint all NFTs. During minting, each item will be assigned to an address. When the NFT secret codes are claimed, the claim app will check whether the corresponding address derives from that secret code and transfer all the NFTs and assets. The claim app either lets the recipient create a new account through the app or select an existing account from someone’s [Polkadot-JS Extension](https://polkadot.js.org/extension/) or [Parity Signer](https://www.parity.io/technologies/signer/) wallet.
+Using the **uniques.mint** call, it’s time to finally mint all NFTs. During minting, each item will be assigned to an address. When the NFT secret codes are claimed, the claim app will check whether the corresponding address derives from that secret code and transfer all the NFTs and assets. The claim app either lets the recipient create a new account through the app or select an existing account from someone’s [Polkadot-JS Extension](https://polkadot.js.org/extension/) or [Parity Signer](https://www.parity.io/technologies/signer/) wallet.
 
 ![](/images/image7-1.jpg)  
 **Step 4. Set all metadata**
@@ -139,7 +139,7 @@ Let’s go through all the steps one-by-one:
 * Create a JSON file with the name, description and a link to the CID of the image
 * Upload that json file to IPFS
 * Get the CID of the metadata.json file on IPFS
-* Use the Uniques pallet setMetadata call to set the NFT metadata to the IPFS CID.
+* Use the Uniques pallet **setMetadata** call to set the NFT metadata to the IPFS CID.
 
 An example metadata from our campaign:
 
@@ -155,7 +155,7 @@ When wallets or NFT UIs want to retrieve and present an NFT, they go to the bloc
 
 **Step 7. Automate with our cli tool**
 
-If all the NFTs were the same, we would just have to set one metadata for the entire collection by calling uniques.setCollectionMetadata. However, for our huge collection we needed to generate and upload 50K images to IPFS, get their CIDs, and generate 50K metadata for each NFT on blockchain by calling uniques.setMetadata.
+If all the NFTs were the same, we would just have to set one metadata for the entire collection by calling **uniques.setCollectionMetadata**. However, for our huge collection we needed to generate and upload 50K images to IPFS, get their CIDs, and generate 50K metadata for each NFT on blockchain by calling **uniques.setMetadata**.
 
 Doing this manually would have been a nightmare. Luckily, we didn’t have to thanks to our developed [cli tool](https://github.com/paritytech/uniques-campaign-runner), which automated this process.
 
