@@ -1,6 +1,5 @@
-# Parity.io Redirects for Gatsby site
-https://parity-prod.netlify.app/ https://www.parity.io 301!
-http://parity-prod.netlify.app/  https://www.parity.io 301!
+# Netlify app dns
+https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 
 # Legacy Redirects
 /blog/security-altert /secyrity-alert-2
