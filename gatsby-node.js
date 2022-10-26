@@ -51,6 +51,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const tags = result.data.tags.group;
   tags.forEach(({ fieldValue }) => {
     let customSlug = slugify(fieldValue);
+    console.log(fieldValue);
     createPage({
       path: `blog/tag/${customSlug}`,
       component: require.resolve(`./src/components/templates/tag-template.tsx`),
