@@ -1,0 +1,6 @@
+Policy: https://www.parity.io/bug-bounty
+Contact: https://security-submission.parity.io/, for bug bounty and non-bug bounty submissions
+Expires: 2027-01-14T21:00:00.000Z
+Acknowledgments: https://www.parity.io/blog/tag/security
+Preferred-Languages: English
+Canonical: https://parity.io/.well-known/security.txt

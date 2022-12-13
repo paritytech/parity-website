@@ -43,7 +43,7 @@ export default function BugBountyPage() {
               <p>Parity welcomes vulnerability reports that demonstrate security flaws in:</p>
               <ul className="font-normal text-testDark pl-4">
                 <li>
-                  <p className="font-bold mb-1">Substrate</p>
+                  <p className="font-bold mb-1">Substrate - implementation-related issues only</p>
                   <ul className="font-normal text-testDark pl-4 mb-1">
                     <li>
                       Any bugs which can be used to bring down or take control of Substrate clients without direct
@@ -61,7 +61,7 @@ export default function BugBountyPage() {
                   </ul>
                 </li>
                 <li>
-                  <p className="font-bold mb-1">Polkadot</p>
+                  <p className="font-bold mb-1">Polkadot - implementation-related issues only</p>
                   <ul className="font-normal text-testDark pl-4 mb-1">
                     <li className="leading-relaxed">
                       <strong>Client:</strong> Any bugs which can be used to bring down or take control of Parity
@@ -81,15 +81,12 @@ export default function BugBountyPage() {
                 <li className="leading-relaxed">
                   <strong>Production infrastructure:</strong> publicly-available infrastructure Parity runs for
                   production-grade networks (in contrast to testnets), especially parts which are critical for network’s
-                  well-being or safety of funds.
+                  well-being or safety of funds. Please note that this does not include our publicly available web pages
+                  that are static.
                 </li>
                 <li className="leading-relaxed">
                   <strong>Cryptography code:</strong> any bugs relating to cryptography, encryption, decryption, and
-                  signing of messages (this includes account creation and recovery).
-                </li>
-                <li className="leading-relaxed">
-                  <strong>Client Application Security:</strong> bugs which can allow users to obtain privileges not
-                  intended for them.
+                  signing of messages (this includes account creation and recovery) in products, developed by Parity.
                 </li>
               </ul>
               <p>
@@ -106,15 +103,8 @@ export default function BugBountyPage() {
               <p>Most other things are not in scope, though. Specifically:</p>
               <ul className="font-normal text-testDark pl-4">
                 <li className="leading-relaxed">
-                  The Parity websites, including{' '}
-                  <a href="https://parity.io" target="_blank" rel="noreferrer">
-                    https://parity.io
-                  </a>{' '}
-                  and{' '}
-                  <a href="https://substrate.dev" target="_blank" rel="noreferrer">
-                    https://substrate.dev
-                  </a>{' '}
-                  (including subdomains), and any others we might make in the future, are not in scope.
+                  Static websites, until you can find a way to compromise the data on the website for all of the
+                  visitors.
                 </li>
                 <li className="leading-relaxed">
                   Bugs which have already been submitted by another user or are already known to the Parity team or have
@@ -127,6 +117,7 @@ export default function BugBountyPage() {
                 <li className="leading-relaxed">
                   Parity Technologies’ development team, Parity Technology employees and any other person employed or
                   providing services in any way to the company, directly or indirectly, are not eligible for rewards.
+                  Social engineering attacks are also here.
                 </li>
                 <li className="leading-relaxed">Anything that contravenes the spirit or letter of this Program.</li>
               </ul>
@@ -135,8 +126,8 @@ export default function BugBountyPage() {
               <p>Responsible investigation and reporting includes, but isn&apos;t limited to, the following:</p>
               <ul className="font-normal text-testDark pl-4">
                 <li className="leading-relaxed">
-                  You should use your best effort not to access, modify, delete, or store user data or Parity’s data.
-                  Instead, use your own accounts or test accounts for security research purposes.
+                  Use your best effort not to access, modify, delete, or store user data or Parity’s data. Instead, use
+                  your own accounts or test accounts for security research purposes.
                 </li>
                 <li className="leading-relaxed">
                   Don’t defraud, harm, or violate the privacy of Parity Technologies Ltd or its users during your
