@@ -1,0 +1,15 @@
+name: Call reusable workflow to add issues to Web project board 
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  call-add-issues-to-project:
+    uses: paritytech-webops/gh-actions/.github/workflows/add-issues-to-project.yml@main
+    secrets:
+      app_id: ${{ secrets.APP_ID }}
+      private_key: ${{ secrets.PRIVATE_KEY }}
+    with:
+      project-url: https://github.com/orgs/paritytech/projects/44
