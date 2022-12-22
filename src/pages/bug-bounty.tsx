@@ -371,15 +371,15 @@ export default function BugBountyPage() {
               </p>
               <p>
                 <b>
-                  If you’re not sure whether your conduct complies with this policy, please contact us first at{` `}
-                  <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> and we will do our best to clarify.
+                  If you’re not sure whether your conduct complies with this policy, please reach us first using{` `}
+                  <a href="https://security-submission.parity.io/" target="_blank">this contact form</a> and we will do our best to clarify.
                 </b>
               </p>
 
               <h3>Got Questions? We Got Answers!</h3>
               <p>
                 If you have a query or complaint about the Parity Bug Bounty Hunter Program, please contact us using the
-                same <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> email address.
+                same <a href="https://security-submission.parity.io/" target="_blank">contact form</a>.
               </p>
             </article>
           </div>
@@ -391,8 +391,8 @@ export default function BugBountyPage() {
           <h3 className="font-normal mb-4">
             {intl.formatMessage({ id: 'bug-bountry-footer-cta-one' })}
             {` `}
-            <a className="text-parityPink font-semibold no-underline hover:underline" href="mailto:bugbounty@parity.io">
-              bugbounty@parity.io
+            <a className="text-parityPink font-semibold no-underline hover:underline" href="https://security-submission.parity.io/" target="_blank">
+              contact form
             </a>
           </h3>
         </div>
