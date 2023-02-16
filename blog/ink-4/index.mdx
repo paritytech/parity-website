@@ -11,7 +11,7 @@ image: "/images/qsdh5p9.jpeg"
 ---
 ink! is a programming language for smart contracts — one of several that blockchains built with the Substrate framework can choose from. It is an opinionated language that we at Parity have built by extending the popular Rust programming language with the functionality needed to make it smart contract compatible. For more details see our article [What is Parity’s ink!?](https://www.parity.io/blog/what-is-paritys-ink).
 
-We just published the next major iteration of ink! ‒ `v4.0`. In this article, we want to highlight the big themes of this release.
+We just published the next major iteration of ink! - `v4.0`. In this article, we want to highlight the big themes of this release.
 
 ## Storage Abstraction
 
@@ -19,8 +19,8 @@ A big change in this release is how developers interact with their smart contrac
 
 We’ve taken our learnings from ink! 3.x and completely overhauled our storage abstraction. This has two major benefits:
 
-* It makes it easier for developers to understand ink!. Our prior abstraction was complex and required developers to write substantial boilerplate code for custom data structures. We think we have a more intuitive, clearer design now with several comfortable `Derive` implementations.
-* The new storage setup reduces the footprint of our contracts on-chain. This is due to reduced complexity in ink!. You can think of it this way: our new abstraction is less complex; it has been implemented with less code, resulting in fewer instructions that will be part of your final contract blob. A smaller contract footprint on-chain translates to fewer costs for users to interact with a contract, as well as higher throughput that the chain on which the contract is deployed can achieve.
+* It makes it easier for developers to understand ink!. Our prior abstraction was complex and required developers to write substantial boilerplate code for custom data structures. We think we have a more intuitive, clearer design now with more comfortable default behavior.
+* The new storage setup reduces the footprint of our contracts on-chain. This is due to reduced complexity in ink!. You can think of it this way: our new abstraction is less complex; it has been implemented with less code, resulting in fewer instructions that will be part of your final binary contract file blob. A smaller contract footprint on-chain translates to fewer costs for users to interact with a contract, as well as higher throughput that the chain on which the contract is deployed can achieve.
 
 This work has been done in collaboration with [@xgreenx](https://github.com/xgreenx) from [Supercolony](https://github.com/Supercolony-net) under a Web3 Foundation grant. Thank you to everyone who contributed to this effort!
 
@@ -37,11 +37,11 @@ Until now, ink! supported classic unit and integration testing:
 
 Through technical advances in Substrate (namely [Metadata v14](https://github.com/paritytech/substrate/pull/8615), which Andrew from the ink! team implemented) and improvements in `subxt` it is now possible for us to introduce a component that we have been dreaming about for a long time: end-to-end testing. In short, you are no longer limited to testing contracts in an artificial world – instead, you can now do so in the real one!
 
-E2E testing enables developers to write a test that will not only test the contract in an isolated manner; instead, the contract will be tested _together_ with all components that will be involved on-chain – so from end to end. This way of testing resembles closely how the contract will actually behave in production.
+E2E testing enables developers to write a test that will not only test the contract in an isolated manner; instead, the contract will be tested _together_ with all components that will be involved. This takes place by deploying the contract on a Substrate node that runs on your local machine (or in your CI). So the testing happens on-chain – from end to end, all parts of the stack are involved. This way of testing resembles closely how the contract will actually behave in production.
 
 As part of the test, the contract will be compiled and deployed to a Substrate node that is running in the background. We offer API functions that enable developers to then interact with the contract via transactions that they create and submit to the blockchain. Developers can define assertions on the outcome of their transactions, such as checking for state mutations, transaction failures or incurred gas costs.
 
-Your chain configuration will be tested together with the smart contract. And if your chain has pallets that are involved with the smart contract execution, those will be part of the test execution as well.
+Your chain configuration will be tested together with the smart contract. And if your chain contains pallets that are involved with the smart contract execution, those will be part of the test execution as well.
 
 We don’t put any requirements on the Substrate node in the background – for example, you can run a node that contains a snapshot of a live network.
 
@@ -51,13 +51,13 @@ This is a big step forward and we see E2E as the last stone in the ink! testing 
 
 We have reworked the metadata format that ink! uses. This makes it easier for third-party tools (like block explorers) to interact with ink! smart contracts and extract information from deployed contracts.
 
-Our new format comes with proper documentation and formal specification. You can find the documentation of the new format [here](https://use.ink/4.0.0-alpha.1/metadata). The formal specification is available as a JSON schema [here](https://github.com/paritytech/ink/tree/master/crates/metadata). The formal schema can be used by block explorers to verify contract metadata that is uploaded by users.
+Our [new format](https://use.ink/metadata/) comes with proper documentation and formal specification. You can find the documentation of the new format [here](https://use.ink/4.0.0-alpha.1/metadata). The formal specification is available as a JSON schema [here](https://github.com/paritytech/ink/tree/master/crates/metadata). The formal schema can be used by block explorers to verify contract metadata that is uploaded by users.
 
 ## More changes
 
 There are a number of other changes that we won’t go into detail here. You can find details in our release notes [here](https://github.com/paritytech/ink/releases/tag/v4.0.0).
 
-The general theme is that we made the ink! API more Rust idiomatic, enabling Rust developers a more intuitive usage of ink!. ink! now also supports [a registry for chain extensions](https://github.com/paritytech/chainextension-registry). This enables developers to use extensions of `pallet-contracts`, e.g. to enable smart contracts to access to the `pallet-assets`.
+The general theme is that we made the ink! API more Rust idiomatic, enabling Rust developers a more intuitive usage of ink!. ink! now also supports [a registry for chain extensions](https://github.com/paritytech/chainextension-registry). This enables Substrate developers to comfortably include extensions for `pallet-contracts`. For example, the Supercolony team has open-sourced an extension that enables smart contracts access `pallet-assets`.
 
 ## `cargo-contract` 2.0
 
@@ -67,7 +67,9 @@ Together with ink! 4.0 we are releasing the next major iteration of [`cargo-cont
 
 ## Further Information
 
-We have written a migration guide from ink! 3.x to 4.0. You can find it on our documentation portal [here](https://use.ink/getting-started/migrating-from-ink-3-to-4).
+We have written a migration guide from ink! 3.x to 4.0. You can find it on our documentation portal [here](https://use.ink/metadata/).
+
+Generally the best resource to learn about ink! is our documentation portal [use.ink](https://use.ink/)
 
 Our documentation portal is versioned now. It contains a dropdown in the top-right corner to switch the version. The changes in ink! 4.0 are documented there.  
 In case you run into any issues with ink!, the best way to get help is to either:
@@ -77,9 +79,9 @@ In case you run into any issues with ink!, the best way to get help is to either
 
 ## Compatibility
 
-ink! 4.0 is compatible with the `pallet-contracts` released with Polkadot release `polkadot-v0.9.37`.
+ink! 4.0 is compatible with the [`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts) released with Polkadot release `polkadot-v0.9.37`.
 
-Our latest `substrate-contracts-node` (version `v0.23.0`) also supports ink! 4.0.
+Our [latest `substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) (version `v0.23.0`) also supports ink! 4.0.
 
 ## What’s next?
 
