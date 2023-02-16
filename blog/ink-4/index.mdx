@@ -11,7 +11,7 @@ image: "/images/qsdh5p9.jpeg"
 ---
 ink! is a programming language for smart contracts — one of several that blockchains built with the Substrate framework can choose from. It is an opinionated language that we at Parity have built by extending the popular Rust programming language with the functionality needed to make it smart contract compatible. For more details see our article [What is Parity’s ink!?](https://www.parity.io/blog/what-is-paritys-ink).
 
-We just published the next major iteration of ink! - `v4.0`. In this article, we want to highlight the big themes of this release.
+We just published the next major iteration of ink! –`v4.0`. In this article, we want to highlight the big themes of this release.
 
 ## Storage Abstraction
 
@@ -51,7 +51,7 @@ This is a big step forward and we see E2E as the last stone in the ink! testing 
 
 We have reworked the metadata format that ink! uses. This makes it easier for third-party tools (like block explorers) to interact with ink! smart contracts and extract information from deployed contracts.
 
-Our [new format](https://use.ink/metadata/) comes with proper documentation and formal specification. You can find the documentation of the new format [here](https://use.ink/4.0.0-alpha.1/metadata). The formal specification is available as a JSON schema [here](https://github.com/paritytech/ink/tree/master/crates/metadata). The formal schema can be used by block explorers to verify contract metadata that is uploaded by users.
+Our [new format](https://use.ink/metadata/) comes with proper documentation and formal specification. You can find the documentation of the new format [here](https://use.ink/metadata/). The formal specification is available as a JSON schema [here](https://github.com/paritytech/ink/tree/master/crates/metadata). The formal schema can be used by block explorers to verify contract metadata that is uploaded by users.
 
 ## More changes
 
@@ -69,7 +69,7 @@ Together with ink! 4.0 we are releasing the next major iteration of [`cargo-cont
 
 We have written a migration guide from ink! 3.x to 4.0. You can find it on our documentation portal [here](https://use.ink/metadata/).
 
-Generally the best resource to learn about ink! is our documentation portal [use.ink](https://use.ink/)
+Generally, the best resource to learn about ink! is our documentation portal [use.ink](https://use.ink/)
 
 Our documentation portal is versioned now. It contains a dropdown in the top-right corner to switch the version. The changes in ink! 4.0 are documented there.  
 In case you run into any issues with ink!, the best way to get help is to either:
@@ -82,10 +82,6 @@ In case you run into any issues with ink!, the best way to get help is to either
 ink! 4.0 is compatible with the [`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts) released with Polkadot release `polkadot-v0.9.37`.
 
 Our [latest `substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) (version `v0.23.0`) also supports ink! 4.0.
-
-## What’s next?
-
-The next big item on our roadmap is to integrate support for XCM into ink!. Our current thinking is that we can do this without breaking changes, e.g. with an ink! 4.1 release.
 
 ## Thank you!
 
