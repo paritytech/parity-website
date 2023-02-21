@@ -39,7 +39,7 @@ Until now, ink! supported classic unit and integration testing:
 * Unit tests for an ink! contract can be written as they are for any other Rust program: using the `#[test]` annotation.
 * For integration tests, the test is annotated with our `#[ink::test]` attribute instead. This attribute denotes that the test is then executed in a simulated, mocked blockchain environment. There are functions available to influence how the test environment is configured (e.g. setting a specified balance of an account to simulate how a contract would behave when interacting with it).
 
-Through technical advances in Substrate (namely [Metadata v14](https://github.com/paritytech/substrate/pull/8615), which Andrew from the ink! team implemented) and improvements in `subxt` it is now possible for us to introduce a component that we have been dreaming about for a long time: end-to-end testing. In short, you are no longer limited to testing contracts in an artificial world – instead, you can now do so in the real one!
+Through technical advances in Substrate (namely Substrate's [Metadata v14](https://github.com/paritytech/substrate/pull/8615), which Andrew from the ink! team implemented) and improvements in `subxt` it is now possible for us to introduce a component that we have been dreaming about for a long time: end-to-end testing. In short, you are no longer limited to testing contracts in an artificial world – instead, you can now do so in the real one!
 
 E2E testing enables developers to write a test that will not only test the contract in an isolated manner; instead, the contract will be tested _together_ with all components that will be involved. This takes place by deploying the contract on a Substrate node that runs on your local machine (or in your CI). So the testing happens on-chain – from end to end, all parts of the stack are involved. This way of testing resembles closely how the contract will actually behave in production.
 
@@ -55,7 +55,7 @@ This is a big step forward and we see E2E as the last stone in the ink! testing 
 
 We have reworked the metadata format that ink! uses. This makes it easier for third-party tools (like block explorers) to interact with ink! smart contracts and extract information from deployed contracts.
 
-Our [new format](https://use.ink/metadata/) comes with proper documentation and formal specification. You can find the documentation of the new format [here](https://use.ink/metadata/). The formal specification is available as a JSON schema [here](https://github.com/paritytech/ink/tree/master/crates/metadata). The formal schema can be used by block explorers to verify contract metadata that is uploaded by users.
+Our [new format](https://use.ink/basics/metadata/) comes with proper documentation and formal specification. You can find the documentation of the new format [here](https://use.ink/metadata/). The formal specification is available as a JSON schema [here](https://github.com/paritytech/ink/tree/master/crates/metadata). The formal schema can be used by block explorers to verify contract metadata that is uploaded by users.
 
 ## More changes
 
@@ -80,12 +80,13 @@ In case you run into any issues with ink!, the best way to get help is to either
 
 * Post a question on [the Substrate Stack Exchange](https://substrate.stackexchange.com/questions/tagged/ink/). There is a tag for ink! and smart contracts.
 * In case you think this could be a bug, or you have a feature suggestion, it’s best to create an issue in [the ink! repository](http://github.com/paritytech/ink) on GitHub.
+* We also have a Twitter account! [@ink_lang](https://twitter.com/ink_lang).
 
 ## Compatibility
 
 ink! 4.0 is compatible with the [`pallet-contracts`](https://github.com/paritytech/substrate/tree/master/frame/contracts) released with Polkadot release `polkadot-v0.9.37`.
 
-Our latest [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) (version `v0.23.0`) also supports ink! 4.0.
+Our latest [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) (version v0.24.0) also supports ink! 4.0.
 
 ## Thank you!
 
