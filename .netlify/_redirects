@@ -2,7 +2,7 @@
 https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 
 # Security Policies
-/security.txt /.well-known/security.txt 301!
+/security.txt /.well-known/security.txt:splat  200
 
 # Legacy Redirects
 /blog/security-altert /secyrity-alert-2
