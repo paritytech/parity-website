@@ -1,6 +1,9 @@
 # Netlify app dns
 https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 
+# Security Policies
+/security.txt /.well-known/security.txt
+
 # Legacy Redirects
 /blog/security-altert /secyrity-alert-2
 /security-is-a-process-a-postmortem-on-the-parity-multi-sig-library-self-destruct /blog/a-postmortem-on-the-parity-multi-sig-library-self-destruct
