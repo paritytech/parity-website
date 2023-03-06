@@ -1,11 +1,11 @@
 ---
 title: index
 tags:
-  - Ink!
-  - Parity Substrate
-  - Polkadot
-  - Rust
-  - Wasm
+- ink!
+- Parity Substrate
+- Polkadot
+- Rust
+- Wasm
 author: Michi Müller
 blogTitle: What is Parity's ink!?
 slug: blog/what-is-paritys-ink
@@ -135,7 +135,7 @@ For building contracts you use `cargo contract build`. Note that the typical Rus
 - It runs a linter for ink! contracts. This linter works analog to Rust’s `clippy`, it checks your contract for idiomatic use of ink!. We are constantly improving this linting tool and will add detections of common security pitfalls in the future.
 - It post-processes and compresses your contract’s binary. This is done to reduce the costs for users deploying a contract, as well as the fees for users interacting with the contract. The contract size also correlates to the throughput a chain can achieve and contributes to the chain footprint.
 - It generates _metadata_ for the contract. With the term metadata we refer to any information that is needed for interacting with the contract’s binary. The binary itself will be just a WebAssembly blob — byte code of the contract that without further information cannot be interacted with. In order to know, for example, which functions the contract exposes and what arguments those functions take one needs to have the metadata.
-  You might also know this concept under the term ABI from other blockchains. In our case the metadata contains a bit more than just the ABI though, it also contains information on e.g. how the contract stores its data, which is helpful for off-chain tooling (e.g. a block explorer) or human readable documentation about the contract functions.
+You might also know this concept under the term ABI from other blockchains. In our case the metadata contains a bit more than just the ABI though, it also contains information on e.g. how the contract stores its data, which is helpful for off-chain tooling (e.g. a block explorer) or human readable documentation about the contract functions.
 
 As a result of executing `cargo contract build` three files are created:
 

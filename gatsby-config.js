@@ -133,7 +133,7 @@ module.exports = {
               'Partnerships',
               'Custom Solutions',
               'Security',
-              'Ink!',
+              'ink!',
               'Parity Ethereum',
               'Parity Fether',
               'Light.js',

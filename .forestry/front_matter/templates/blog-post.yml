@@ -28,15 +28,15 @@ fields:
   description: Select publishing date &amp; time
   config:
     required: true
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
 - name: tags
   type: tag_list
   default: []
   label: Tags
   description: Community, Polkadot, Releases, Parity Substrate, People of Parity,
-    Rust, Wasm, Partnerships, Custom Solutions, Security, Ink!, Parity Ethereum, Parity
+    Rust, Wasm, Partnerships, Custom Solutions, Security, ink!, Parity Ethereum, Parity
     Fether, Light.js, Company and Culture, Parity Signer, Zcash, PICOPS, Parity Bridge
 - name: author
   type: select
@@ -70,7 +70,7 @@ fields:
       type: simple
       section: blog-settings
       file: content/blog/authors.json
-      path: 
+      path:
   label: Author
 - name: image
   type: file
