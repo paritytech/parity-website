@@ -1,8 +1,8 @@
 ---
 title: index
 tags:
-- Ink!
-- " Parity Substrate"
+- ink!
+- Parity Substrate
 - Polkadot
 - Rust
 - Wasm
@@ -134,7 +134,7 @@ For building contracts you use `cargo contract build`. Note that the typical Rus
 
 * It runs a linter for ink! contracts. This linter works analog to Rust’s `clippy`, it checks your contract for idiomatic use of ink!. We are constantly improving this linting tool and will add detections of common security pitfalls in the future.
 * It post-processes and compresses your contract’s binary. This is done to reduce the costs for users deploying a contract, as well as the fees for users interacting with the contract. The contract size also correlates to the throughput a chain can achieve and contributes to the chain footprint.
-* It generates _metadata_ for the contract. With the term metadata we refer to any information that is needed for interacting with the contract’s binary. The binary itself will be just a WebAssembly blob — byte code of the contract that without further information cannot be interacted with. In order to know, for example, which functions the contract exposes and what arguments those functions take one needs to have the metadata.  
+* It generates _metadata_ for the contract. With the term metadata we refer to any information that is needed for interacting with the contract’s binary. The binary itself will be just a WebAssembly blob — byte code of the contract that without further information cannot be interacted with. In order to know, for example, which functions the contract exposes and what arguments those functions take one needs to have the metadata.
   You might also know this concept under the term ABI from other blockchains. In our case the metadata contains a bit more than just the ABI though, it also contains information on e.g. how the contract stores its data, which is helpful for off-chain tooling (e.g. a block explorer) or human readable documentation about the contract functions.
 
 As a result of executing `cargo contract build` three files are created:
@@ -157,7 +157,7 @@ A number of parachains have developed custom tooling that provides a more contex
 
 We, as the team developing ink! and the Contracts pallet, provide a couple of handy tools as well:
 
-* [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment.  
+* [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment.
   If you are looking for production templates take a look at Substrate’s [`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
 * We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://ink.substrate.io/testnet).
 
