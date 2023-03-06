@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { slugify } = require('./src/utils/url');
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
@@ -47,7 +50,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   //Creating Tag Pages based on tags mentioned in each mdx file
   const tags = result.data.tags.group;
   tags.forEach(({ fieldValue }) => {
-    let customSlug = fieldValue.replace(/[.!]/g, '').replace(/\s+/g, '-').toLowerCase();
+    let customSlug = slugify(fieldValue);
+    console.log(fieldValue);
     createPage({
       path: `blog/tag/${customSlug}`,
       component: require.resolve(`./src/components/templates/tag-template.tsx`),
@@ -60,7 +64,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   //Creating Author Pages based on author mentioned in Forestry MDX files
   const authors = result.data.authors.group;
   authors.forEach(({ fieldValue }) => {
-    let customSlug = fieldValue.replace(/\s+/g, '-').toLowerCase();
+    let customSlug = slugify(fieldValue);
     createPage({
       path: `blog/author/${customSlug}`,
       component: require.resolve(`./src/components/templates/author-template.tsx`),

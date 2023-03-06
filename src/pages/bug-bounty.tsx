@@ -31,19 +31,19 @@ export default function BugBountyPage() {
                 Program set out below.
               </p>
               <p>
-                We want to remind all hunters that Parity’s main projects are blockchain-related source code (located in
-                our Github repositories) and associated released binaries, and not websites or services in any form.
-                This is the reason for our Bug Bounty Program covering only the former, and not the latter.
+                We want to remind all hunters that Parity&rsquo;s main projects are blockchain-related source code
+                (located in our Github repositories) and associated released binaries, and not websites or services in
+                any form. This is the reason for our Bug Bounty Program covering only the former, and not the latter.
               </p>
-              <h3>What&apos;s In Scope? (Hint: Not Our Website!)</h3>
+              <h3>What&#39;s In Scope?</h3>
               <p>
-                If you&apos;ve found a potential bug in Substrate, Polkadot, or associated build and deployment
+                If you&#39;ve found a potential bug in Substrate, Polkadot, or associated build and deployment
                 infrastructure, then we want to hear from you!
               </p>
               <p>Parity welcomes vulnerability reports that demonstrate security flaws in:</p>
               <ul className="font-normal text-testDark pl-4">
                 <li>
-                  <p className="font-bold mb-1">Substrate</p>
+                  <p className="font-bold mb-1">Substrate - implementation-related issues only</p>
                   <ul className="font-normal text-testDark pl-4 mb-1">
                     <li>
                       Any bugs which can be used to bring down or take control of Substrate clients without direct
@@ -56,12 +56,12 @@ export default function BugBountyPage() {
                   <ul className="font-normal text-testDark pl-4 mb-1">
                     <li>
                       Any bugs which can be used to bring down or take control of Smoldot light clients without direct
-                      access to the machine.
+                      access to the machine
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <p className="font-bold mb-1">Polkadot</p>
+                  <p className="font-bold mb-1">Polkadot - implementation-related issues only</p>
                   <ul className="font-normal text-testDark pl-4 mb-1">
                     <li className="leading-relaxed">
                       <strong>Client:</strong> Any bugs which can be used to bring down or take control of Parity
@@ -75,21 +75,18 @@ export default function BugBountyPage() {
                 </li>
                 <li className="leading-relaxed">
                   <strong>Parity releases pipeline:</strong> any bugs which could be used to enable an attacker to
-                  inject malicious code into our distributed binaries, or be used to halt Parity’s release process or
-                  add malicious/unintended functions to the released binaries.
+                  inject malicious code into our distributed binaries, or be used to halt Parity&rsquo;s release process
+                  or add malicious/unintended functions to the released binaries.
                 </li>
                 <li className="leading-relaxed">
                   <strong>Production infrastructure:</strong> publicly-available infrastructure Parity runs for
-                  production-grade networks (in contrast to testnets), especially parts which are critical for network’s
-                  well-being or safety of funds.
+                  production-grade networks (in contrast to testnets), especially parts which are critical for
+                  network&rsquo;s well-being or safety of funds. Please note that this does not include our publicly
+                  available web pages that are static.
                 </li>
                 <li className="leading-relaxed">
                   <strong>Cryptography code:</strong> any bugs relating to cryptography, encryption, decryption, and
-                  signing of messages (this includes account creation and recovery).
-                </li>
-                <li className="leading-relaxed">
-                  <strong>Client Application Security:</strong> bugs which can allow users to obtain privileges not
-                  intended for them.
+                  signing of messages (this includes account creation and recovery) in products, developed by Parity
                 </li>
               </ul>
               <p>
@@ -106,27 +103,21 @@ export default function BugBountyPage() {
               <p>Most other things are not in scope, though. Specifically:</p>
               <ul className="font-normal text-testDark pl-4">
                 <li className="leading-relaxed">
-                  The Parity websites, including{' '}
-                  <a href="https://parity.io" target="_blank" rel="noreferrer">
-                    https://parity.io
-                  </a>{' '}
-                  and{' '}
-                  <a href="https://substrate.dev" target="_blank" rel="noreferrer">
-                    https://substrate.dev
-                  </a>{' '}
-                  (including subdomains), and any others we might make in the future, are not in scope.
+                  Static websites, until you can find a way to compromise the data on the website for all of the
+                  visitors.
                 </li>
                 <li className="leading-relaxed">
                   Bugs which have already been submitted by another user or are already known to the Parity team or have
                   already been publicly disclosed.
                 </li>
                 <li className="leading-relaxed">
-                  Bugs in third-party tools and services we’re using (but we would be glad to connect you with the
+                  Bugs in third-party tools and services we&rsquo;re using (but we would be glad to connect you with the
                   security team of the corresponding project).
                 </li>
                 <li className="leading-relaxed">
-                  Parity Technologies’ development team, Parity Technology employees and any other person employed or
-                  providing services in any way to the company, directly or indirectly, are not eligible for rewards.
+                  Parity Technologies&rsquo; development team, Parity Technology employees and any other person employed
+                  or providing services in any way to the company, directly or indirectly, are not eligible for rewards.
+                  Social engineering attacks are also here.
                 </li>
                 <li className="leading-relaxed">Anything that contravenes the spirit or letter of this Program.</li>
               </ul>
@@ -135,15 +126,15 @@ export default function BugBountyPage() {
               <p>Responsible investigation and reporting includes, but isn&apos;t limited to, the following:</p>
               <ul className="font-normal text-testDark pl-4">
                 <li className="leading-relaxed">
-                  You should use your best effort not to access, modify, delete, or store user data or Parity’s data.
+                  Use your best effort not to access, modify, delete, or store user data or Parity&rsquo;s data.
                   Instead, use your own accounts or test accounts for security research purposes.
                 </li>
                 <li className="leading-relaxed">
-                  Don’t defraud, harm, or violate the privacy of Parity Technologies Ltd or its users during your
+                  Don&rsquo;t defraud, harm, or violate the privacy of Parity Technologies Ltd or its users during your
                   research; you should make a good faith effort to not interrupt or degrade our services.
                 </li>
                 <li className="leading-relaxed">
-                  Don&apos;t target our physical security measures, or attempt to use social engineering, spam,
+                  Don&#39;t target our physical security measures, or attempt to use social engineering, spam,
                   distributed denial of service (DDOS) attacks, etc.
                 </li>
                 <li className="leading-relaxed">Initially report the bug only to us and not to anyone else.</li>
@@ -151,35 +142,83 @@ export default function BugBountyPage() {
                 <li className="leading-relaxed">
                   After reporting a suspected bug, give us a reasonable amount of time to fix the bug before disclosing
                   it to anyone else, and seek our approval before disclosing it to anyone else. An uncoordinated public
-                  disclosure may lead to your submission being disqualified from the Program.
+                  disclosure may lead to your submission being disqualified from the Program (consequently, leaving you
+                  without any payout or recognition from Parity&rsquo;s side).
                 </li>
                 <li className="leading-relaxed">
-                  Please don’t make repeat submissions of low quality, rejected or automated vulnerability reports.In
-                  general, please investigate and report bugs in a way that makes a reasonable, good faith effort not to
-                  be disruptive or harmful to us or our users. Otherwise your actions might be interpreted as an attack
-                  rather than an effort to be helpful.
+                  Please don&rsquo;t make repeat submissions of low quality, rejected or automated vulnerability
+                  reports. In general, please investigate and report bugs in a way that makes a reasonable, good faith
+                  effort not to be disruptive or harmful to us or our users. Otherwise your actions might be interpreted
+                  as an attack rather than an effort to be helpful.
                 </li>
               </ul>
 
               <h3>Is My Bug Eligible?</h3>
-              <p>To be eligible for a reward under this Program:</p>
+              <p>
+                We evaluate submissions based on impact and the following help us more quickly respond to your
+                submission:
+              </p>
               <ul className="font-normal text-testDark pl-4">
                 <li className="leading-relaxed">
-                  Play by the rules - this includes complying with the spirit and letter of this policy as well as any
-                  other applicable laws or agreements.
+                  Provide us with a working proof-of-concept or equivalent evidence, assuming that your research
+                  didn&rsquo;t produce unrecoverable changes. This helps us evaluate that your submission is within the
+                  program&rsquo;s scope and is usable in possible attacks.
+                </li>
+                <li className="leading-relaxed">
+                  If you suspect that the flaw you have found may be fatal for the items in the scope, please DO NOT
+                  take further actions. Instead, describe your assumptions as much as possible in the report. The
+                  Security team will investigate and submit a higher bounty if it has a greater impact than you were
+                  able to determine without breaking our stuff. Please do not break our (or anyone&rsquo;s) stuff.
+                </li>
+                <li className="leading-relaxed">
+                  In the report, include your vision of the potential impact and potential attack scenario, including
+                  required attack conditions. If your submission requires special, unrealistic conditions, or must be
+                  chained with other attacks with such conditions to be executed, unfortunately, it is OUT OF SCOPE.
+                </li>
+                <li className="leading-relaxed">
+                  If there is no impact, then we aren&rsquo;t really interested. Purely-theoretical findings are
+                  sometimes entertaining to investigate, so feel free to send us any &mdash; but if there&rsquo;s no way
+                  it can be used to break our systems in practice, it won&rsquo;t be eligible.
+                </li>
+                <li className="leading-relaxed">
+                  If you can identify some issues in our core products (Polkadot, Smoldot, Substrate, crypto libraries
+                  or consensus engine), but you can&rsquo;t provide a working proof of concept, you are always welcome
+                  to share your inputs with Parity. We will evaluate your findings carefully, it just takes more time
+                  this way.
+                </li>
+                <li className="leading-relaxed">
+                  If you are able to compromise something significant,&nbsp;please STOP at the point of recognition,
+                  collect the small evidence enough to understand where you are and what you can do, and report the
+                  vulnerability. This is particularly important if after having discovered the initial vulnerability,
+                  your continued research is likely to look a lot more like an attack than research. At that point, we
+                  might find the vulnerability before you tell us, making your discovery no longer eligible, and if we
+                  do not know that you are friendly, we might be required to get law enforcement or other authorities
+                  involved. We would prefer to avoid dealing with either of situations.
+                </li>
+                <li className="leading-relaxed">
+                  You are welcome (and encouraged!) to include additional comments about your assumptions and further
+                  suspicions in your bug bounty report. The Security team will investigate your report and the potential
+                  consequences of the flaw you have identified, and submit a higher bounty if it is a valuable finding
+                  with an impact higher than you were able to determine.
+                </li>
+                <p>To be eligible for a reward under this Program:</p>
+                <li className="leading-relaxed">
+                  Play by the rules &mdash; this includes complying with the spirit and letter of this policy as well as
+                  any other applicable laws or agreements.
                 </li>
                 <li className="leading-relaxed">
                   The security bug must be original and previously unreported. Duplicate submissions made within 72
                   hours of each other will split the bounty between reporters. If duplicate submissions are of unequal
                   quality, the split will be at the level of the lesser report, and the greater report will receive a
-                  pro-rated additional bounty on top of the split.
+                  pro-rated additional bounty on top of the split. Despite striving to be transparent as much as
+                  possible, we do not disclose other participant&rsquo;s names in such cases.
                 </li>
                 <li className="leading-relaxed">
-                  The security bug must be a part of Parity’s code, not the code of a third party. We will pay bounties
-                  for vulnerabilities in third-party libraries (for instance, libp2p) incorporated into shipped client
-                  code utilized by Parity if both of the following two conditions are met:
-                  <ul className="font-normal text-testDark pl-4 mb-0">
-                    <li>the bug leads to an exploitable vulnerability in Parity&apos;s software in particular, and</li>
+                  The security bug must be a part of Parity&rsquo;s code, not the code of a third party. We will pay
+                  bounties for vulnerabilities in third-party libraries (for instance, libp2p) incorporated into shipped
+                  client code utilized by Parity if both of the following two conditions are met:
+                  <ul>
+                    <li>the bug leads to an exploitable vulnerability in Parity&#39;s software in particular, and</li>
                     <li>is not actively maintained by another commercial entity with a separate bug bounty program.</li>
                   </ul>
                 </li>
@@ -197,9 +236,8 @@ export default function BugBountyPage() {
                   any of its subsidiaries.
                 </li>
                 <li className="leading-relaxed">
-                  If you inadvertently access, modify, delete, or store user data, we ask that you notify Parity
-                  immediately at <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> and delete any stored data
-                  after notifying us.
+                  If you inadvertently access, modify, delete, or store user data, we ask that you notify
+                  Parity&nbsp;immediately at bugbounty@parity.io and delete any stored data after notifying us.
                 </li>
                 <li className="leading-relaxed">
                   We might be prevented by law from paying you. For example, if you happen to live in a country on a
@@ -216,7 +254,7 @@ export default function BugBountyPage() {
                 </li>
                 <li className="leading-relaxed">
                   To the extent that you propose a fix that includes code we will ask you to sign our standard
-                  contributor license agreement in respect of that fix so that we can deploy it going forwards.
+                  contributor license agreement with respect to that fix so that we can deploy it going forwards.
                 </li>
               </ul>
               <p>
@@ -227,8 +265,8 @@ export default function BugBountyPage() {
               </p>
               <p>
                 <i>
-                  We want your bugs! But please note that it&apos;s entirely at our discretion to decide whether a bug
-                  is significant enough to be eligible for reward. Our lawyer made us write this. You understand.
+                  We want your bugs! But please note that it&#39;s entirely at our discretion to decide whether a bug is
+                  significant enough to be eligible for reward. Our lawyer made us write this. You understand.
                 </i>
               </p>
 
@@ -262,18 +300,18 @@ export default function BugBountyPage() {
                   <ul className="font-normal text-testDark pl-4 mb-0">
                     <li>step by step details to reproduce</li>
                     <li>affected components</li>
-                    <li>potential impact</li>
+                    <li>Your vision of the potential impact and the attack scenario</li>
                   </ul>
                 </li>
                 <li className="leading-relaxed">
                   Please be as detailed as possible. The easier it is for us to reproduce your bug, the faster we can
-                  fix it — and the faster we can pay you! Try to include as much information in your report as you can,
-                  including a description of the bug, its potential impact, and steps for reproducing it or proof of
-                  concept.
+                  fix it &mdash; and the faster we can pay you! Try to include as much information in your report as you
+                  can, including a description of the bug, its potential impact, and steps for reproducing it or proof
+                  of concept.
                 </li>
                 <li className="leading-relaxed">
-                  Please add a Github link to the repo you’ve found a bug in right in the email title — this will help
-                  our laborious robots to route your email accordingly.
+                  Please add a Github link to the repo you&rsquo;ve found a bug in right in the email title &mdash; this
+                  will help our laborious robots to route your email accordingly.
                 </li>
                 <li className="leading-relaxed">
                   Please allow two business days for us to respond before taking any further action.
@@ -294,13 +332,13 @@ export default function BugBountyPage() {
                 to issue awards to individuals who are on sanctions lists or who are in countries on sanctions lists.
                 You are responsible for all taxes payable in connection with the receipt of any rewards. All rewards are
                 subject to the laws of England and Wales. Finally, your testing must not violate any law or compromise
-                any data — or funds — that are not yours.
+                any data &mdash; or funds &mdash; that are not yours.
               </p>
               <p>
                 We will do our best to respond to your submission as quickly as possible, keep you updated on the fix,
                 and award a bounty where appropriate. If you follow these guidelines in discovering and disclosing a
-                vulnerability, we will not consider your actions as an attack and won’t take any legal action against
-                you.
+                vulnerability, we will not consider your actions as an attack and won&rsquo;t take any legal action
+                against you.
               </p>
               <p>
                 <b>Privacy</b> <br />
@@ -328,20 +366,20 @@ export default function BugBountyPage() {
               </p>
               <p>
                 We understand that many Parity systems and services are interconnected with third-party systems and
-                services. While we can authorize your research on Parity’s systems and services we cannot authorize
-                efforts on third-party products or guarantee they won’t pursue legal action against you.{' '}
+                services. While we can authorize your research on Parity&rsquo;s systems and services we cannot
+                authorize efforts on third-party products or guarantee they won&rsquo;t pursue legal action against you.{' '}
               </p>
               <p>
                 <b>
-                  If you’re not sure whether your conduct complies with this policy, please contact us first at{` `}
-                  <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> and we will do our best to clarify.
+                  If you’re not sure whether your conduct complies with this policy, please reach us first using{` `}
+                  <a href="https://security-submission.parity.io/" target="_blank">this contact form</a> and we will do our best to clarify.
                 </b>
               </p>
 
               <h3>Got Questions? We Got Answers!</h3>
               <p>
                 If you have a query or complaint about the Parity Bug Bounty Hunter Program, please contact us using the
-                same <a href="mailto:bugbounty@parity.io">bugbounty@parity.io</a> email address.
+                same <a href="https://security-submission.parity.io/" target="_blank">contact form</a>.
               </p>
             </article>
           </div>
@@ -353,8 +391,8 @@ export default function BugBountyPage() {
           <h3 className="font-normal mb-4">
             {intl.formatMessage({ id: 'bug-bountry-footer-cta-one' })}
             {` `}
-            <a className="text-parityPink font-semibold no-underline hover:underline" href="mailto:bugbounty@parity.io">
-              bugbounty@parity.io
+            <a className="text-parityPink font-semibold no-underline hover:underline" href="https://security-submission.parity.io/" target="_blank">
+              contact form
             </a>
           </h3>
         </div>

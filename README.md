@@ -12,7 +12,7 @@
 
 ### Production [Live Site](https://www.parity.io)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/18555313-f0d7-4189-8176-b27ed50e17fa/deploy-status)](https://app.netlify.com/sites/parity-prod/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18555313-f0d7-4189-8176-b27ed50e17fa/deploy-status)](https://app.netlify.com/sites/parity-website-gatsby/deploys)
 
 ## 🚀 Quick start
 

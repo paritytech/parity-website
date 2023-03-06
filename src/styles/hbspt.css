@@ -146,3 +146,28 @@ textarea {
 #hubspotForm .hs-richtext[data-reactid='.hbspt-forms-1.2.3'] p {
   font-size: 12px !important;
 }
+
+#modal {
+  z-index: 999!important;
+}
+
+.hs-main-font-element {
+  margin-bottom: 2rem;
+}
+
+.hs-main-font-element > h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.submitted-message {
+  margin: 4rem 0;
+}
+
+.hs_email {
+  margin-top: 2rem;
+}
+
+.hs_recaptcha {
+  margin: 2rem 0;
+}

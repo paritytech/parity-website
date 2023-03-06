@@ -1,0 +1,15 @@
+name: Call reusable workflow to add PRs to Web project board 
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  call-add-prs-to-project:
+    uses: paritytech-webops/gh-actions/.github/workflows/add-prs-to-project.yml@main
+    secrets:
+      app_id: ${{ secrets.APP_ID }}
+      private_key: ${{ secrets.PRIVATE_KEY }}
+    with:
+      project-url: https://github.com/orgs/paritytech/projects/44
