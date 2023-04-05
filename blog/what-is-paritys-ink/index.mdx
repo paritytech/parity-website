@@ -15,7 +15,7 @@ image: '/images/xwqylk5.jpg'
 
 - _On the occasion of ink! surpassing 1,000 stars on Github, we take a deep dive into the smart contract programming language._
 
-[ink!](https://ink.substrate.io) is a programming language for smart contracts — one of several that blockchains built with [the Substrate framework](http://substrate.io) can choose from. It’s an opinionated language that we at Parity have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
+[ink!](https://use.ink/) is a programming language for smart contracts — one of several that blockchains built with [the Substrate framework](http://substrate.io) can choose from. It’s an opinionated language that we at Parity have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
 
 ## **Thank you for helping ink! surpass 1,000 GitHub stars!**
 
@@ -92,7 +92,7 @@ Those chains typically take the off-the-shelf Contracts pallet and create some a
 
 There is another not so obvious use case for the Contracts pallet: smart contracts as “second-class citizens” on an existing chain. By this we mean that the central value proposition of the chain has nothing to do with smart contracts, but it still includes them as an add-on.
 
-We provide an API (called [chain extensions](https://ink.substrate.io/macros-attributes/chain-extension)) with which a parachain can expose certain parts of its business logic to smart contract developers. Through this, smart contract developers can utilize the business logic primitives of the chain to build a new application on top of it. Think for example of a decentralized exchange blockchain. This chain would in its simplest form have an order book to place bids and asks — there is no need for taking untrusted, turing complete, programs from the outside. The parachain could decide to expose the order book into smart contracts though, giving external developers the option of building new applications that utilize the order book. For example, to upload trading algorithms as smart contracts to the chain.
+We provide an API (called [chain extensions](https://use.ink/macros-attributes/chain-extension)) with which a parachain can expose certain parts of its business logic to smart contract developers. Through this, smart contract developers can utilize the business logic primitives of the chain to build a new application on top of it. Think for example of a decentralized exchange blockchain. This chain would in its simplest form have an order book to place bids and asks — there is no need for taking untrusted, turing complete, programs from the outside. The parachain could decide to expose the order book into smart contracts though, giving external developers the option of building new applications that utilize the order book. For example, to upload trading algorithms as smart contracts to the chain.
 
 Smart contracts here are an opportunity to help increase user engagement. And the billing for utilizing the chain comes already built-in with the pallet — users have to pay gas fees for the execution of their smart contract.
 
@@ -159,7 +159,8 @@ We, as the team developing ink! and the Contracts pallet, provide a couple of ha
 
 - [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment.
   If you are looking for production templates take a look at Substrate’s [`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
-- We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://ink.substrate.io/testnet).
+
+* We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://use.ink/testnet).
 
 There’s also a number of community testnets, you can find some in our [`awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
 
