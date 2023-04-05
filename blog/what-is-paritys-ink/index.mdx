@@ -10,10 +10,10 @@ author: Michi Müller
 blogTitle: What is Parity's ink!?
 slug: blog/what-is-paritys-ink
 date_published: 2022-09-20T10:00:00.000+00:00
-image: "/images/xwqylk5.jpg"
-
+image: '/images/xwqylk5.jpg'
 ---
-* _On the occasion of ink! surpassing 1,000 stars on Github, we take a deep dive into the smart contract programming language._
+
+- _On the occasion of ink! surpassing 1,000 stars on Github, we take a deep dive into the smart contract programming language._
 
 [ink!](https://use.ink/) is a programming language for smart contracts — one of several that blockchains built with [the Substrate framework](http://substrate.io) can choose from. It’s an opinionated language that we at Parity have built by extending the popular Rust programming language with functionality needed to make it smart contract compatible.
 
@@ -33,7 +33,7 @@ How does ink! come into play here? ink! is a programming language, specifically 
 
 > **With ink! you can write smart contracts in Rust for blockchains built with Substrate that include the Contracts pallet.**
 
-![Substrate pallets](/images/uhlpu68.png "Substrate pallets")
+![Substrate pallets](/images/uhlpu68.png 'Substrate pallets')
 
 ## **Smart contracts vs. parachains**
 
@@ -55,7 +55,7 @@ The trade-off is that with a parachain one has the freedom to decide on (nearly)
 
 A smart contract on the other hand has less friction for developing and deploying it. Developers don’t have to think about governance, crypto-economics, etc. One just needs a few tokens and can go on their merry way deploying a smart contract. It’s as simple as that.
 
-![ink! smart contract vs. a parachain](/images/ehszjuy.png "ink! smart contract vs. a parachain")
+![ink! smart contract vs. a parachain](/images/ehszjuy.png 'ink! smart contract vs. a parachain')
 
 ## **How does the Contracts pallet work?**
 
@@ -63,9 +63,9 @@ We intentionally designed the Contracts pallet in a way that it is decoupled fro
 
 For contract developers this means they can use ink! for writing smart contracts, but can also decide on other languages. Right now three languages to choose from exist:
 
-* [Parity’s ink!](https://github.com/paritytech/ink) for Rust.
-* [ask!](https://github.com/ask-lang/ask) for AssemblyScript.
-* The [Solang](https://github.com/hyperledger-labs/solang) compiler for Solidity.
+- [Parity’s ink!](https://github.com/paritytech/ink) for Rust.
+- [ask!](https://github.com/ask-lang/ask) for AssemblyScript.
+- The [Solang](https://github.com/hyperledger-labs/solang) compiler for Solidity.
 
 It’s not hard to add new languages. There just needs to be a compiler for the language down to WebAssembly, then it’s possible to implement the Contracts pallet API. This API at the moment consists of about 15-20 functions for anything a smart contract may desire: storage access, cryptographic functionality, environmental information like block numbers, access to functions for getting random numbers or to self-terminate the contract, etc. Not all of those have to be implemented in the language — the ink! “Hello, World!” requires just six API functions. The following schema depicts this relationship:
 
@@ -83,10 +83,10 @@ The most obvious use case is a parachain which provides smart contracts as a “
 
 Those chains typically take the off-the-shelf Contracts pallet and create some additional innovation on top of it. Examples of this are:
 
-* [Astar](https://astar.network): built a layer on top of the Contracts pallet so that contract developers can earn a passive income whenever their contracts are being used.
-* [Phala](https://www.phala.network): utilizes the Contracts pallet in a trusted execution environment, enabling confidential smart contract execution and interoperability.
-* [Aleph Zero](https://alephzero.org): uses the Contracts pallet in a zero-knowledge context.
-* [t3rn](https://www.t3rn.io): uses the Contracts pallet as a building block to enable multichain execution for smart contracts.
+- [Astar](https://astar.network): built a layer on top of the Contracts pallet so that contract developers can earn a passive income whenever their contracts are being used.
+- [Phala](https://www.phala.network): utilizes the Contracts pallet in a trusted execution environment, enabling confidential smart contract execution and interoperability.
+- [Aleph Zero](https://alephzero.org): uses the Contracts pallet in a zero-knowledge context.
+- [t3rn](https://www.t3rn.io): uses the Contracts pallet as a building block to enable multichain execution for smart contracts.
 
 ### **Use Case 2: Smart Contracts as “second-class citizens”**
 
@@ -132,16 +132,16 @@ For building ink! smart contracts you could just use the normal `cargo build` wo
 
 For building contracts you use `cargo contract build`. Note that the typical Rust `cargo build` behavior is that you need to supply `--release` if you want the smallest possible binary size, same with cargo `contract build --release`. If you run this command you’ll see that `cargo-contract` executes the “normal” `cargo build` on your contract, but it does some more steps as well. The three most important additional steps are:
 
-* It runs a linter for ink! contracts. This linter works analog to Rust’s `clippy`, it checks your contract for idiomatic use of ink!. We are constantly improving this linting tool and will add detections of common security pitfalls in the future.
-* It post-processes and compresses your contract’s binary. This is done to reduce the costs for users deploying a contract, as well as the fees for users interacting with the contract. The contract size also correlates to the throughput a chain can achieve and contributes to the chain footprint.
-* It generates _metadata_ for the contract. With the term metadata we refer to any information that is needed for interacting with the contract’s binary. The binary itself will be just a WebAssembly blob — byte code of the contract that without further information cannot be interacted with. In order to know, for example, which functions the contract exposes and what arguments those functions take one needs to have the metadata.
-  You might also know this concept under the term ABI from other blockchains. In our case the metadata contains a bit more than just the ABI though, it also contains information on e.g. how the contract stores its data, which is helpful for off-chain tooling (e.g. a block explorer) or human readable documentation about the contract functions.
+- It runs a linter for ink! contracts. This linter works analog to Rust’s `clippy`, it checks your contract for idiomatic use of ink!. We are constantly improving this linting tool and will add detections of common security pitfalls in the future.
+- It post-processes and compresses your contract’s binary. This is done to reduce the costs for users deploying a contract, as well as the fees for users interacting with the contract. The contract size also correlates to the throughput a chain can achieve and contributes to the chain footprint.
+- It generates _metadata_ for the contract. With the term metadata we refer to any information that is needed for interacting with the contract’s binary. The binary itself will be just a WebAssembly blob — byte code of the contract that without further information cannot be interacted with. In order to know, for example, which functions the contract exposes and what arguments those functions take one needs to have the metadata.
+You might also know this concept under the term ABI from other blockchains. In our case the metadata contains a bit more than just the ABI though, it also contains information on e.g. how the contract stores its data, which is helpful for off-chain tooling (e.g. a block explorer) or human readable documentation about the contract functions.
 
 As a result of executing `cargo contract build` three files are created:
 
-* `my_contract.contract`: a JSON file that contains the contract’s WebAssembly blob in hex encoding plus the contract’s metadata.
-* `metadata.json`: a JSON file that contains just the contract’s metadata, without the WebAssembly blob.
-* `my_contract.wasm`: the contract’s WebAssembly blob.
+- `my_contract.contract`: a JSON file that contains the contract’s WebAssembly blob in hex encoding plus the contract’s metadata.
+- `metadata.json`: a JSON file that contains just the contract’s metadata, without the WebAssembly blob.
+- `my_contract.wasm`: the contract’s WebAssembly blob.
 
 Each of those files has a different use case:
 
@@ -157,18 +157,19 @@ A number of parachains have developed custom tooling that provides a more contex
 
 We, as the team developing ink! and the Contracts pallet, provide a couple of handy tools as well:
 
-* [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment.
+- [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node) This repository contains Substrate’s `node-template` configured to include `pallet-contracts`. This node is tracking Substrate’s `master` branch and has been modified to make it a great fit for development and testing. For example, it does not have any fixed block time, everything is processed immediately. This comes at the cost of making the node unsuitable for production use, but great for scripting, testing, or a Continuous Integration (CI) environment.
   If you are looking for production templates take a look at Substrate’s [`node`](https://github.com/paritytech/substrate/tree/master/bin/node/runtime) or the How-To guide in Substrate’s documentation on how to add the `pallets-contracts` ([link here](https://docs.substrate.io/reference/how-to-guides/pallet-design/add-contracts-pallet/)).
+
 * We maintain a testnet named plainly `Contracts` on Rococo. Rococo is a testnet for anything Polkadot and Kusama. Many parachains are connected to Rococo with their own testnets. You can read more about how to deploy on our testnet [in our documentation](https://use.ink/testnet).
 
 There’s also a number of community testnets, you can find some in our [`awesome-ink`](https://github.com/paritytech/awesome-ink) repository.
 
 For Developer UI’s there are currently three choices:
 
-* [Contracts UI](https://contracts-ui.substrate.io/): Ideal for beginners, gives helpful hints and assists developers.
-* [polkadot.js](https://polkadot.js.org/apps): Advanced interface which gives developers flexibility, at the cost of user friendliness.
-* [ink! playground](http://ink-playground.substrate.io/): A playground to try out ink! in the browser or share permanent links to code snippets. A very handy use is if you are asking questions on the [Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes): you can share code with e.g. a problem you are facing.
-* [`cargo-contract`](https://github.com/paritytech/cargo-contract): If you are looking to deploy contracts from the command-line, call them, decode their output, etc. then this tool provides a handy option to do all of that from a command-line interface. The tool is also perfect for scripting or CI integrations.
+- [Contracts UI](https://contracts-ui.substrate.io/): Ideal for beginners, gives helpful hints and assists developers.
+- [polkadot.js](https://polkadot.js.org/apps): Advanced interface which gives developers flexibility, at the cost of user friendliness.
+- [ink! playground](http://ink-playground.substrate.io/): A playground to try out ink! in the browser or share permanent links to code snippets. A very handy use is if you are asking questions on the [Substrate StackExchange](https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes): you can share code with e.g. a problem you are facing.
+- [`cargo-contract`](https://github.com/paritytech/cargo-contract): If you are looking to deploy contracts from the command-line, call them, decode their output, etc. then this tool provides a handy option to do all of that from a command-line interface. The tool is also perfect for scripting or CI integrations.
 
 ## **Why choose this route over a Substrate Ethereum compatibility layer?**
 
@@ -176,25 +177,25 @@ Besides the Contracts pallet, two other popular options for smart contracts in S
 
 There are a number of advantages for choosing the route of ink! and the Contracts pallet over the EVM one. To summarize a few which were detailed in this article:
 
-* ink! is just Rust — you can use all the normal Rust tooling: clippy, [crates.io](http://crates.io), IDE’s, etc.
-* Rust is a language that incorporates years of language research, it’s safe and fast. On top of that we took major learnings from older smart contract languages (like Solidity) and incorporated them into the ink! language design. We’ve chosen more sensible default behavior, such as disabling re-entrancy by default or making functions private by default.
-* Rust is an amazing language to work with, _it has been crowned the most loved programming language for seven years in a row_ on StackOverflow ([source](https://survey.stackoverflow.co/2022/)).
-* If you are a company and looking to hire smart contract developers, you can hire from the Rust ecosystem, which is much larger than the niche of e.g. Solidity developers.
-* ink! is native to Substrate, we use similar primitives, like the same type system.
-* There is a clear migration path to graduate from a contract to a parachain. Since ink! and Substrate are both Rust, developers can reuse large parts of their code, their tests, as well as frontend and client code.
-* WebAssembly is an industry standard, it’s not just used in the blockchain world. It is continually improved by major companies such as Google, Apple, Microsoft, Mozilla, and Facebook. Going forward we will profit from all improvements to the standard and its implementations. This is a big thing. WebAssembly is mostly used for the web, which has similar requirements as blockchains — safe and fast.
-* WebAssembly expands the family of languages available to smart contract developers to include Rust, C/C++, C#, Typescript, Haxe, Kotlin, etc. This means you can write smart contracts in whichever language you’re familiar with. We think this design is more future proof than a tight coupling of language and execution architecture.
+- ink! is just Rust — you can use all the normal Rust tooling: clippy, [crates.io](http://crates.io), IDE’s, etc.
+- Rust is a language that incorporates years of language research, it’s safe and fast. On top of that we took major learnings from older smart contract languages (like Solidity) and incorporated them into the ink! language design. We’ve chosen more sensible default behavior, such as disabling re-entrancy by default or making functions private by default.
+- Rust is an amazing language to work with, _it has been crowned the most loved programming language for seven years in a row_ on StackOverflow ([source](https://survey.stackoverflow.co/2022/)).
+- If you are a company and looking to hire smart contract developers, you can hire from the Rust ecosystem, which is much larger than the niche of e.g. Solidity developers.
+- ink! is native to Substrate, we use similar primitives, like the same type system.
+- There is a clear migration path to graduate from a contract to a parachain. Since ink! and Substrate are both Rust, developers can reuse large parts of their code, their tests, as well as frontend and client code.
+- WebAssembly is an industry standard, it’s not just used in the blockchain world. It is continually improved by major companies such as Google, Apple, Microsoft, Mozilla, and Facebook. Going forward we will profit from all improvements to the standard and its implementations. This is a big thing. WebAssembly is mostly used for the web, which has similar requirements as blockchains — safe and fast.
+- WebAssembly expands the family of languages available to smart contract developers to include Rust, C/C++, C#, Typescript, Haxe, Kotlin, etc. This means you can write smart contracts in whichever language you’re familiar with. We think this design is more future proof than a tight coupling of language and execution architecture.
 
 We support interoperability with legacy Solidity codebases: the HyperLedger project[ Solang](https://github.com/hyperledger/solang) compiles Solidity for the Contracts pallet.
 
 ## **Where to learn more?**
 
-* Our documentation portal can be found at [use.ink](https://use.ink/), it contains the most comprehensive information on ink!.
-* Since ink! is just Rust, you can also check out the crate docs. We’ve linked relevant crate docs in our readme [here](https://github.com/paritytech/ink#developer-documentation), e.g. the crate documentation for data structures is linked there.
-* We have a number of contract examples in our repository [here](https://github.com/paritytech/ink/tree/master/examples). Those cover a broad number of typical use-cases: ERC-20, upgradeable contracts, etc.
-* If you are looking for a quickstart, [ink!'s Guided Tutorial for Beginners](https://docs.substrate.io/tutorials/smart-contracts/) provides a great starting point.
-* In case you are interested in the inner workings of ink!, we explain those in our [`ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
-* For the Contracts pallet the [`README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
+- Our documentation portal can be found at [use.ink](https://use.ink/), it contains the most comprehensive information on ink!.
+- Since ink! is just Rust, you can also check out the crate docs. We’ve linked relevant crate docs in our readme [here](https://github.com/paritytech/ink#developer-documentation), e.g. the crate documentation for data structures is linked there.
+- We have a number of contract examples in our repository [here](https://github.com/paritytech/ink/tree/master/examples). Those cover a broad number of typical use-cases: ERC-20, upgradeable contracts, etc.
+- If you are looking for a quickstart, [ink!'s Guided Tutorial for Beginners](https://docs.substrate.io/tutorials/smart-contracts/) provides a great starting point.
+- In case you are interested in the inner workings of ink!, we explain those in our [`ARCHITECTURE.md`](https://github.com/paritytech/ink/blob/master/ARCHITECTURE.md) file.
+- For the Contracts pallet the [`README.md`](https://github.com/paritytech/substrate/tree/master/frame/contracts) provides a starting point.
 
 ## **Going forward**
 

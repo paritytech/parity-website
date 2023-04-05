@@ -1,0 +1,4 @@
+/*
+  Content-Security-Policy: frame-ancestors 'self' https://parity-website-gatsby.netlify.app https://wwww.parity.io
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
