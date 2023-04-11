@@ -22,7 +22,7 @@ module.exports = {
     email: 'info@parity.io',
     twitter: 'https://twitter.com/ParityTech',
     linkedIn: 'https://www.linkedin.com/company/paritytech',
-    element: 'https://app.element.io/#/room/#watercooler:matrix.parity.io',
+    element: 'https://app.element.io/#/room/!FdCojkeGzZLSEoiecf:web3.foundation',
     github: 'https://github.com/paritytech/',
     telegram: 'https://t.me/parity_technologies',
     gitter: 'https://gitter.im/paritytech/parity',
