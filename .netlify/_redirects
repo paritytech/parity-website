@@ -213,3 +213,8 @@ https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 /parity-ethereum-2-0/	/blog/parity-ethereum-2-0/
 /fighting-hunger-with-blockchain/	/blog/fighting-hunger-with-blockchain/
 /what-is-a-light-client/	/blog/what-is-a-light-client/
+
+# Parity signer redirects
+
+parity.io/signer https://signer.parity.io/ 301!
+parity.io/technologies/signer/ https://signer.parity.io/ 301!
