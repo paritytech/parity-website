@@ -51,7 +51,7 @@ export default function ParityTech() {
             title={intl.formatMessage({ id: 'homepage-parity-tech-section-signer-title' })}
             description={intl.formatMessage({ id: 'homepage-parity-tech-section-signer-description' })}
             logo={images.signer.publicURL}
-            link="/technologies/signer"
+            link="/technologies/signer/"
             extraClass=" "
             theme="light"
           />
