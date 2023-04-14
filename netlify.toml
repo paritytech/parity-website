@@ -11,8 +11,8 @@
   publish = "public/"
 
 [[redirects]]
-from = “/technologies/signer”
-to = “https://signer.parity.io”
-status = 301
-force = true
+  from = “/technologies/signer”
+  to = “https://signer.parity.io”
+  status = 301
+  force = true
 
