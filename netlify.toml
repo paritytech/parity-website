@@ -10,14 +10,3 @@
   command = "yarn build && cp .netlify/_headers public/_headers && cp .netlify/_redirects public/_redirects"
   publish = "public/"
 
-[[redirects]]
-  from = "/technologies/signer"
-  to = "https://signer.parity.io"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/signer"
-  to = "https://signer.parity.io"
-  status = 301
-  force = true
