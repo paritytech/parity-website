@@ -216,3 +216,5 @@ https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 # Parity signer redirects
 /signer https://signer.parity.io 301!
 /technologies/signer https://signer.parity.io 301!
+/signer/ https://signer.parity.io 301!
+/technologies/signer/ https://signer.parity.io 301!
