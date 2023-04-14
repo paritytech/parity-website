@@ -15,3 +15,9 @@
   to = "https://signer.parity.io"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/signer"
+  to = "https://signer.parity.io"
+  status = 301
+  force = true
