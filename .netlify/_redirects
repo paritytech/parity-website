@@ -18,7 +18,6 @@ https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 # Technology Section
 /polkadot /technologies/polkadot
 /substrate /technologies/substrate
-/signer /technologies/signer
 /ethereum /technologies/ethereum
 
 # About Section
@@ -215,6 +214,5 @@ https://parity-website-gatsby.netlify.app/* https://www.parity.io 301!
 /what-is-a-light-client/	/blog/what-is-a-light-client/
 
 # Parity signer redirects
-
 /signer https://signer.parity.io 301!
 /technologies/signer https://signer.parity.io 301!

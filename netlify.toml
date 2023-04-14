@@ -9,3 +9,4 @@
 [context.develop]
   command = "yarn build && cp .netlify/_headers public/_headers && cp .netlify/_redirects public/_redirects"
   publish = "public/"
+
