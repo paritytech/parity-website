@@ -12,18 +12,24 @@
 
 [[redirects]]
   from = "/technologies/signer"
-  to = "/technologies/signer/"
-  status = 200
+  to = "https://signer.parity.io"
+  status = 301
   force = true
 
 [[redirects]]
-  from = "/technologies/signer"
+  from = "/technologies/signer/"
   to = "https://signer.parity.io"
   status = 301
   force = true
 
 [[redirects]]
   from = "/signer"
+  to = "https://signer.parity.io"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/signer/"
   to = "https://signer.parity.io"
   status = 301
   force = true
