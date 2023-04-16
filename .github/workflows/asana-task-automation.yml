@@ -1,32 +1,13 @@
-name: Asana Task Automation
+name: Github Asana Action
 
 on:
   pull_request:
     types: [closed]
-    branches:
-      - main
-
 jobs:
-  automate_task:
+  sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Generate Asana Access Token
-        uses: http-request/action@v1.3.2
-        with:
-          url: https://app.asana.com/-/oauth_token
-          method: POST
-          contentType: application/x-www-form-urlencoded
-          body: |
-            grant_type=client_credentials
-            &client_id=${{ secrets.ASANA_CLIENT_ID }}
-            &client_secret=${{ secrets.ASANA_CLIENT_SECRET }}
-
-      - name: Automate Asana Task
-        uses: everphone-gmbh/github-asana-action@v1.0.0
-        with:
-          asana-pat: ${{ fromJson(steps['Generate Asana Access Token'].outputs.response.body).access_token }}
-          task-id: ${{ github.event.pull_request.body | regex_replace_all('\\D', '') }} # Extracts the task ID from the PR body
-          action: 'complete'
+     -  uses: TheDotLabs/github-asana-action@v4.0.2
+        with: 
+          asana-token: ${{ secrets.ASANA_PAT }}
+          targets_pr_merge: '[{"project": "IT Project Plan", "section": "Done"}]'
