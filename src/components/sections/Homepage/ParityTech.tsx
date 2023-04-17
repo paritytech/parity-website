@@ -48,7 +48,7 @@ export default function ParityTech() {
             theme="light"
           />
           <div className="bg-white m-4 text-center hover:shadow-2xl transition-shadow duration-500 cursor-pointer md:w-1/3 rounded-md">
-            <a href="https://signer.parity.io/" target="_blank" rel="noreferrer noopener" className="no-underline">
+            <a href="https://signer.parity.io" target="_blank" rel="noreferrer noopener" className="no-underline">
               <div className="px-4 pt-6 pb-6 flex flex-col items-center">
                 <img className={`h-16 w-auto`} src={images.signer.publicURL} alt="Parity Technology Logo" />
                 <h4 className="m-6">{intl.formatMessage({ id: 'homepage-parity-tech-section-signer-title' })}</h4>
