@@ -58,14 +58,20 @@ export default function HeroPattern() {
               />
             </div>
             <div className="md:flex md:justify-center">
-              <TechCard
-                title={intl.formatMessage({ id: 'homepage-parity-tech-section-signer-title' })}
-                description={intl.formatMessage({ id: 'homepage-parity-tech-section-signer-description' })}
-                logo={images.signer.publicURL}
-                link="/technologies/signer"
-                extraClass=" "
-                theme="dark"
-              />
+              <div className="bg-textDark text-gray-200 m-4 text-center hover:shadow-2xl transition-shadow duration-500 cursor-pointer md:w-1/3 rounded-md">
+                <a href="https://signer.parity.io/" target="_blank" rel="noreferrer noopener" className="no-underline">
+                  <div className="px-4 pt-6 pb-6 md:pb-16 flex flex-col items-center">
+                    <img className={`h-16 w-auto`} src={images.signer.publicURL} alt="Parity Technology Logo" />
+                    <h6 className="m-3 text-lg md:text-xl text-gray-200">
+                      {intl.formatMessage({ id: 'homepage-parity-tech-section-signer-title' })}
+                    </h6>
+                    <p className="text-sm md:text-base leading-7 2xl:w-2/3">
+                      {intl.formatMessage({ id: 'homepage-parity-tech-section-signer-description' })}
+                    </p>
+                  </div>
+                </a>
+              </div>
+
               <TechCard
                 title={intl.formatMessage({ id: 'technology-page-github-title' })}
                 description={intl.formatMessage({ id: 'technology-page-github-text' })}

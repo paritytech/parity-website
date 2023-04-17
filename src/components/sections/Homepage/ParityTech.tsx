@@ -47,14 +47,17 @@ export default function ParityTech() {
             extraClass=" "
             theme="light"
           />
-          <TechCard
-            title={intl.formatMessage({ id: 'homepage-parity-tech-section-signer-title' })}
-            description={intl.formatMessage({ id: 'homepage-parity-tech-section-signer-description' })}
-            logo={images.signer.publicURL}
-            link="/technologies/signer"
-            extraClass=" "
-            theme="light"
-          />
+          <div className="bg-white m-4 text-center hover:shadow-2xl transition-shadow duration-500 cursor-pointer md:w-1/3 rounded-md">
+            <a href="https://signer.parity.io/" target="_blank" rel="noreferrer noopener" className="no-underline">
+              <div className="px-4 pt-6 pb-6 flex flex-col items-center">
+                <img className={`h-16 w-auto`} src={images.signer.publicURL} alt="Parity Technology Logo" />
+                <h4 className="m-6">{intl.formatMessage({ id: 'homepage-parity-tech-section-signer-title' })}</h4>
+                <p className="text-sm md:text-base text-textDark leading-7 2xl:w-2/3">
+                  {intl.formatMessage({ id: 'homepage-parity-tech-section-signer-description' })}
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
         <div className="mb-24 mt-12">
           <Button extraClass="" link="/technologies">
