@@ -38,28 +38,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Create Redirects for signer
   createRedirect({
     fromPath: '/technologies/signer',
-    toPath: 'https://signer.parity.io/',
+    toPath: 'https://signer.parity.io',
     isPermanent: true,
     redirectInBrowser: true,
   });
 
   createRedirect({
     fromPath: '/signer',
-    toPath: 'https://signer.parity.io/',
+    toPath: 'https://signer.parity.io',
     isPermanent: true,
     redirectInBrowser: true,
   });
 
   createRedirect({
     fromPath: '/technologies/signer/',
-    toPath: 'https://signer.parity.io/',
+    toPath: 'https://signer.parity.io',
     isPermanent: true,
     redirectInBrowser: true,
   });
 
   createRedirect({
     fromPath: '/signer/',
-    toPath: 'https://signer.parity.io/',
+    toPath: 'https://signer.parity.io',
     isPermanent: true,
     redirectInBrowser: true,
   });
