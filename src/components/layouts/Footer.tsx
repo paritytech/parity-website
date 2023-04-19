@@ -70,9 +70,9 @@ export default function Footer() {
               <LocalizedLink to="/technologies/polkadot" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'polkadot' })}
               </LocalizedLink>
-              <LocalizedLink to="/technologies/signer" className={navItemsFooter}>
+              <a href="https://signer.parity.io" className={navItemsFooter} target="_blank" rel="noreferrer noopener">
                 {intl.formatMessage({ id: 'parity-signer' })}
-              </LocalizedLink>
+              </a>
               <LocalizedLink to="/technologies" className={navItemsFooter}>
                 {intl.formatMessage({ id: 'all-technologies' })}
               </LocalizedLink>

@@ -2,7 +2,7 @@
 const { slugify } = require('./src/utils/url');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage, createRedirect } = actions;
+  const { createPage } = actions;
 
   const blogTemplate = require.resolve(`./src/components/templates/blog-template.tsx`);
 
@@ -34,35 +34,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild('ERROR: Loading "createPages" query for blogs', result.errors);
     return;
   }
-
-  // Create Redirects for signer
-  createRedirect({
-    fromPath: '/technologies/signer',
-    toPath: 'https://signer.parity.io',
-    isPermanent: true,
-    redirectInBrowser: true,
-  });
-
-  createRedirect({
-    fromPath: '/signer',
-    toPath: 'https://signer.parity.io',
-    isPermanent: true,
-    redirectInBrowser: true,
-  });
-
-  createRedirect({
-    fromPath: '/technologies/signer/',
-    toPath: 'https://signer.parity.io',
-    isPermanent: true,
-    redirectInBrowser: true,
-  });
-
-  createRedirect({
-    fromPath: '/signer/',
-    toPath: 'https://signer.parity.io',
-    isPermanent: true,
-    redirectInBrowser: true,
-  });
 
   //Creating Blog Posts based on slugs
   const blogPosts = result.data.blog.nodes;
