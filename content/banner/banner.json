@@ -1,8 +1,8 @@
 {
-  "active": false,
-  "text": "Join Polkadot @ Consensus 2023. Meet the largest multichain ecosystem in Web3.",
+  "active": true,
+  "text": "Polkadot Decoded 2023 registration is open! Join June 28-29.",
   "emoji": "👉",
   "link-text": "Learn More",
-  "url": "https://polkadot.network/ecosystem/events/consensus-2023/?utm_source=parity.io&utm_medium=referral&utm_campaign=consensus%202023&utm_content=notification",
+  "url": "https://polkadot.network/ecosystem/events/decoded-2023/?utm_source=parity.io&utm_medium=referral&utm_campaign=decoded23&utm_content=notification",
   "pages": ["/"]
 }
