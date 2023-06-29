@@ -15,11 +15,10 @@ export default function Banner() {
           <p className="mb-0">
             {bannerData.text}
             {` `}
-            {bannerData.emoji}
-            {` `}{' '}
             <a href={bannerData.url} target="_blank" rel="noreferrer">
               {bannerData['link-text']}
             </a>{' '}
+            {bannerData.emoji}
           </p>
         </div>
       )}
