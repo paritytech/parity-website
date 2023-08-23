@@ -484,7 +484,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-textDark leading-normal">
               For data about your visits to our Sites and where we process personal data for Sites security purposes, we
-              will retain this data for 12 months following your last visit to one of our Sites.
+              will retain this data for a maximum of 12 months following your last visit to one of our Sites.
             </p>
             <p className="text-textDark leading-normal">
               Laws may require us to hold certain information of yours for specific retention periods. In other cases,
