@@ -13,15 +13,21 @@ export default function PrivacyPolicyPage() {
             <article>
               <h3 className="text-textDark text-center pt-24 pb-8 font-normal md:text-5xl md:mb-8">Privacy Policy</h3>
               <p className="text-textDark  leading-normal">
-                Parity Technologies Limited and Parity Technologies Deutschland GmbH (also referred to as &quot;
+                Parity Technologies Limited, along with its Affiliates, as defined below, (also referred to as &quot;
                 <strong>Parity</strong>&quot;; &quot;<strong>we</strong>&quot;; &quot;<strong>us</strong>&quot;; or
                 &quot;<strong>our</strong>&quot;) are committed to protecting and respecting your privacy.
               </p>
               <p className="text-textDark  leading-normal">
+                In this document Affiliates means in relation to a company both (i) any subsidiary or holding company
+                from time to time of that company, and any subsidiary from time to time of a holding company of that
+                company, and (ii) any company that directly or indirectly controls, is controlled by, or is under common
+                control with that company; including but is not limited to Parity Technologies Deutschland GmbH,
+                Unstoppable Open Source Technologies Lda, Parity Technologies Singapore Pte. Ltd.
+              </p>
+              <p className="text-textDark  leading-normal">
                 This policy (together with our terms of use on our websites <a href="https://parity.io/">parity.io</a>,{' '}
-                <a href="https://paritytech.io">paritytech.io</a>, <a href="https://polkadot.io">polkadot.io</a>,{' '}
-                <a href="https://substrate.dev">substrate.dev</a>, <a href="https:www.substrate.io">substrate.io</a> and
-                any subdomains such as <a href="https://sub0.parity.io/">sub0.parity.io</a> (the “<strong>Sites</strong>
+                <a href="https://paritytech.io">paritytech.io</a>, <a href="https://substrate.dev">substrate.dev</a>,{' '}
+                <a href="https:www.substrate.io">substrate.io</a> and any subdomains (the “<strong>Sites</strong>
                 ”) and any other documents referred to on them) sets out the basis on which any personal data we collect
                 from you, or that you provide to us, will be processed by us in accordance with the General Data
                 Protection Regulation (EU) 2016/ 679 (“<strong>GDPR</strong>”) and other applicable data protection
@@ -66,8 +72,8 @@ export default function PrivacyPolicyPage() {
                   information you give us may include your name, address, e-mail address, registration information (such
                   as username and password when you create an account on one of our sites or those of the third parties
                   vendors we work with), phone number, job title, organisation, dietary and / or accessibility
-                  requirements or your public Ethereum address. We will tell you whether the information we are
-                  requesting is essential or whether the supply of this information is optional.
+                  requirements or your public Polkadot, Kusama or other address. We will tell you whether the
+                  information we are requesting is essential or whether the supply of this information is optional.
                 </li>
                 <li className="font-normal">
                   <strong>Information we collect about you</strong>. With regard to each of your visits to our Sites we
@@ -99,15 +105,14 @@ export default function PrivacyPolicyPage() {
                       about you on e.g. business social media.
                     </li>
                     <li className="font-normal">
-                      We may also receive information about you from the Web 3.0 Technologies Foundation as part of our
-                      cooperation. The Web 3.0 Foundation may share information about you with us for the purposes of
-                      organising joint events, meetups, conferences, workshops or hackathons; assisting and/or
-                      following-up with you and coordinating that assistance; addressing and/or following-up with you
-                      where you have shown interest in Polkadot and/or Substrate; and building and maintaining the
-                      Polkadot network and its community of users. To the extent that you would like further information
-                      on the data we receive about you from the Web 3 Foundation and the protections we have put in
-                      place to ensure it is processed and transferred securely, please contact us at{' '}
-                      <a href="mailto:legal@parity.io">legal@parity.io</a>.
+                      We may also receive information about you from the Web 3.0 Technologies Foundation (“W3F”) as part
+                      of our cooperation. W3F may share information about you with us for the purposes of organising
+                      joint events, meetups, conferences, workshops or hackathons; assisting and/or following-up with
+                      you and coordinating that assistance; addressing and/or following-up with you where you have shown
+                      interest in Polkadot and/or Substrate; and building and maintaining the Polkadot network and its
+                      community of users. To the extent that you would like further information on the data we receive
+                      about you from the W3F and the protections we have put in place to ensure it is processed and
+                      transferred securely, please contact us at <a href="mailto:legal@parity.io">legal@parity.io</a>.
                     </li>
                     <li className="font-normal">
                       In addition, we are working closely with third parties (including, for example, event organisation
@@ -130,11 +135,11 @@ export default function PrivacyPolicyPage() {
               <p className="text-textDark  leading-normal">
                 The Ethereum and Substrate based blockchain clients written in the programming language Rust which
                 Parity is involved in building and maintaining do not collect information from you. However, any
-                information you publish onto a (public) blockchain like Ethereum, Kusama or Polkadot is public by
-                design. Your use of a client and interaction with a blockchain like Ethereum or Polkadot will lead you
-                to interact with other network participants on those blockchains, you should note that where you do so
-                those with whom you interact as well as other participants on those networks may be able to determine
-                certain things about you through your use of those networks.
+                information you publish onto a (public) blockchain like Polkadot or Kusama is public by design. Your use
+                of a client and interaction with a blockchain like Ethereum or Polkadot will lead you to interact with
+                other network participants on those blockchains, you should note that where you do so those with whom
+                you interact as well as other participants on those networks may be able to determine certain things
+                about you through your use of those networks.
               </p>
               <p className="text-textDark  leading-normal">
                 <strong>For what purposes do we use your data and what is the legal basis for this use?</strong>
@@ -214,7 +219,7 @@ export default function PrivacyPolicyPage() {
                     disclosure of such information in connection with legal process or litigation); and
                   </li>
                   <li className="font-normal">
-                    Information we receive from other sources: We will combine this information with information you
+                    Information we receive from other sources: we will combine this information with information you
                     give to us and information we collect about you. We will use this information and the combined
                     information for the purposes set out above (depending on the types of information we receive).
                   </li>
@@ -253,7 +258,7 @@ export default function PrivacyPolicyPage() {
                 <ul className="ml-4 text-textDark">
                   <li className="font-normal">
                     we or our carefully selected partners will send you direct marketing in relation to our relevant
-                    products and services, or other products and services provided by us, our affiliates and carefully
+                    products and services, or other products and services provided by us, our Affiliates and carefully
                     selected partners. However, we will only provide you with marketing related information after you
                     have, where legally required to do so, opted in to receive those communications and having provided
                     the opportunity for you to opt out at any time;
@@ -303,8 +308,8 @@ export default function PrivacyPolicyPage() {
             <p className="text-textDark leading-normal">We will share your personal information with:</p>
             <ul className="ml-4 text-textDark">
               <li className="font-normal">
-                Other members of the Parity group, which means our subsidiaries, our ultimate holding company and its
-                subsidiaries for:
+                Other members of the Parity group, which means our Affiliates, subsidiaries, our ultimate holding
+                company and its subsidiaries for:
                 <ul className="ml-4 text-textDark">
                   <li className="font-normal">
                     the purposes of providing you with our services, addressing a request submitted by you, or follow-up
@@ -333,12 +338,13 @@ export default function PrivacyPolicyPage() {
                     third party developers for and / or providers of website hosting and maintenance; and
                   </li>
                   <li className="font-normal">
-                    the Web 3 Technologies Foundation as part of our cooperation. We will share your data with the Web 3
-                    Foundation for the purposes of organising joint events, meetups, conferences, workshops or
-                    hackathons; assisting and/or following-up with you and coordinating that assistance; addressing
-                    and/or following-up with you where you have shown interest in Polkadot and/or Substrate; and
-                    building and maintaining the Polkadot network and its community of users. For certain processes
-                    Parity and Web 3 Technologies Foundation also act as joint controllers.
+                    the Web 3.0 Technologies Foundation as part of our cooperation. We will share your data with the W3F
+                    for the purposes of organising joint events, meetups, conferences, workshops or hackathons;
+                    assisting and/or following-up with you and coordinating that assistance; addressing and/or
+                    following-up with you where you have shown interest in Polkadot and/or Substrate; improving the
+                    Sites and understanding visitors’ use of the sites; and building and maintaining the Polkadot
+                    network and its community of users. For certain processes Parity and W3F also act as joint
+                    controllers.
                   </li>
                 </ul>
               </li>
@@ -357,14 +363,14 @@ export default function PrivacyPolicyPage() {
                 data to the prospective seller or buyer of such business or assets in compliance with applicable law.
               </li>
               <li className="font-normal">
-                If Parity Technologies Limited and Parity Technologies Deutschland GmbH or substantially all of its
-                assets are acquired by a third party, in which case personal data held by it about its customers will be
-                one of the transferred assets.
+                If Parity Technologies Limited and/or any of its affiliated companies or substantially all of its assets
+                are acquired by a third party, in which case personal data held by it about its customers will be one of
+                the transferred assets.
               </li>
               <li className="font-normal">
                 If we are under a duty to disclose or share your personal data in order to comply with any legal
                 obligation, or in order to enforce or apply our terms of use and other agreements; or to protect the
-                rights, property, or safety of Parity Technologies Limited and Parity Technologies Deutschland GmbH, our
+                rights, property, or safety of Parity Technologies Limited and/or its affiliated companies, our
                 customers, or others. This includes exchanging information with other companies and organisations for
                 the purposes of fraud protection and credit risk reduction.
               </li>
@@ -386,7 +392,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-textDark leading-normal">
               Our Sites may, from time to time, contain links to and from the websites of our partner networks, and
-              affiliates. If you follow a link to any of these websites, please note that these websites have their own
+              Affiliates. If you follow a link to any of these websites, please note that these websites have their own
               privacy policies and that we do not accept any responsibility or liability for these policies. Please
               check these policies before you submit any personal data to these websites.
             </p>
@@ -440,28 +446,27 @@ export default function PrivacyPolicyPage() {
               response.
             </p>
             <p className="text-textDark leading-normal">
-              <strong>Which entity is my data controller, and which affiliates might my data be shared with?</strong>
+              <strong>Which entity is my data controller, and with which entities might my data be shared with?</strong>
             </p>
             <p className="text-textDark leading-normal">
               The data controllers for your personal information are Parity Technologies Limited of c/o Ignition Law, 1
-              Sans Walk, London, England, EC1R 0LT and Parity Technologies Deutschland GmbH, Glogauer Str. 6, 10999
-              Berlin, Germany which also act as joint controllers (Article 26 EU GDPR) regarding specific data
-              processing operations. The legal basis for the joint processing and transmission of personal data between
-              the companies lies, unless a different determination is made in individual cases, in the legitimate
-              interests of the companies under Art. 6 para. 1 s. 1 lit. f GDPR, to transmit personal data for internal
-              administrative purposes, including the processing of personal data of business partners, customers and
-              employees.
+              Sans Walk, London, England, EC1R 0LT and in some instances its Affiliates who may also act as joint
+              controllers (Article 26 EU GDPR) regarding specific data processing operations. The legal basis for the
+              joint processing and transmission of personal data between the companies lies, unless a different
+              determination is made in individual cases, in the legitimate interests of the companies under Art. 6 para.
+              1 s. 1 lit. f GDPR, to transmit personal data for internal administrative purposes, including the
+              processing of personal data of business partners, customers and employees.
             </p>
             <p className="text-textDark leading-normal">
-              Your data might be shared as part of our business operations with our group companies for the management
-              and execution of group functions.
+              Your data might be shared as part of our business operations with our Affiliates and group companies for
+              the management and execution of group functions.
             </p>
             <p className="text-textDark leading-normal">
-              Your personal data might also be shared with the Web 3.0 Technologies Foundation, Reiffergässli 4, 6300
-              Zug, Switzerland a third party with whom we are not affiliated but with whom we cooperate on a range of
+              Your personal data might also be shared with the Web 3.0 Technologies Foundation, Baarerstrasse 14, 6300
+              Zug, Switzerland, a third party with whom we are not affiliated but with whom we cooperate on a range of
               activities. In some cases your data will be jointly controlled (in accordance with Art. 26 GDPR) by the
-              Web 3.0 Technologies Foundation and Parity in the framework of our cooperation. The essence of the
-              corresponding joint controller agreement will be made available on request.
+              W3F and Parity in the framework of our cooperation. The essence of the corresponding data protection
+              framework will be made available on request.
             </p>
             <p className="text-textDark leading-normal">
               <strong>How long will you retain my data?</strong>
@@ -479,7 +484,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-textDark leading-normal">
               For data about your visits to our Sites and where we process personal data for Sites security purposes, we
-              will retain this data for 12 months following your last visit to one of our Sites.
+              will retain this data for a maximum of 12 months following your last visit to one of our Sites.
             </p>
             <p className="text-textDark leading-normal">
               Laws may require us to hold certain information of yours for specific retention periods. In other cases,
@@ -491,12 +496,12 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-textDark leading-normal">
               We strive to maintain the highest standards of security and Parity has put in place robust technical and
-              organizational measures for the protection of your data in accordance with the current, general state of
-              the art technologies, especially to protect the data against loss, falsification or access by unauthorized
+              organisational measures for the protection of your data in accordance with the current, general state of
+              the art technologies, especially to protect the data against loss, falsification or access by unauthorised
               third persons. However the transmission of information via the internet is not completely secure. So,
               whilst we will do our best to protect your personal data, we cannot guarantee the security of your data
               transmitted to our Sites. Any transmission is at your own risk. Once we have received your personal data
-              we will use strict procedures and security features to prevent unauthorized access.
+              we will use strict procedures and security features to prevent unauthorised access.
             </p>
             <p className="text-textDark leading-normal">
               Where we have given you (or where you have chosen) a password which enables you to access certain parts of
@@ -605,34 +610,6 @@ export default function PrivacyPolicyPage() {
                       This cookie is a session cookie that lasts anywhere from several seconds up to 24 hours.
                     </td>
                   </tr>
-                  <tr>
-                    <td className="p-4 text-parityBlack border border-black align-top">
-                      <code className="bounty-code">_ga</code>
-                      <br />
-                      <code className="bounty-code">_gid</code>
-                      <br />
-                      <code className="bounty-code">_gad</code>
-                    </td>
-                    <td className="p-4 text-parityBlack border border-black align-top">
-                      These cookies are set as a result of our use of Google analytics and are used to collect
-                      information about how visitors use our website. We use the information to compile reports and to
-                      help us improve the website. The cookies collect information in an anonymous form, including the
-                      number of visitors to the Sites where visitors have come to the Sites from and the pages they
-                      visited. <br />
-                      <br />
-                      For more information about how Google safeguards your data and approaches privacy please see:{' '}
-                      <a className="text-parityPink" href="https://support.google.com/analytics/answer/6004245">
-                        https://support.google.com/analytics/answer/6004245
-                      </a>
-                    </td>
-                    <td className="p-4 text-parityBlack border border-black align-top">
-                      After 2 years
-                      <br />
-                      After 24 hours
-                      <br />
-                      After 10 minutes
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
@@ -661,47 +638,10 @@ export default function PrivacyPolicyPage() {
               <a href="http://youronlinechoices.eu/">http://youronlinechoices.eu/</a>.
             </p>
             <p className="text-textDark  leading-normal">
-              <strong>Google Analytics</strong>
-            </p>
-            <p className="text-textDark  leading-normal">
-              Our Sites use Google Analytics, a web analysis service of Google, Inc., 1600 Amphitheatre Parkway,
-              Mountain View, CA 94043, USA, www.google.com (“Google Analytics” or “Google”). Google Analytics employs
-              cookies that are stored to your computer in order to facilitate an analysis of your use of the Sites. The
-              information generated by these cookies, such as time, place and frequency of your visits to our site,
-              including your IP address, is transmitted to Google and stored by them.
-            </p>
-            <p className="text-textDark  leading-normal">
-              Google may also transfer this information to third parties where required to do so by law or where such
-              third parties process this data on Google’s behalf. Google states that it will never associate your IP
-              address with other data held by Google. You can prevent cookies from being used any time by changing the
-              settings in our cookie consent management tool which is present on all pages of our Sites as noted in this
-              privacy policy. You should be aware, however, that by doing so you may not be able to make full use of all
-              the functions of our Sites.
-            </p>
-            <p className="text-textDark  leading-normal">
-              Google Analytics also offers a deactivation add-on for most current browsers that provides you with more
-              control over what data Google can collect on websites you access. The add-on tells Google Analytics not to
-              transmit any information about website visits to Google Analytics. You can find additional information on
-              how to install this browser add-on at the following link:{' '}
-              <a href="https://tools.google.com/dlpage/gaoptout?hl=en">
-                https://tools.google.com/dlpage/gaoptout?hl=en
-              </a>
-              .
-            </p>
-            <p className="text-textDark  leading-normal">
-              For the cases in which personal data is transferred out of the European Economic Area, Switzerland and the
-              UK to the US, Google uses Standard Contractual Clauses.
-            </p>
-            <p className="text-textDark  leading-normal">
-              Google Analytics cookies are only used after we have obtained your consent (via the consent management
-              tool on the Parity website, see above) in accordance with Art. 6 para. 1 s. 1 lit. a GDPR. You can
-              withdraw your consent at any time (Art. 7 para. 3 GDPR).
-            </p>
-            <p className="text-textDark  leading-normal">
               <strong>Simple Analytics</strong>
             </p>
             <p className="text-textDark  leading-normal">
-              To get information about the behavior of our visitors, we use Simple Analytics. This analytics software
+              To get information about the behaviour of our visitors, we use Simple Analytics. This analytics software
               gives us insight about our visitors only in general. It does not give us any insights or information about
               individuals as it does not track visitors and does not store any personal identifiable information. Go to
               {` `}
@@ -733,10 +673,11 @@ export default function PrivacyPolicyPage() {
               <a href="https://www.datenschutz-berlin.de">https://www.datenschutz-berlin.de</a> or{' '}
               <a href="https://ico.org.uk">https://ico.org.uk</a>
             </p>
-            <p className="text-textDark  leading-normal">This privacy policy was last updated 12 June 2021.</p>
+            <p className="text-textDark  leading-normal">This privacy policy was last updated 01 August 2023.</p>
             <h2 className="py-12">Supplemental privacy notice for event participants</h2>
             <p className="text-textDark  leading-normal">
-              ‘We’, ‘our’, ‘Parity’ – refers to Parity Technologies Limited.
+              <strong>‘We’</strong>, <strong>‘our’</strong>, <strong>‘Parity’</strong> – refers to Parity Technologies
+              Limited and/or its Affiliates (as defined above).
             </p>
             <p className="text-textDark  leading-normal">
               This notice supplements our Privacy Notice and describes how we collect, use, share and retain additional
@@ -750,12 +691,12 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-textDark  leading-normal">
               When you register to participate in a Parity event we will collect some or all of the following
-              information from you directly or we will receive it from Eventbrite, Meetup, Crowdcast or any of our
-              carefully selected partners:
+              information from you directly or we will receive it from Eventbrite, Meetup, Crowdcast, SwapCard or any of
+              our carefully selected partners:
             </p>
             <ul className="ml-4 text-textDark">
               <li className="font-normal">Name</li>
-              <li className="font-normal">Meetup, Eventbrite, Crowdcast (or other) profile link</li>
+              <li className="font-normal">Meetup, Eventbrite, Crowdcast, SwapCard (or other) profile link</li>
               <li className="font-normal">Job title and organisation</li>
               <li className="font-normal">Email address</li>
               <li className="font-normal">Dietary requirements</li>
@@ -763,13 +704,14 @@ export default function PrivacyPolicyPage() {
               <li className="font-normal">Level of familiarity with our technologies</li>
             </ul>
             <p className="text-textDark  leading-normal">
-              When you book an event through Eventbrite or Meetup you will also have to agree to their terms and
-              conditions of service. When we use third party service providers to host an event such as Crowdcast,
-              please note that their terms of service and privacy policy apply. These third-party services that are not
-              owned or managed by Parity. This policy only refers to the way Parity will use your information.
+              When you book an event through a third party platform you will also have to agree to their terms and
+              conditions of service and privacy policy. When we use third party service providers to host an event such
+              as Crowdcast or SwapCard, please note that their terms of service and privacy policy apply. These
+              third-party services that are not owned or managed by Parity. This policy only refers to the way Parity
+              will use your information.
             </p>
             <p className="text-textDark  leading-normal">
-              If you wish to attend one of our events but do not wish to use Eventbrite or Meetup to book a place,
+              If you wish to attend one of our events but do not wish to use a third party platform to book a place,
               please contact the event organiser. Contact details for each event are provided on the event booking page.
             </p>
             <p className="text-textDark  leading-normal">
@@ -789,8 +731,8 @@ export default function PrivacyPolicyPage() {
             <p className="text-textDark  leading-normal">
               <strong>Event registration data</strong>
               <br />
-              We may use this information for the purposes of scheduling, organising and administering the event, this
-              includes but is not limited to:
+              We may use this information for the purposes of scheduling, organising, administering and improving the
+              event, this includes but is not limited to:
             </p>
             <ul className="ml-4 text-textDark">
               <li className="font-normal">registering you to attend the event;</li>
@@ -822,18 +764,18 @@ export default function PrivacyPolicyPage() {
               <strong>Event registration data</strong>
             </p>
             <p className="text-textDark  leading-normal">
-              Unless otherwise stated we use Meetup or Eventbrite to manage online registration for our events. We may
-              share your personal data with Meetup or Eventbrite (or an alternative service provider), hosting platforms
-              for our online events (such as Crowdcast), event partners (including but not limited to: event space
-              providers, caterers and security service providers) and partner organisations (for example partners with
-              whom we are joint hosting or presenting) as needed to provide you with information and services associated
-              with the event and so as to administer the event itself.
+              Unless otherwise stated we use third party service providers to manage online registration for our events
+              (such as Meetup, Eventbrite or SwapCard). We may also share your personal data with third party hosting
+              platforms for our online events (such as Crowdcast), event partners (including but not limited to: event
+              space providers, caterers and security service providers) and partner organisations (for example partners
+              with whom we are joint hosting or presenting) as needed to provide you with information and services
+              associated with the event and so as to administer the event itself.
             </p>
             <p className="text-textDark  leading-normal">
               <strong>Event photography and audio or video recordings</strong>
               <br />
               We may publish or distribute photos and audio or video recording from our events via social media,
-              including Twitter, Telegram, and LinkedIn. In doing so we will share those photos, audio or video with
+              including Twitter, Telegram and LinkedIn. In doing so we will share those photos, audio or video with
               those services and their users.
             </p>
             <h3>How long do we retain your data?</h3>
@@ -867,7 +809,7 @@ export default function PrivacyPolicyPage() {
               this supplemental policy or the information we hold about you.
             </p>
             <p className="text-textDark  leading-normal">
-              This supplemental privacy notice was last updated 18 August, 2020.
+              This supplemental privacy notice was last updated 06 July, 2023.
             </p>
             <div className="mt-2 mb-16 pb-8 pt-6">
               <h2 className="font-semibold">Statutory information</h2>
