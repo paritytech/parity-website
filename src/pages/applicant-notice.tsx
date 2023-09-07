@@ -19,7 +19,7 @@ export default function ApplicantNoticePage() {
               </p>
               <p>
                 Parity Technologies Limited of c/o Ignition Law, 1 Sans Walk, London, England, EC1R 0LT{' '}
-                <strong>or</strong> Parity Technologies Deutschland GmbH of Glogauer Straße 6, 10999 Berlin, Germany{' '}
+                or Parity Technologies Deutschland GmbH of Glogauer Straße 6, 10999 Berlin, Germany{' '}
                 <strong>or</strong> Unstoppable Open Source Technologies, Unipessoal Lda of Rua Garrett 64, 1200-204
                 Lisboa, Portugal (also referred to as “<strong>Parity</strong>”; “<strong>company</strong>”; “
                 <strong>we</strong>”; “<strong>our</strong>” or “<strong>us</strong>”) is the data controller of any
@@ -182,7 +182,7 @@ export default function ApplicantNoticePage() {
                 <a href="mailto:legal@parity.io">legal@parity.io</a>.
               </p>
               <p>
-                <em>This notice was last updated on May 12, 2022.</em>
+                <em>This notice was last updated on September 7, 2023.</em>
               </p>
             </article>
           </div>
