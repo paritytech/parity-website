@@ -187,7 +187,7 @@ export default function ApplicantNoticePage() {
                 <a href="mailto:legal@parity.io">legal@parity.io</a>.
               </p>
               <p>
-                <em>This notice was last updated on 01 August 2023.</em>
+                <em>This notice was last updated on 07 September 2023.</em>
               </p>
             </article>
           </div>
