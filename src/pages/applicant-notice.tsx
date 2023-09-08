@@ -19,7 +19,7 @@ export default function ApplicantNoticePage() {
               </p>
               <p>
                 Parity Technologies Limited of c/o Ignition Law, 1 Sans Walk, London, England, EC1R 0LT{' '}
-                or or its Affiliates, as defined below (also referred to as “<strong>Parity</strong>”;
+                or its Affiliates, as defined below (also referred to as “<strong>Parity</strong>”;
                 “<strong>company</strong>”; “<strong>we</strong>”; “<strong>our</strong>” or “<strong>us</strong>”) is
                 the data controller of any information you submit in support of your application according to the
                 General Data Protection Regulation (EU) 2016/679 (“
@@ -187,7 +187,7 @@ export default function ApplicantNoticePage() {
                 <a href="mailto:legal@parity.io">legal@parity.io</a>.
               </p>
               <p>
-                <em>This notice was last updated on 07 September 2023.</em>
+                <em>This notice was last updated on 08 September 2023.</em>
               </p>
             </article>
           </div>
