@@ -19,13 +19,18 @@ export default function ApplicantNoticePage() {
               </p>
               <p>
                 Parity Technologies Limited of c/o Ignition Law, 1 Sans Walk, London, England, EC1R 0LT{' '}
-                <strong>or</strong> Parity Technologies Deutschland GmbH of Glogauer Straße 6, 10999 Berlin, Germany{' '}
-                <strong>or</strong> Unstoppable Open Source Technologies, Unipessoal Lda of Rua Garrett 64, 1200-204
-                Lisboa, Portugal (also referred to as “<strong>Parity</strong>”; “<strong>company</strong>”; “
-                <strong>we</strong>”; “<strong>our</strong>” or “<strong>us</strong>”) is the data controller of any
-                information you submit in support of your application according to the General Data Protection
-                Regulation (EU) 2016/679 (“
+                or its Affiliates, as defined below (also referred to as “<strong>Parity</strong>”;
+                “<strong>company</strong>”; “<strong>we</strong>”; “<strong>our</strong>” or “<strong>us</strong>”) is
+                the data controller of any information you submit in support of your application according to the
+                General Data Protection Regulation (EU) 2016/679 (“
                 <strong>GDPR</strong>”).
+              </p>
+              <p>
+                In this document Affiliates means in relation to a company both (i) any subsidiary or holding company
+                from time to time of that company, and any subsidiary from time to time of a holding company of that
+                company, and (ii) any company that directly or indirectly controls, is controlled by, or is under common
+                control with that company; including but is not limited to Parity Technologies Deutschland GmbH,
+                Unstoppable Open Source Technologies Lda, Parity Technologies Singapore Pte. Ltd.
               </p>
               <p>
                 <strong>Purpose of This Notice</strong>
@@ -40,8 +45,8 @@ export default function ApplicantNoticePage() {
                 <strong>Why We Collect, Use and Store Personal Data</strong>
               </p>
               <p>
-                We use information you supply in support of your application (e.g. name, birthday, email address, postal
-                address, contact details, gender, nationality, education information, work history, photos,
+                We use information you supply in support of your application (e.g. name, date of birth, email address,
+                postal address, contact details, gender, nationality, education information, work history, photos,
                 certificates, references) to consider your application and assess your suitability. We use your data to
                 our legitimate interests in managing our recruitment based on Art. 6 par. 1 s. 1 lit. f) GDPR and so
                 that we can take steps at your request prior to entering into an employment or services contract (Art. 6
@@ -87,8 +92,8 @@ export default function ApplicantNoticePage() {
               <p>
                 Your data might be shared with other entities for the purpose of assessing your application only. In
                 particular, we may share your personal information with Web 3.0 Technologies Foundation (registered
-                address Reiffergässli 4, CH-6300 Zug, Switzerland), a third party with whom we are not affiliated but
-                with whom we cooperate on a range of activities, for the purposes of assessing your application where
+                address Baarerstrasse 14, 6300 Zug, Switzerland), a third party with whom we are not affiliated but with
+                whom we cooperate on a range of activities, for the purposes of assessing your application where
                 necessary and appropriate for the purposes of our collaboration.
               </p>
               <p>
@@ -182,7 +187,7 @@ export default function ApplicantNoticePage() {
                 <a href="mailto:legal@parity.io">legal@parity.io</a>.
               </p>
               <p>
-                <em>This notice was last updated on May 12, 2022.</em>
+                <em>This notice was last updated on 08 September 2023.</em>
               </p>
             </article>
           </div>
