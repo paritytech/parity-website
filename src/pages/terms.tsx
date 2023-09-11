@@ -20,17 +20,24 @@ export default function TermsOfUsePage() {
                 any of their subdomains
               </p>
               <p className="leading-normal">
-                Parity Technologies Limited (&quot;Parity&quot;) is a company registered in England and Wales under
-                company number 09760015 with its registered office at c/o Ignition Law, 1 Sans Walk, London, England,
-                EC1R 0LT. We operate the website parity.io, paritytech.io, polkadot.io and any subdomains such as
-                sub0.parity.io (the &quot;Sites&quot;).
+                Parity Technologies Limited (a company registered in England and Wales under company number 09760015
+                with its registered office at c/o Ignition Law 1 Sans Walk, London, England, EC1R 0LTs operates the
+                websites parity.io, paritytech.io, polkadot.io, substrate.io, substrate.dev and any subdomains such as
+                sub0.parity.io (the <strong>&quot;Sites&quot;</strong>).
+              </p>
+              <p className="leading-normal">
+                In this document Affiliates means in relation to a company both (i) any subsidiary or holding company
+                from time to time of that company, and any subsidiary from time to time of a holding company of that
+                company, and (ii) any company that directly or indirectly controls, is controlled by, or is under common
+                control with that company; including but is not limited to Parity Technologies Deutschland GmbH,
+                Unstoppable Open Source Technologies Lda, Parity Technologies Singapore Pte. Ltd.
               </p>
               <p className="font-semibold">Understanding these Terms of Use</p>
               <p className="leading-normal">
-                These terms of use (together with the documents referred to in it) (the “Terms”) describe how you may
-                access, browse, use and interact with the Sites. By using the Sites you confirm that you accept these
-                Terms and that you agree to comply with them. If you do not agree to any part of these Terms, you must
-                not use the Sites.
+                These terms of use (together with the documents referred to in it) (the <strong>“Terms”</strong>)
+                describe how you may access, browse, use and interact with the Sites. By using the Sites you confirm
+                that you accept these Terms and that you agree to comply with them. If you do not agree to any part of
+                these Terms, you must not use the Sites.
               </p>
               <p className="leading-normal">
                 When certain words and phrases are used in these Terms, they have specific meanings (these are known as
@@ -49,8 +56,9 @@ export default function TermsOfUsePage() {
               </p>
               <ul className="ml-4">
                 <li className="text-textDark font-normal leading-normal">
-                  Our <LocalizedLink to="/privacy/">Privacy Policy</LocalizedLink>, which sets out information about how
-                  we use your personal information and the use of cookies and local storage on our Sites.
+                  Our <LocalizedLink to="/privacy/">Privacy Policy</LocalizedLink> (including our Supplemental privacy
+                  notice for event participants), which sets out information about how we use your personal information
+                  and the use of cookies and local storage on our Sites.
                 </li>
                 <li className="text-textDark font-normal leading-normal">
                   Our <LocalizedLink to="/applicant-notice/">Applicant Notice</LocalizedLink>, which sets out
@@ -201,11 +209,11 @@ export default function TermsOfUsePage() {
                 intellectual property laws and treaties around the world. All such rights are reserved.
               </p>
               <p className="leading-normal">
-                You must not use the Sites (or any part of it or its content) as part of any commercial offering ,
-                though you may use it for your own purposes. You are not granted any right to use, and may not use, any
-                of our intellectual property rights other than as set out in these Terms - however, you may print off
-                one copy, and may download extracts, of any page(s) from the Sites for your non-commercial, personal use
-                and you may draw the attention of others within your organisation to content posted on the Sites.
+                You must not use the Sites (or any part of it or its content) as part of any commercial offering, though
+                you may use it for your own purposes. You are not granted any right to use, and may not use, any of our
+                intellectual property rights other than as set out in these Terms - however, you may print off one copy,
+                and may download extracts, of any page(s) from the Sites for your non-commercial, personal use and you
+                may draw the attention of others within your organisation to content posted on the Sites.
               </p>
               <p className="leading-normal">
                 You must not modify the paper or digital copies of any materials you have printed off or downloaded in
@@ -421,7 +429,7 @@ export default function TermsOfUsePage() {
                 </ul>
                 <p>Thank you for visiting the Sites.</p>
                 <br />
-                <p className="font-semibold">Terms last updated: December 10, 2020</p>
+                <p className="font-semibold">Terms last updated: 5 September, 2023</p>
               </div>
             </article>
           </div>
