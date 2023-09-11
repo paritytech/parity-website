@@ -22,8 +22,8 @@ export default function TermsOfUsePage() {
               <p className="leading-normal">
                 Parity Technologies Limited (a company registered in England and Wales under company number 09760015
                 with its registered office at c/o Ignition Law 1 Sans Walk, London, England, EC1R 0LT) and its
-                Affiliates, as defined below (“Parity”), operate the websites parity.io, paritytech.io, polkadot.io,
-                substrate.io, substrate.dev and any subdomains such as sub0.parity.io (the{' '}
+                Affiliates, as defined below (<strong>“Parity”</strong>), operate the websites parity.io, paritytech.io,
+                polkadot.io, substrate.io, substrate.dev and any subdomains such as sub0.parity.io (the{' '}
                 <strong>&quot;Sites&quot;</strong>).
               </p>
               <p className="leading-normal">
