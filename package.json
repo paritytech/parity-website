@@ -22,9 +22,11 @@
   },
   "license": "0BSD",
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "animate.css": "^4.1.1",
+    "classnames": "^2.3.2",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-eslint": "^2.0.8",
