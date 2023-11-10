@@ -3,13 +3,16 @@ blogTitle: 'Built on Substrate: KILT Protocol'
 slug: blog/built-on-substrate-kilt-protocol
 date_published: 2020-02-12
 tags:
-- Parity Substrate
-- Polkadot
-- Community
+  - Parity Substrate
+  - Polkadot
+  - Community
 author: Zach Cavanaugh
-image: "/images/kilt-blog-01-1.png"
-
+image: '/images/kilt-blog-01-1.png'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import KiltThumbnail from '../../src/images/built-on-substrate-kilt-protocol-thumbnail.webp';
+
 In recent years, several high-profile data scandals have helped spread awareness of privacy and data rights issues among the general public. From Facebook to Equifax, an ever-growing number of companies have demonstrated their inability to keep our sensitive private data safe. Still, most everyday internet users probably don’t think twice about what happens behind the scenes when they log into their favorite web services.
 
 In reality, the usernames and passwords we use to unlock our most sensitive data and assets are being held by each service provider we interact with, often under less-than-ideal security conditions. These centralized data silos become honey pots for hackers, leaving our information vulnerable to theft and misuse. The widespread use of poor password-management strategies, i.e. using the same password and username for multiple services, means that once (not if) a hack happens, hackers can use those logins to access our data everywhere that we reused them. Fraud, identity theft, extortion—the consequences of managing authentication in this way can often be catastrophic.
@@ -44,11 +47,11 @@ A good example of this would be a fair trade certification, where the Claimer co
 
 Ultimately the number of use cases is as varied as the decentralized applications that will make use of KILT protocol in their services. With KILT’s planned integration with Polkadot, parachains specialized for a variety of use cases could leverage the protocol for things like user authentication and certifications, potentially creating shared, cross-chain trust marketplaces that enable interoperable services across multiple networks.
 
-<iframe className="w-full h-56 sm:h-80 md:h-96" src="https://www.youtube.com/embed/fCHsbs96lvE" allowFullScreen></iframe>
+<YoutubeEmbed id="fCHsbs96lvE" thumbnail={KiltThumbnail} />
 
 Building on Substrate gives KILT the freedom to design this system in precisely the best way for the desired functionality while speeding up development by taking more general blockchain components from Substate’s ready-made modules. Substrate’s runtime upgrades allow KILT to not only maintain independence over their own blockchain logic but continue to adapt it into the future. Other networks would require design compromises, such as the need to factor in gas costs on Ethereum. Substrate also gives KILT the possibility of connecting to Polkadot and interoperating with other chains for completely new services that would otherwise be impossible in previous networks.
 
-***
+---
 
 For more info on KILT Protocol, visit [kilt.io](https://kilt.io). You can also watch their presentation at the Sub0.1 Substrate developer conference on [Youtube](https://youtu.be/d0zF3ghAdVI), and hear [an in-depth discussion on the Relay Chain podcast](https://relaychain.fm/9-on-chain-trust-with-kilt-protocol).
 

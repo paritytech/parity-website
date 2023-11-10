@@ -1,16 +1,19 @@
 ---
 title: index
 tags:
-- Community
-- Partnerships
-- Parity Ethereum
+  - Community
+  - Partnerships
+  - Parity Ethereum
 author: Phil Lucsok
 blogTitle: Parity Technologies awarded $5 million grant by the Ethereum Foundation
 slug: blog/parity-technologies-awarded-5-million-grant-from-the-ethereum-foundation/
 date_published: 2019-01-07T06:00:00+01:00
-image: "/images/ef-grant-announcement.png"
-
+image: '/images/ef-grant-announcement.png'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import EthAwardThumbnail from '../../src/images/ethereum-award-thumbnail.webp';
+
 The [Ethereum Foundation](https://ethereum.org/foundation) has announced that Parity Technologies has been granted $5 million USD for its years of contributions to the Ethereum ecosystem and continuing development of the core infrastructure for Ethereum 2.0.
 
 The grant entrusts Parity Technologies to build out its Ethereum development scaling, security and usability, and comes in two distinct tranches. The first tranche has already been awarded and the second will be distributed after reaching specific milestones laid out by the foundation.
@@ -21,39 +24,40 @@ Parity Technologies is best known for its Ethereum client **Parity Ethereum**, o
 
 Beyond [Parity Ethereum](https://parity.io/ethereum), Parity Technologies has developed free open-source tools for developers to interact with the Ethereum network and launch their own EVM-based blockchains, including:
 
-* [Parity Fether](https://github.com/paritytech/fether), a simple wallet based on Parity’s light client
-* [Parity Signer](https://paritytech.io/send-transactions-with-mycrypto-beta-and-parity-signer/), a mobile hardware wallet for securely signing transactions
-* [Parity Bridge](https://github.com/paritytech/parity-bridge), a two-way bridge for arbitrary message passing between Ethereum-based networks, used for scaling Dapps
-* [Light.js](https://www.parity.io/light-js-how-to-build-your-dapp-on-a-light-client/), a web3.js alternative that supports development on light clients
-* [Parity Light Client](https://wiki.parity.io/Light-Client), a fast and secure client for low-performant devices
-* [Secret Store](https://wiki.parity.io/Secret-Store), a distributed key generator that also stores keys to enable permissioning
-* [Private Transactions](https://paritytech.io/private-transactions-webassembly-and-permissioning-new-features-energy-web-foundation-blockchain-for-energy/), encrypted smart contracts where the code and state are viewable only by permissioned validators
-* [oo7 Bonds](https://github.com/paritytech/oo7), a library that makes it easy to build reactive DApps in Javascript
-* [p-Wasm](https://github.com/paritytech/parity-wasm), a low-level WebAssembly library for creating smart contracts with Rust
-* [Libp2p](https://github.com/libp2p/rust-libp2p), the Rust implementation of the libp2p networking stack that will be used in Ethereum 2.0
-* [Kovan testnet](https://kovan-stats.parity.io/), a Proof-of-Authority network that supports Wasm and Parity Bridge
-* [Substrate](https://www.parity.io/substrate/), a framework for blockchain innovation which will serve as the foundation of Parity’s Serenity client.
+- [Parity Fether](https://github.com/paritytech/fether), a simple wallet based on Parity’s light client
+- [Parity Signer](https://paritytech.io/send-transactions-with-mycrypto-beta-and-parity-signer/), a mobile hardware wallet for securely signing transactions
+- [Parity Bridge](https://github.com/paritytech/parity-bridge), a two-way bridge for arbitrary message passing between Ethereum-based networks, used for scaling Dapps
+- [Light.js](https://www.parity.io/light-js-how-to-build-your-dapp-on-a-light-client/), a web3.js alternative that supports development on light clients
+- [Parity Light Client](https://wiki.parity.io/Light-Client), a fast and secure client for low-performant devices
+- [Secret Store](https://wiki.parity.io/Secret-Store), a distributed key generator that also stores keys to enable permissioning
+- [Private Transactions](https://paritytech.io/private-transactions-webassembly-and-permissioning-new-features-energy-web-foundation-blockchain-for-energy/), encrypted smart contracts where the code and state are viewable only by permissioned validators
+- [oo7 Bonds](https://github.com/paritytech/oo7), a library that makes it easy to build reactive DApps in Javascript
+- [p-Wasm](https://github.com/paritytech/parity-wasm), a low-level WebAssembly library for creating smart contracts with Rust
+- [Libp2p](https://github.com/libp2p/rust-libp2p), the Rust implementation of the libp2p networking stack that will be used in Ethereum 2.0
+- [Kovan testnet](https://kovan-stats.parity.io/), a Proof-of-Authority network that supports Wasm and Parity Bridge
+- [Substrate](https://www.parity.io/substrate/), a framework for blockchain innovation which will serve as the foundation of Parity’s Serenity client.
 
 Parity Technologies has been actively contributing to Ethereum 2.0, [launching a Casper testnet last summer](https://twitter.com/paritytech/status/1001753206865752067?lang=en) and implementing an [Ethereum 2.0 Beacon Chain](https://www.coindesk.com/ethereum-startup-parity-adds-casper-code-to-custom-blockchain-toolbox) with Substrate in September 2018.
 
-<iframe className="w-full h-56 my-8 sm:h-80 md:h-96" src="https://www.youtube.com/embed/YDJCezRzaXg" allowFullScreen></iframe>_Serenity on Substrate implementation progress update_
+<YoutubeEmbed thumbnail={EthAwardThumbnail} id="YDJCezRzaXg" />
+_Serenity on Substrate implementation progress update_
 
 ## Upcoming milestones
 
 The second tranche of the grant will be awarded to Parity Technologies when the following milestones have been completed:
 
-* The completion of eWasm compatibility work
-* Shipping a light wallet for mainnet
-* The successful completion of Phase 0 and Phase 1 of sharding
+- The completion of eWasm compatibility work
+- Shipping a light wallet for mainnet
+- The successful completion of Phase 0 and Phase 1 of sharding
 
 Parity Technologies is committed to implementing Ethereum 2.0, as well as continuously contributing further tools for developers to build decentralised applications.
 
 Parity Technologies has thus far been self-financed, providing open-source core infrastructure software and tooling to achieve the [Web3 vision laid out](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) by Parity and Ethereum co-founder Gavin Wood, a vision that comprises:
 
-* A decentralised web where users retain their agency
-* A world where access to information is an unsuppressable human right
-* A world where all 7.4 billion people have open access to finance
-* A society less reliant on skewed institutional powers
+- A decentralised web where users retain their agency
+- A world where access to information is an unsuppressable human right
+- A world where all 7.4 billion people have open access to finance
+- A society less reliant on skewed institutional powers
 
 ## We’re hiring
 
