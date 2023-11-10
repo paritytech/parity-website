@@ -6,6 +6,10 @@ import Img from 'gatsby-image';
 import Social from '../../components/Social';
 import SEO from '../../components/layouts/SEO';
 
+import { YoutubeEmbed } from '../../components/YoutubeEmbed';
+
+import GavinWoodThumbnail from '../../images/gavin-wood-thumbnail.webp';
+
 interface GavinWoodProps {
   data: any;
 }
@@ -37,18 +41,9 @@ export default function GavinWood(props: GavinWoodProps) {
           </h4>
           <p>{intl.formatMessage({ id: 'gavin-wood-page-paragraph-two' })}</p>
           <p dangerouslySetInnerHTML={{ __html: intl.formatMessage({ id: 'gavin-wood-page-paragraph-three' }) }} />
-          <div>
-            <iframe
-              className="w-full h-72 md:h-96"
-              src="https://www.youtube.com/embed/UIBR99gOLOQ?feature=oembed"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <caption className="flex text-xs text-textLight italic my-4">
-              {intl.formatMessage({ id: 'gavin-wood-page-video-caption' })}
-            </caption>
-          </div>
+
+          <YoutubeEmbed id="UIBR99gOLOQ" title="gavin-wood" thumbnail={GavinWoodThumbnail} />
+
           <h4 className="mb-6 md:text-2xl md:font-semibold">
             {intl.formatMessage({ id: 'gavin-wood-page-subtitle-two' })}
           </h4>
