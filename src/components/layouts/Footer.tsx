@@ -164,7 +164,7 @@ export default function Footer() {
             <LocalizedLink to="/applicant-notice" className={navItemsSubFooter}>
               {intl.formatMessage({ id: 'nav-applicant' })}
             </LocalizedLink>
-            <button className="text-xs text-textLight" onClick={openCookieModal}>
+            <button className={navItemsSubFooter} onClick={openCookieModal}>
               Cookie Settings
             </button>
           </div>
