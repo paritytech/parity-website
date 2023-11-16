@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useLocalStorage } from '../hooks/useLocalStorage.js';
+
+import { YoutubeEmbed } from './YoutubeEmbed';
 
 interface FullWidthYouTubeProps {
   image: string;
@@ -29,19 +32,7 @@ export default function FullWidthYouTube(props: FullWidthYouTubeProps) {
           </div>
         </div>
       </div>
-      {showModal ? (
-        <div
-          onClick={() => setShowModal(!showModal)}
-          className="fixed top-0 bottom-0 left-0 right-0 z-10 bg-opacity-80 h-full w-full bg-black text-textDark flex justify-center items-center"
-        >
-          <iframe
-            className="w-full md:w-2/3 h-1/3 md:h-2/3"
-            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          ></iframe>
-        </div>
-      ) : null}
+      {showModal && <YoutubeEmbed fullScreen closeModal={() => setShowModal(false)} id={videoId} />}
     </div>
   );
 }

@@ -1,16 +1,19 @@
 ---
 title: index
 tags:
-- Parity Substrate
-- Community
-- Polkadot
+  - Parity Substrate
+  - Community
+  - Polkadot
 author: Phil Lucsok
 blogTitle: 'Built on Substrate: Polkascan'
 slug: blog/built-on-substrate-polkascan/
 date_published: 2019-07-15T01:00:00+02:00
-image: "/images/built-with-substrate-polkascan.png"
-
+image: '/images/built-with-substrate-polkascan.png'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import PolkascanThumbnail from '../../src/images/built-on-substrate-polkascan-thumbnail.webp';
+
 ## Substrate for Substrate chains. How Polkascan is building a multi-chain block explorer using Substrate.
 
 As Substrate’s 1.0 release nears, many projects have already begun building on the blockchain framework. One such project that’s been working closely with the Parity development team is [Polkascan](https://polkascan.io/), the first multi-chain block explorer.
@@ -27,7 +30,7 @@ Thanks to Substrate, every chain that is built on this framework shares common p
 
 The alpha version of Polkascan is live on [Polkascan.io](https://polkascan.io/), and is already serving the data of Polkadot and three other networks built on Substrate including Robonomics, Joystream, and Edgeware.
 
-<iframe className="w-full h-56 my-8 sm:h-80 md:h-96" src="https://www.youtube.com/embed/TmfXDduVQLI" allowFullScreen></iframe> <em>Emiel Sebastiaan demos Polkascan at Sub0 in Berlin</em>
+<YoutubeEmbed id="TmfXDduVQLI" thumbnail={PolkascanThumbnail} />
 
 ## Milestones and Progress
 
@@ -37,8 +40,8 @@ The [latest milestone reached](https://medium.com/polkadot-network/polkascan-dev
 
 > The third milestone extends the base system-architecture of the explorer with a number of Substrate Runtime Module Libraries (SRML) that are key to the inner workings of the Polkadot Relay Chain, such as: timestamp, indices (accounts), sessions, democracy & staking. With this milestone the explorer should provide basic data structures for the following entities: block timestamps, accounts, staking (validators), sessions (validators) & democracy (proposals, referenda).
 
-![Polkascan](/images/built-on-polkascan-image-one.png "Polkascan")
+![Polkascan](/images/built-on-polkascan-image-one.png 'Polkascan')
 
 Once support for the SRML is completed, Polkascan will continue optimizing their database and server architecture so that users can quickly and easily find the data they’re looking for, no matter which Substrate chain they want to query.
 
-Start exploring the chains on [Polkascan.io](http://polkascan.io/) right now, and if you want to dig into the code, it’s open-source and hosted at [https://github.com/polkascan](https://github.com/polkascan "https://github.com/polkascan").
+Start exploring the chains on [Polkascan.io](http://polkascan.io/) right now, and if you want to dig into the code, it’s open-source and hosted at [https://github.com/polkascan](https://github.com/polkascan 'https://github.com/polkascan').

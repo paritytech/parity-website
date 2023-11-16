@@ -1,16 +1,19 @@
 ---
 title: index
 tags:
-- Light.js
-- Parity Fether
-- Releases
+  - Light.js
+  - Parity Fether
+  - Releases
 author: Amaury Martiny
 blogTitle: 'Light.js: How to Build Your Dapp on a Light Client'
 slug: blog/light-js-how-to-build-your-dapp-on-a-light-client/
 date_published: 2018-11-18T06:00:00+01:00
-image: "/images/light-js-web3-library.jpeg"
-
+image: '/images/light-js-web3-library.jpeg'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import LightJSThumbnail from '../../src/images/light-js-dapp-thumbnail.webp';
+
 This article introduces a new JavaScript library, [light.js](https://github.com/paritytech/js-libs/tree/master/packages/light.js), which provides a set of high-level tools to build light-client-efficient Dapps. It is primarily aimed for Dapp developers looking for an alternative to web3.js.
 
 ## **Why build on top of a light client?**
@@ -19,13 +22,13 @@ Running a full Ethereum node is laborious: it’s very challenging today to have
 
 Light clients solve this problem. A light client is a special kind of Ethereum node that is, as suggested by its name, light. Concretely, this means:
 
-* low on resources usage: CPU, memory, storage, I/O operations…
-* embeddable: in a desktop application, on mobile, within a web app.
-* but still remains trustless.
+- low on resources usage: CPU, memory, storage, I/O operations…
+- embeddable: in a desktop application, on mobile, within a web app.
+- but still remains trustless.
 
 If a Dapp is paired with its own light client to query state and make transactions, it does not need to rely on centralized infrastructures anymore. At Parity Technologies, we wish to embed light clients everywhere: in desktop and mobile apps, browser extensions, web apps… We believe light clients will[ play a key role](https://www.parity.io/what-is-a-light-client) in Ethereum mass adoption.
 
-<iframe className="w-full h-56 my-8 sm:h-80 md:h-96" src="https://www.youtube.com/embed/Hxzzj3lJKlw" allowFullScreen></iframe>
+<YoutubeEmbed id="Hxzzj3lJKlw" thumbnail={LightJSThumbnail} />
 
 _Amaury Martiny presenting light.js at the Parity & Polkadot Devcon meetup_
 
@@ -33,10 +36,10 @@ _Amaury Martiny presenting light.js at the Parity & Polkadot Devcon meetup_
 
 We have built over fifteen Dapps for our now-defunct [Parity UI](https://github.com/parity-js/shell). When building these Dapps, we came across development patterns that were popping up again and again. For example, if we want to constantly show the latest balance of an ERC20 token for a particular address, we can do one of the following:
 
-* poll the chain every 5 seconds
-* do some smart-polling, e.g. make a new call only once the previous call has finished
-* listen to incoming blocks via pub/sub, and only make a call on new block
-* listen to state changes via pub/sub (Parity only, see [the documentation](https://wiki.parity.io/JSONRPC-parity_pubsub-module))
+- poll the chain every 5 seconds
+- do some smart-polling, e.g. make a new call only once the previous call has finished
+- listen to incoming blocks via pub/sub, and only make a call on new block
+- listen to state changes via pub/sub (Parity only, see [the documentation](https://wiki.parity.io/JSONRPC-parity_pubsub-module))
 
 These patterns appear often in the Dapps ecosystem, if you are a Dapp developer, chances are you are using one of them.
 
@@ -44,34 +47,34 @@ However, these are empirical patterns: they are well-known amongst Dapp develope
 
 The goal of `light.js` is simple:
 
-* pick the best pattern that works with light clients: listen to headers via pub/sub and make API calls on new header, while making sure that the amount of network calls is not excessive.
-* put it into a high-level library, so that Dapp developers use a simple API instead of following a supposedly well-known pattern.
+- pick the best pattern that works with light clients: listen to headers via pub/sub and make API calls on new header, while making sure that the amount of network calls is not excessive.
+- put it into a high-level library, so that Dapp developers use a simple API instead of following a supposedly well-known pattern.
 
 Concretely, it means:
 
-``` js
+```js
     // Before, with web3.js
-    
+
     const contract = web3.eth.Contract(ABI, '0x00..ff');
-    
-    async function updateBalance() {  
-    	const balance = await contract.methods.balanceOf('0xabc').call(); 
+
+    async function updateBalance() {
+    	const balance = await contract.methods.balanceOf('0xabc').call();
     	console.log(balance);
     }
-    
+
     // Dapp developer: "This should be light-client-friendly...
     "web3.eth.subscribe('newBlockHeaders').on('data', updateBalance);
-    
-    --- 
-    
+
+    ---
+
     // Now, with light.js
-    
+
     import { makeContract } from '@parity/light.js';
     // Dapp developer: "I'm sure this is light-client-friendly!"
     makeContract(ABI, '0x00..ff')
     	.balanceOf$('0xabc')
     	.subscribe(console.log); // Logs the result when balance changes
-```  
+```
 
 ## **High-level reactive programming**
 
@@ -79,19 +82,19 @@ Concretely, it means:
 
 `light.js`; only exposes 10 high-level functions, amongst them:
 
-* query the balance: `balanceOf$('0x123');`
-* interact with contracts: `makeContract(abi, contractAddress);`
-* post a transaction: `post$(myTx);`
-* manage accounts: `account$();`
-* etc. (you can find the full list in the [documentation](https://parity-js.github.io/light.js/api/modules/_rpc_eth_.html))
+- query the balance: `balanceOf$('0x123');`
+- interact with contracts: `makeContract(abi, contractAddress);`
+- post a transaction: `post$(myTx);`
+- manage accounts: `account$();`
+- etc. (you can find the full list in the [documentation](https://parity-js.github.io/light.js/api/modules/_rpc_eth_.html))
 
 We only expose ten functions, but they should cater to the needs of most Dapps today. For reference, we built a fully-featured Ethereum & ERC20 wallet on top of `light.js`, called [Parity Fether](https://github.com/paritytech/fether). Based on feedback, we might of course add new functions—feel free to [create an issue](https://github.com/paritytech/js-libs/issues) if you need one.
 
 You might have noticed the $ sign behind the names of the functions. This is a[ JavaScript convention](https://stackoverflow.com/questions/43083577/what-does-sign-at-the-end-of-function-name-indicate) to represent Observables. Observables are a JavaScript structure that basically represents an ongoing asynchronous stream of data, ordered in time. Some examples that can be expressed in Observables:
 
-* clicks on a button
-* tweets on your Twitter feed
-* new blocks on the Ethereum blockchain
+- clicks on a button
+- tweets on your Twitter feed
+- new blocks on the Ethereum blockchain
 
 Data streams are an intuitive, high-level way to express changes happening on the Ethereum blockchain. The Observables in `light.js` fire when something changes, and the Dapp reacts to those changes. Moreover, Dapp developers can leverage the[ huge ecosystem](https://github.com/ReactiveX/rxjs) around Observables to build complex Dapps with the basic ones provided by `light.js`.
 
@@ -101,11 +104,12 @@ To learn more about reactive programming, head towards[ our documentation](https
 
 The best way to start hacking with \`light.js \`is to:
 
-* download it from npm: `yarn install rxjs @parity/light.js`
-* follow our 6-step tutorial: [https://parity-js.github.io/light.js/guides/tutorial1-set-up-a-light-client.html](https://parity-js.github.io/light.js/guides/tutorial1-set-up-a-light-client.html "https://parity-js.github.io/light.js/guides/tutorial1-set-up-a-light-client.html")
+- download it from npm: `yarn install rxjs @parity/light.js`
+- follow our 6-step tutorial: [https://parity-js.github.io/light.js/guides/tutorial1-set-up-a-light-client.html](https://parity-js.github.io/light.js/guides/tutorial1-set-up-a-light-client.html 'https://parity-js.github.io/light.js/guides/tutorial1-set-up-a-light-client.html')
 
 An important thing to note is that while `light.js` is optimized for light clients, it will of course work with full nodes, local or remote. In particular, it works out-of-the-box if you have MetaMask installed:
-``` js
+
+```js
 import light, { balanceOf$ } from '@parity/light.js';
 
 // Wait for web3.currentProvider to be injected
@@ -115,32 +119,29 @@ window.addEventListener('load', () => {
 
   balanceOf$('0x123').subscribe(console.log); // Logs the balance
 });
-```    
+```
 
 Even if you can't embed a light-client in your app today for whatever reason, `light.js` [works well with remote full nodes](https://parity-js.github.io/light.js/getting-started/does-it-work-with-a-full-node.html), so we do recommend `light.js` for any kind of Dapp. The day you decide to finally switch to a light client, you won’t have to change a single line of code.
 
 If you are writing your Dapp with React, we also provide light.js-react, a tiny library to integrate light.js easily with React apps:
+
 ```js
 import * as React from 'react';
 import { balanceOf$ } from '@parity/light.js';
 import light from '@parity/light.js-react';
 
 @light({
-  myBalance: () => balanceOf$('0x123')
+  myBalance: () => balanceOf$('0x123'),
 })
 class MyComponent extends React.Component {
   render() {
-    return (
-      <div>
-        The balance of "0x123" is {this.props.myBalance.toFormat(2)}.
-      </div>
-    );
+    return <div>The balance of "0x123" is {this.props.myBalance.toFormat(2)}.</div>;
   }
 }
 ```
 
-
 To see an example of how light.js is used in a real-world app, see how we built [Parity Fether](https://github.com/paritytech/fether) on top of it.
 
 ## Next steps
+
 `light.js` is a small step in the direction of our effort to promote the use of decentralised light clients. We would love to hear feedback from developers, so if you have questions or ideas about this library, make sure to post an issue on the Github repo: https://github.com/paritytech/js-libs/tree/master/packages/light.js.

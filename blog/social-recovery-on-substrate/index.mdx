@@ -1,16 +1,19 @@
 ---
 title: index
 tags:
-- Parity Substrate
-- Custom Solutions
-- Security
+  - Parity Substrate
+  - Custom Solutions
+  - Security
 author: Phil Lucsok
 blogTitle: Social recovery on Substrate
 slug: blog/social-recovery-on-substrate/
 date_published: 2020-04-16T01:00:00+02:00
-image: "/images/social-recovery2.png"
-
+image: '/images/social-recovery2.png'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import SocialRecoveryThumbnail from '../../src/images/social-recovery-thumbnail.webp';
+
 ### Never lose access to your cryptocurrency accounts
 
 ## Why do we need social recovery systems?
@@ -23,7 +26,8 @@ Decentralization and blockchain can improve the quality of life for people becau
 
 Substrate is the blockchain framework for creating any kind of blockchain, and as more blockchains are built and deployed, it’s necessary that key management can be improved without resorting to centralized custodians who may not be trustworthy or competent. That’s why we’ve created the Recovery pallet ([GitHub](https://github.com/paritytech/substrate/blob/master/frame/recovery/src/lib.rs)), a module that any blockchain innovator can use for their blockchain to increase their userbase and reduce headaches in their community.
 
-<iframe className="w-full h-56 my-8 sm:h-80 md:h-96" src="https://www.youtube.com/embed/rRnWKDaTb9E" allowFullScreen></iframe>_Video walkthrough of the Recovery pallet code_
+<YoutubeEmbed thumbnail={SocialRecoveryThumbnail} id="rRnWKDaTb9E" />
+_Video walkthrough of the Recovery pallet code_
 
 The Substrate Recovery pallet is an M-of-N social recovery tool, based on a multisignature wallet. It allows users to recover their accounts if their private key or other authentication mechanism has been lost. Substrate is generalized to the point where we do not even assume that the blockchain you’re building is using public-private keypairs, enabling the Recovery Pallet to be used for authentication mechanisms of your choice. You can specify the set of users allowed to give you access to your account again.
 
@@ -33,23 +37,23 @@ It's possible for the user of a blockchain to set their: number of total friends
 
 ### Step 1: Set up a recovery configuration
 
-* User selects up to N friends that they trust
-* User picks a threshold M
-* User selects a minimum delay period for the recovery process
-* User places a refundable configuration deposit, making sure that previous data/accounts are cleaned up
+- User selects up to N friends that they trust
+- User picks a threshold M
+- User selects a minimum delay period for the recovery process
+- User places a refundable configuration deposit, making sure that previous data/accounts are cleaned up
 
 ### Step 2: Lose access to your account
 
-* We don’t recommend performing this step, but just in case you do lose access, continue to step 3
+- We don’t recommend performing this step, but just in case you do lose access, continue to step 3
 
 ### Step 3: Initiate recovery process
 
-* User creates a new account
-* User funds this new account with enough funds to pay the recovery deposit and pay for transaction fees
-* User calls the Recovery pallet by declaring the account that is lost, and the new account with the deposit
-* User contacts friends to vouch for your recovery attempt
-* At least M of N friends need to approve
-* Wait for the delay period to pass
+- User creates a new account
+- User funds this new account with enough funds to pay the recovery deposit and pay for transaction fees
+- User calls the Recovery pallet by declaring the account that is lost, and the new account with the deposit
+- User contacts friends to vouch for your recovery attempt
+- At least M of N friends need to approve
+- Wait for the delay period to pass
 
 Once these steps are completed, you are now able to make calls with your lost account.
 
@@ -57,10 +61,10 @@ The recovery pallet gives you access to all other pallets. This is so that each 
 
 ### Step 4: Clean up your old account
 
-* Close the recovery process, which refunds the deposit
-* Remove recovery configuration, which refunds the other deposit
-* Call other pallets through the Recovery pallets, such as unbonding, removing Identity information
-* Finally, transfer all your funds from the lost account to your new account
+- Close the recovery process, which refunds the deposit
+- Remove recovery configuration, which refunds the other deposit
+- Call other pallets through the Recovery pallets, such as unbonding, removing Identity information
+- Finally, transfer all your funds from the lost account to your new account
 
 ## What about malicious recovery attempts?
 

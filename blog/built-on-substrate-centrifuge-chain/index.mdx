@@ -1,15 +1,18 @@
 ---
 title: index
 tags:
-- Parity Substrate
-- Community
+  - Parity Substrate
+  - Community
 author: Phil Lucsok
 blogTitle: 'Built on Substrate: Centrifuge Chain'
 slug: blog/built-on-substrate-centrifuge-chain/
 date_published: 2020-04-08T01:00:00+02:00
-image: "/images/substarte-centrefuge-02.png"
-
+image: '/images/substarte-centrefuge-02.png'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import Thumbnail from '../../src/images/built-on-substrate-centrifuge-chain-thumbnail.jpg';
+
 Currently, the flow of financial information and money is opaque and disconnected. The data silos and fragmentation that exist today create roadblocks for businesses, especially SMEs, to access the financing they need for quick, sustainable growth. Centrifuge, the team behind Centrifuge OS and Tinlake, is delivering a next-generation approach to replace the traditional financial supply chain of invoices and payments.
 
 [Centrifuge OS](https://centrifuge.io/) is an open, decentralized platform to connect traditional invoices and token-based assets on the blockchain, specifically the Centrifuge chain. This blockchain will allow businesses to exchange verified business documents (such as invoices) and tokenize those assets for further financing.
@@ -36,19 +39,21 @@ While the entirety of Centrifuge OS includes both Ethereum and Substrate, they n
 
 **User / Developer Experience**: Building a custom Substrate chain enables rapid improvements for the user and developer experience for Centrifuge. Users require privacy, and this is something Substrate allows Centrifuge to build for directly — targeting the features they need from the start.
 
-<iframe className="w-full h-56 my-8 sm:h-80 md:h-96" src="https://www.youtube.com/embed/gFcb7jeEdjg" allowFullScreen></iframe>_Cassidy and Philip from Centrifuge present Centrifuge OS_
+<YoutubeEmbed id="gFcb7jeEdjg" thumbnail={Thumbnail} />
+
+_Cassidy and Philip from Centrifuge present Centrifuge OS_
 
 ## **Assembling the right pallets**
 
 Pallets are the modules within the Substrate framework. They allow for the composability and customization developers and founders want because they reduce technical overhead, enable a high amount of extensibility to Substrate chains, and come with a community of active developers using and enhancing pallets. Centrifuge has become a contributing member of the Substrate ecosystem, putting out their own pallets and tooling for Centrifuge OS and the wider Substrate community.
 
-![Centrifuge with Substrate](/images/substrate-centrefuge-01.png "Centrifuge with Substrate")
+![Centrifuge with Substrate](/images/substrate-centrefuge-01.png 'Centrifuge with Substrate')
 
 Pallets created by Centrifuge:
 
-* Zero-knowledge verifier: verifies zero-knowledge proofs generated for privacy of documents on-chain. (ZK Verifier)
-* Multi-signature accounts: creates m-of-n accounts for greater security and group control/access. (Multisig Accounts)
-* ERC-721-based NFT: creates non-fungible tokens to be used to correlate to on-chain documents, such as invoices on Centrifuge chain. (NFTs)
+- Zero-knowledge verifier: verifies zero-knowledge proofs generated for privacy of documents on-chain. (ZK Verifier)
+- Multi-signature accounts: creates m-of-n accounts for greater security and group control/access. (Multisig Accounts)
+- ERC-721-based NFT: creates non-fungible tokens to be used to correlate to on-chain documents, such as invoices on Centrifuge chain. (NFTs)
 
 By utilizing many of the pre-packaged pallets, the Centrifuge team was able to quickly launch their Amber testnet on Substrate. With the ease and speed of on-chain upgrades thanks to the sandboxed WebAssembly runtime, the pallets they will complete can be added without forking the chain or requiring all the nodes to update their client software.
 

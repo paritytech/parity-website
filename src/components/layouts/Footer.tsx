@@ -10,7 +10,12 @@ const navItemsFooter = 'no-underline text-left text-sm opacity-50 hover:opacity-
 const navItemsSubFooter = 'no-underline text-xs my-1 hover:underline mx-6 xl:ml-0 text-textLight';
 const socialIcons = 'w-5 mx-4 h-auto fill-current';
 
+import { CookieModal } from '../CookieModal';
+import { useModal } from '../../hooks/useModal.js';
+
 export default function Footer() {
+  const { isOpen: isCookieModalOpen, openModal: openCookieModal, closeModal: closeCookieModal } = useModal();
+
   const intl = useIntl();
   const socialLinks = useStaticQuery(graphql`
     {
@@ -159,6 +164,9 @@ export default function Footer() {
             <LocalizedLink to="/applicant-notice" className={navItemsSubFooter}>
               {intl.formatMessage({ id: 'nav-applicant' })}
             </LocalizedLink>
+            <button className={navItemsSubFooter} onClick={openCookieModal}>
+              Cookie Settings
+            </button>
           </div>
           <div className="flex justify-center mb-8 xl:justify-end">
             <a href={socialLinks.site.siteMetadata.twitter} target="_blank" rel="noreferrer">
@@ -187,6 +195,8 @@ export default function Footer() {
             <a href={socialLinks.site.siteMetadata.element} target="_blank" rel="noreferrer">
               <img className={`${socialIcons} rounded-full`} src={elementLogo} alt="Element Logo" />
             </a>
+
+            <CookieModal isOpen={isCookieModalOpen} closeModal={closeCookieModal} />
           </div>
         </div>
       </div>

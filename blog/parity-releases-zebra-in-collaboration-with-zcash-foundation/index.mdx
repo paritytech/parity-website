@@ -1,15 +1,18 @@
 ---
 title: index
 tags:
-- Zcash
-- Releases
+  - Zcash
+  - Releases
 author: Phil Lucsok
 blogTitle: Parity releases Zebra in collaboration with Zcash Foundation
 slug: blog/parity-releases-zebra-in-collaboration-with-zcash-foundation/
 date_published: 2019-06-17T06:00:00.000+02:00
-image: "/images/zebra-parity-zcash-client-fnl-2.png"
-
+image: '/images/zebra-parity-zcash-client-fnl-2.png'
 ---
+
+import { YoutubeEmbed } from '../../src/components/YoutubeEmbed.tsx';
+import ZebraThumbnail from '../../src/images/zebra-thumbnail.webp';
+
 Today marks the alpha release of **Zebra**, the first Zcash client written entirely in Rust. Tasked by the Zcash Foundation to create a new alternative client to zcashd, Parity Technologies completed the initial implementation of a new Zcash client two months ahead of schedule. The [codebase](https://github.com/ZcashFoundation/zebra) has now been handed over to the Zcash Foundation, which will develop and maintain Zebra. The client offers the Zcash community an independent alternative to the Electric Coin Company’s [zcashd](https://github.com/zcash/zcash).
 
 The project united Parity’s experience in building blockchain clients with the Zcash Foundation’s expertise in cryptography and zero-knowledge proofs. Both teams gained new knowledge and skills, while providing the Zcash community with a multi-client ecosystem.
@@ -22,7 +25,7 @@ The project united Parity’s experience in building blockchain clients with the
 
 Alternative client implementations help developers quickly detect implementation-specific bugs that could cause consensus-related issues. Multiple client implementations also attract a broader audience of developers, who can start contributing in a language they’re familiar with. Zebra allows Rust developers to easily start hacking on and contributing to Zcash.
 
-<iframe className="w-full h-56 my-8 sm:h-80 md:h-96" src="https://www.youtube.com/embed/WduXasm8l-Y" allowFullScreen></iframe>
+<YoutubeEmbed id="WduXasm8l-Y" thumbnail={ZebraThumbnail} />
 
 Open-source and licensed under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html), Zebra has already been handed over to the Zcash Foundation’s [Github repo](https://github.com/ZcashFoundation/zebra) where it will continue to be developed into a full-featured Zcash client. Zebra was derived from [Parity Bitcoin](https://www.parity.io/bitcoin/), which led to a quick turnover and fast roadmap after the [announcement](https://www.parity.io/parity-teams-up-with-zcash-foundation-for-parity-zcash-client/) of the partnership several months ago.
 
