@@ -1,205 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import "./font-manifold.css";
+@import './font-roboto.css';
+@import './font-merriweather.css';
+@import './font-manifold.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    * {
-        @apply leading-normal;
-        scroll-behavior: smooth;
-    }
-    body {
-        @apply overflow-x-hidden bg-white font-body font-normal text-base leading-7 text-textLight antialiased;
-    }
-    
-    /* Headings */
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-title text-textDark font-semibold m-0 p-0;
-    }
+  * {
+    @apply leading-normal;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply overflow-x-hidden bg-white font-body font-normal text-base leading-7 text-textLight antialiased;
+  }
 
-    h1 { 
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-title text-textDark font-semibold m-0 p-0;
+  }
+
+  h1 {
     @apply text-3xl md:text-5xl leading-snug;
-    }
+  }
 
-    h2 {
+  h2 {
     @apply text-3xl md:text-4xl leading-8;
-    }
+  }
 
-    h3 {
+  h3 {
     @apply text-3xl leading-9 mb-6;
-    }
+  }
 
-    h4 {
+  h4 {
     @apply text-xl leading-5;
-    }
+  }
 
-    h5 {
+  h5 {
     @apply text-base leading-7;
-    }
+  }
 
-    h6 {
+  h6 {
     @apply text-sm leading-8;
-    }
+  }
 
-    /* Paragraphs */
-    p, ul, ol, pre, table, blockquote {
+  /* Paragraphs */
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote {
     @apply mb-6;
-    }
+  }
 
-    p {
+  p {
     @apply font-normal leading-normal;
-    }
-    
-    strong {
+  }
+
+  strong {
     @apply font-semibold;
-    }
-    /* Blockquotes */
-    blockquote {
+  }
+  /* Blockquotes */
+  blockquote {
     @apply font-quote font-normal italic text-xl md:text-2xl leading-6 p-0 m-0 border-l-0;
-    }
+  }
 
-    pre {
-        font-size: .9rem;
-        overflow: auto;
-        word-wrap: normal;
-        white-space: pre;
-    }
-    /* Horizontal Rules */
-    hr {
+  pre {
+    font-size: 0.9rem;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+  }
+  /* Horizontal Rules */
+  hr {
     @apply my-6 border-t;
-    }
+  }
 
-    /* Lists */
-    dl, ol, ul {
+  /* Lists */
+  dl,
+  ol,
+  ul {
     @apply list-outside;
+  }
+
+  li {
+    @apply font-light;
+  }
+
+  /* Definition Lists */
+  dl {
+    dt {
+      @apply font-semibold;
     }
 
-    li {
-    @apply font-light; 
+    dd {
+      @apply ml-6;
     }
+  }
 
-    /* Definition Lists */
-    dl {
-        dt {
-        @apply font-semibold;
-        }
-
-        dd {
-        @apply ml-6;
-        }
-    }
-
-    /* Ordered Lists */
-    ol {
+  /* Ordered Lists */
+  ol {
     @apply list-decimal;
-    }
+  }
 
-    /* Unordered Lists */
-    ul {
+  /* Unordered Lists */
+  ul {
     @apply list-disc;
-    }
+  }
 
-    /* Anchors */
-    a {
+  /* Anchors */
+  a {
     @apply underline cursor-pointer;
-    text-decoration-thickness: .05em;
-    }
+    text-decoration-thickness: 0.05em;
+  }
 
-    /* Forms */
-    input, textarea {
+  /* Forms */
+  input,
+  textarea {
     @apply block px-3 py-2 border rounded text-sm;
-    }
+  }
 
-    input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     @apply outline-none;
-    }
+  }
 
-    label {
+  label {
     @apply block mb-2 text-sm font-semibold;
-    }
+  }
 
-    input[type="submit"], input[type="button"], input[type="reset"] {
+  input[type='submit'],
+  input[type='button'],
+  input[type='reset'] {
     @apply inline-block px-4 py-2 bg-gray-200 font-semibold;
-    }
+  }
 
-    /* Images */
-    figure {
+  /* Images */
+  figure {
     @apply inline-block;
 
-        img {
-        @apply block w-full;
-        }
-
-        figcaption {
-        @apply block p-3 text-center text-sm;
-        }
+    img {
+      @apply block w-full;
     }
 
-    .text-xxs {
-        font-size: 9px;
-        letter-spacing: 0.5px;
+    figcaption {
+      @apply block p-3 text-center text-sm;
     }
+  }
 
-    .bounty-code {
-        @apply break-words;
-        color: #e83e8c;
-    }
+  .text-xxs {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
 
-    /* Article CSS  */
+  .bounty-code {
+    @apply break-words;
+    color: #e83e8c;
+  }
 
-    article h2 {
-    @apply mb-6;    
-    }
+  /* Article CSS  */
 
-    article h3 {
-    @apply font-semibold;    
-    }
+  article h2 {
+    @apply mb-6;
+  }
 
-    article h4 {
+  article h3 {
+    @apply font-semibold;
+  }
+
+  article h4 {
     @apply mb-6 text-2xl md:font-semibold;
-    }
-    article p {
+  }
+  article p {
     @apply text-textDark text-lg md:text-xl md:leading-relaxed;
-    }
+  }
 
-    article p ul li {
-    @apply
-     text-textDark font-normal ml-4;
-    }
+  article p ul li {
+    @apply text-textDark font-normal ml-4;
+  }
 
-    article ul {
+  article ul {
     @apply ml-4;
-    }
+  }
 
-    article ul li {
+  article ul li {
     @apply text-textDark font-normal;
-    }
+  }
 
-    article ol {
+  article ol {
     @apply ml-5;
-    }
+  }
 
-    article ol li {
+  article ol li {
     @apply text-textDark font-normal;
-    }
+  }
 
-    article img {
-    @apply mb-6 mx-auto;    
-    }
+  article img {
+    @apply mb-6 mx-auto;
+  }
 
-    article img + em {
-    @apply text-sm text-textLight leading-3;    
-    }
+  article img + em {
+    @apply text-sm text-textLight leading-3;
+  }
 
-    article code {
+  article code {
     @apply text-parityPink text-base;
-    }
+  }
 
-    article blockquote p {
+  article blockquote p {
     @apply font-quote font-normal italic text-xl text-textLight text-center md:text-2xl md:leading-normal tracking-wide mb-6 py-6 border-l-0;
-    }
+  }
 }
