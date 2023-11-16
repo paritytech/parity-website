@@ -105,7 +105,7 @@ const CookieModal = ({ isOpen, closeModal }) => {
 
   return (
     <Dialog open={isOpen} onClose={closeModal}>
-      <div className="bg-opacity-80 bg-black fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div className="bg-opacity-80 bg-black fixed inset-0 z-50 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center items-center sm:p-0">
           <Dialog.Panel className="relative transform overflow-hidden rounded bg-white px-12 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
             <button

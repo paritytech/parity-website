@@ -15,7 +15,8 @@ const YoutubeEmbed = ({ id, title, thumbnail, fullScreen = false, closeModal }) 
     <div
       onClick={fullScreen && closeModal}
       className={cx([
-        'h-96 w-full',
+        'w-full',
+        { 'h-72 md:h-96': !fullScreen },
         {
           'fixed top-0 bottom-0 left-0 right-0 z-10 bg-opacity-80 h-full bg-black text-textDark flex justify-center items-center':
             fullScreen,
@@ -32,7 +33,7 @@ const YoutubeEmbed = ({ id, title, thumbnail, fullScreen = false, closeModal }) 
             'border-1 rounded-sm',
             { 'h-full': !fullScreen },
             {
-              'w-full md:w-2/3 h-1/3 md:h-2/3 bg-black text-textDark flex justify-center items-center': fullScreen,
+              'w-full lg:w-2/3 h-1/3 md:h-2/3 bg-black text-textDark flex justify-center items-center': fullScreen,
             },
           ])}
         >
@@ -98,11 +99,11 @@ const CookieOverlay = ({ id, acceptAll, fullScreen = false }) => {
           'h-full': !fullScreen,
         },
         {
-          'md:w-2/3 h-1/3 md:h-2/3': fullScreen,
+          'w-2/3 h-1/3 h-2/3': fullScreen,
         },
       ])}
     >
-      <h5 className="text-2xl md:text-3xl mt-8 mb-4 text-center font-heading text-white sm:mt-4 relative top-1/4 md:top-1/3">
+      <h5 className="text-2xl md:text-3xl mt-2 mb-4 text-center font-heading text-white sm:mt-4 relative top-1/4 md:top-1/3">
         You must enable all cookie types to play this video
       </h5>
       <div className="text-white mt-4 flex justify-center items-center flex-row space-x-4 relative top-1/4 md:top-1/3">
