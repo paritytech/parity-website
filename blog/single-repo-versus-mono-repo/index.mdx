@@ -1,0 +1,54 @@
+---
+title: index
+tags:
+- monorepo
+- git
+- analysis
+- Polkadot
+author: Joyce Siqueria
+blogTitle: Single repo versus monorepo
+slug: monorepo
+date_published: 2024-01-29T23:00:00Z
+image: "/images/qsdh5p9.jpeg"
+
+---
+Ah, January, that magical time of year when suddenly everyone turns into a philosopher, gazing deeply into the past and future. Naturally, we couldn't resist joining the trend.
+
+Since we moved to the monorepo back in August 2023, we felt that it boosted our productivity, but just to be sure, we decided to back up our intuition with some data and would like to introduce to you our Polkadot SDK repository data analysis made with the help of the Parity Data team (real hot data shit 🔥).
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/cKnxiph10lNCP3DCnv" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/paramountnetwork-paramount-network-wife-swap-wifeswap-cKnxiph10lNCP3DCnv">via GIPHY</a></p>
+
+For context, we have moved the development from our 3 repositories [Substrate](https://github.com/paritytech/substrate), [Cumulus](https://github.com/paritytech/cumulus) and [Polkadot](https://github.com/paritytech/polkadot) and consolidated it into the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk/), which we refer to as the monorepo.
+
+Reflecting on the past 6 months, it was evident that individual repositories like Cumulus, Polkadot, and Substrate demanded a considerably longer review period. Notably, Substrate PRs felt the pinch the most with an average open-to-merge duration stretching up to 13 days, and in average it wouldn’t be under 8 days! 
+Looking at the graph, it's clear that our initial average pull request merge times in August were a bit elongated, but let’s not forget to count in time of adoption and vacation on this season 🌴.
+
+The Polkadot SDK monorepo shows that focusing on one thing helps reduce open to merge by 25% every month consistently, proving enhancements in development velocity and efficiency.
+
+![](/images/monorepo/image4.png)
+
+Getting rid of the companion system and having all related changes in one Pull Request makes it not only easier for you to submit code, but also for us to review them. This will save you and us a lot of time that can be devoted to what really matters: coding 🤠
+
+<div style="width:100%;height:0;padding-bottom:60%;position:relative;"><iframe src="https://giphy.com/embed/Ws6T5PN7wHv3cY8xy8" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/nounish-dao-nouns-noggles-Ws6T5PN7wHv3cY8xy8">via GIPHY</a></p>
+
+When it comes to companion PRs themselves, the number would always differentiate but some months had almost 30 companion PRs to review. This also justifies the extended time that the team would need in order to review those PRs.
+
+A significant yet potentially misleading indicator is the number of merged Pull Requests. Observably, we demonstrated enhanced efficiency in merging Pull Requests when the repos were distinct from one another. The contributions were dispersed, but during some fruitful months, we managed to merge over 280 Pull Requests monthly. However, does the sheer volume of Pull Requests genuinely reflect our working efficiency? 🧐 Feel free to form your own opinion on this, for now, here’s the data:
+
+![](/images/monorepo/image2.png)
+
+But what I’ve learned reading this data was that even if we are now merging less Pull Requests, we’re in fact solving more problems than before. 
+
+![](/images/monorepo/image1.png)
+![](/images/monorepo/image3.png)
+
+If you look into the last diagram we achieved to solve almost 55% of all issues opened this month. Before, we could solve between 38,6% up to 48,3% of the opened issues per month.
+
+This number would only come close to our lucky 55% in one month (which was in this case May).
+
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/KEBNNZHrre4A714JYx" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/outsidetv-KEBNNZHrre4A714JYx">via GIPHY</a></p>
+
+Well and with that being said, this is also all what we’ve got for today. We hope you enjoyed it and are looking forward to continuing to give you some juicy insights about Polkadot and the development of it.
+
+Stay tuned for more ✌️
+

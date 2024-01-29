@@ -1,6 +1,13 @@
 {
   "authors": [
     {
+      "name": "Joyce Siqueria",
+      "title": "Program Manager",
+      "company": "Parity Technologies",
+      "avatar": "/images/joyce.png",
+      "link": "/blog/author/joyce-siqueria"
+    },
+    {
       "name": "Michi Müller",
       "title": "Core Developer",
       "company": "Parity Technologies",
