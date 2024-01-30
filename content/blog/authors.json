@@ -1,6 +1,20 @@
 {
   "authors": [
     {
+      "name": "Karim Jedda",
+      "title": "Senior Tech Lead",
+      "company": "Parity Technologies",
+      "avatar": "/images/karim.jpg",
+      "link": "/blog/author/karim-jedda"
+    },
+    {
+      "name": "Joyce Siqueira",
+      "title": "Program Manager",
+      "company": "Parity Technologies",
+      "avatar": "/images/joyce.png",
+      "link": "/blog/author/joyce-siqueira"
+    },
+    {
       "name": "Michi Müller",
       "title": "Core Developer",
       "company": "Parity Technologies",
