@@ -6,52 +6,59 @@ tags:
 - analysis
 - Polkadot
 author: Joyce Siqueira
-blogTitle: "One Repo to Rule Them All: A Data-Driven Look at Monorepo"
+blogTitle: "One Repo to Rule Them All: A Data-Driven Look at Polkadot's Monorepo"
 slug: one-repo-to-rule-them-all
 date_published: 2024-01-29T23:00:00Z
-image: "/images/monorepo/one-repo.png"
+image: "/images/monorepo/one-repo.jpg"
 
 ---
-Ah, January, that magical time of year when suddenly everyone turns into a philosopher, gazing deeply into the past and future. Naturally, we couldn't resist joining the trend.
-
-Since we moved to the monorepo back in August 2023, we felt that it boosted our productivity, but just to be sure, we decided to back up our intuition with some data and would like to introduce to you our Polkadot SDK repository data analysis made with the help of the Parity Data team (real hot data shit 🔥).
+Ah, January… that magical time of year when suddenly everyone turns into a philosopher, gazing deeply into the past and future. Naturally, we at Parity couldn't resist joining the trend.
 
 <img width="100%" height="100%" src="/images/monorepo/gif.gif" alt="99% of that was a waste of time gif" />
 <br/>
 
+Since moving all code to the monorepo back in August 2023, we felt that it boosted our productivity. Just to be sure, we decided to back up our intuition with some data and would like to introduce our Polkadot SDK repository data analysis made with the help of everyone in the Parity Data Team (real hot data shit 🔥).
+
 For context, we have moved the development from our 3 repositories [Substrate](https://github.com/paritytech/substrate), [Cumulus](https://github.com/paritytech/cumulus) and [Polkadot](https://github.com/paritytech/polkadot) and consolidated it into the [Polkadot SDK](https://github.com/paritytech/polkadot-sdk/), which we refer to as the monorepo.
 
-Reflecting on the past 6 months, it was evident that individual repositories like Cumulus, Polkadot, and Substrate demanded a considerably longer review period. Notably, Substrate PRs felt the pinch the most with an average open-to-merge duration stretching up to 13 days, and in average it wouldn’t be under 8 days! 
-Looking at the graph, it's clear that our initial average pull request merge times in August were a bit elongated, but let’s not forget to count in time of adoption and vacation on this season 🌴.
+Reflecting on the past six months, it was evident that the three individual repositories demanded a considerably longer review period. Notably, Substrate PRs felt the pinch the most with an average open-to-merge duration <b>stretching up to 13 days</b>, and on average it wouldn’t be under eight days! 
 
-The Polkadot SDK monorepo shows that focusing on one thing helps reduce open to merge by 25% every month consistently, proving enhancements in development velocity and efficiency.
+Looking at the graph, it's clear that our initial average pull request merge times in August were a bit elongated. But let’s consider the effect of vacation at this time of year 🌴 plus the time to adapt to a new codebase and new processes. The Polkadot SDK monorepo shows that focusing on one thing helps reduce open-to-merge by 25% every month consistently, proving enhancements in development velocity and efficiency. 
 
-![](/images/monorepo/image4.png)
+![](/images/monorepo/image6.png)
+
+Not only have we become faster, 25% of our issues are closed within a single day, which is 5% more than before when we were all spread out working in different repos.
+
+![](/images/monorepo/image1.png)
 
 Getting rid of the companion system and having all related changes in one Pull Request makes it not only easier for you to submit code, but also for us to review them. This will save you and us a lot of time that can be devoted to what really matters: coding 🤠
 
 <img width="100%" height="100%" src="/images/monorepo/gif1.gif" alt="Typing gif" />
 <br />
 
-When it comes to companion PRs themselves, the number would always differentiate but some months had almost 30 companion PRs to review. This also justifies the extended time that the team would need in order to review those PRs.
+![](/images/monorepo/image5.png)
 
-A significant yet potentially misleading indicator is the number of merged Pull Requests. Observably, we demonstrated enhanced efficiency in merging Pull Requests when the repos were distinct from one another. The contributions were dispersed, but during some fruitful months, we managed to merge over 280 Pull Requests monthly. However, does the sheer volume of Pull Requests genuinely reflect our working efficiency? 🧐 Feel free to form your own opinion on this, for now, here’s the data:
+When it comes to companion PRs themselves, the number would always vary but some months had almost 30 companion PRs to review. This also justifies the extended time that the team would need in order to review those PRs.
+
+A significant yet potentially misleading indicator is the number of merged Pull Requests. We demonstrated enhanced efficiency in merging Pull Requests when the repos were distinct from one another. The contributions were dispersed, but during some fruitful months we managed to merge more than 280 Pull Requests monthly. However, does the sheer volume of Pull Requests genuinely reflect our working efficiency? 🧐 Feel free to form your own opinion on this. For now, here’s the data:
 
 ![](/images/monorepo/image2.png)
 
-But what I’ve learned reading this data was that even if we are now merging less Pull Requests, we’re in fact solving more problems than before. 
+What I’ve learned from reading this data is that even if we are now merging fewer Pull Requests, we’re in fact solving more problems than before. 
 
-![](/images/monorepo/image1.png)
 ![](/images/monorepo/image3.png)
 
-If you look into the last diagram we achieved to solve almost 55% of all issues opened this month. Before, we could solve between 38,6% up to 48,3% of the opened issues per month.
+If you look into the last diagram we successfully solved on average between 50-55% of all issues opened throughout the last period. Before, we only solved between 39% and 48% of the opened issues per month. This number would only come close to our lucky 55% in one month (which was in this case May).
 
-This number would only come close to our lucky 55% in one month (which was in this case May).
+Since moving to the monorepo, our community has come closer together. When in the past everyone would work in their own silo, looking specifically into the code they knew, today we bring all contributors together and this (hopefully) brings new synergy, exchange of information within the community and growth for Polkadot.
+
+![](/images/monorepo/image4.png)
 
 <img width="100%" height="100%" src="/images/monorepo/gif2.gif" alt="That's it gif" />
 <br />
 
-Well and with that being said, this is also all what we’ve got for today. We hope you enjoyed it and are looking forward to continuing to give you some juicy insights about Polkadot and the development of it.
+And with that being said, this is also all what we’ve got for today. Shout out to Marek Hakala and William Stevenson for providing the sexy dashboards. We hope you enjoyed it and we’re looking forward to giving you many more juicy insights about Polkadot and its development.
 
-Stay tuned for more ✌️
+Stay tuned for more! ✌️
 
+<small>This blog post was cowritten by Joyce Siqueira and Karim Jedda from Parity Technologies.</small>
