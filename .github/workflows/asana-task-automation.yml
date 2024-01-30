@@ -1,0 +1,13 @@
+name: Github Asana Action
+
+on:
+  pull_request:
+    types: [closed]
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+     -  uses: TheDotLabs/github-asana-action@v4.0.2
+        with: 
+          asana-token: ${{ secrets.ASANA_PAT }}
+          targets_pr_merge: '[{"project": "Team Kanban", "section": "Completed"}]'
